@@ -1497,15 +1497,26 @@
         //choose instrument
         $('.instrument-item').click(function () {
             debugger;
+            var dataId = $(this).data('id');
             if(!selected[1].value) {
                 selected[1].value = [];
             }
 
-            if(selected[1].value.length >= 0 && selected[1].value.length <= 5) {
+            if(selected[1].value.length >= 0) {
+
+                var filtered = selected[1].value.filter(function (t) {
+                    return t.id = dataId;
+                },dataId);
+                if(filtered.length){
+                    $(this).find('csscheckbox').addClass('hidden');
+                    selected.value.splice(1,selected.value.indexOf(filtered[0]));
+                }else{
+                    $(this).find('csscheckbox').removeClass('hidden');
                 selected[1].value.push({
                     "name": $(this).find('h3').html(),
                     "image": $(this).find('img').attr('src')
                 });
+                }
             }
 
             //todo fill instruments
@@ -1595,15 +1606,9 @@
         //open instrument modal
         $(".instrument-choose").click(function () {
             debugger;
-            if(!selected[1].value || selected[1].value.length < 5) {
-                drowInstrumentContent(instrumentsArray);
-                $(".choose-instruments-types-modal").show(200);
-            }else{
-                var selector = 'p[data-number="1"]';
-                console.log(selected[1].validation.limit);
-                $(selector).text(selected[1].validation.limit);
-                $(selector).removeClass('hidden');
-            }
+            drowInstrumentContent(instrumentsArray);
+            $(".choose-instruments-types-modal").show(200);
+
         });
 
         //drow instrument modal content
@@ -1612,8 +1617,8 @@
             var needClose = true;
             for(var i=0;i<instruments.length;i++){
                 content += ' <div class="col-md-3 col-sm-4  col-xs-6 instrument-image-and-name">'+
-                    '<div class="instrument-image instrument-item">'+
-                    '<div class="csscheckbox"><span>&#10004;</span></div>'+
+                    '<div class="instrument-image instrument-item" data-id="' + instruments[i].id +'">'+
+                    '<div class="csscheckbox hidden"><span>&#10004;</span></div>'+
                     '<img src="' + instruments[i].src +'" alt="">' +
                     '<div class="instruments-name">'+
                     '<h3>' + instruments[i].name + '</h3></div></div></div>';

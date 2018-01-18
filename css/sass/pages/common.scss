@@ -34,9 +34,11 @@ html, body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: #1b1e21s;
+  background: #1b1e21;
 
-
+  .hidden{
+    display:none;
+  }
   .main-general {
     height: 100%;
     @include bg-properties;
