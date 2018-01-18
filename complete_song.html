@@ -18,8 +18,11 @@
         <p>Smartgig.ch</p>
         <p>We bring your song idea to life</p>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto main-menu">
@@ -36,11 +39,13 @@
                 <a class="nav-link item-link" href="complete_song.html" title="complete_song">Complete song</a>
             </li>
         </ul>
-        <span class="navbar-text">
-            <span class="page-indicator" id="countSlider">
-                <span data-index="1">1</span>
-                <span data-index="2"></span>
-                <span>/4</span>
+        <span class="navbar-text nav-counter">
+            <span class="counter">
+                <span class="page-indicator" id="countSlider">
+                        <span data-index="1">1</span>
+                        <span data-index="2"></span>
+                </span>
+                <span class="total-counter">/ 9</span>
             </span>
         </span>
     </div>
@@ -173,8 +178,8 @@
                         <p>Choose one or up to 5 instruments for your song.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-5 groups-of-genre instrument-choose">
+                <div class="row choosen-content-private">
+                    <div class="col-md-4  col-sm-4 groups-of-genre instrument-choose">
                         <div class="instrument-image">
                             <img src="images/instrumentals/instr.jpg" alt="">
                         </div>
@@ -263,7 +268,8 @@
                         <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
                         <p>Let the musician know until when you need the service to be done.</p>
                     </div>
-                    <div class="col-md-4 offset-md-4 calendar">
+                    <div class="col-md-4 offset-md-4 calendar deadline ">
+                        <h3>Deadline</h3>
                         <input type="date" placeholder="Select Date" data-number="7">
                         <p data-number="7" class="hidden error-message"></p>
                     </div>
@@ -291,6 +297,7 @@
                         <p>Let the musician know what's your maximum budget that you're willing to pay for the service.</p>
                     </div>
                     <div class="col-md-4 offset-md-4  calendar">
+                        <h3>Budget</h3>
                         <input type="number" placeholder="CHF 50" data-number="8">
                         <p data-number="8" class="hidden error-message"></p>
                         <p>Average price for this service: CHF 60</p>
@@ -352,7 +359,7 @@
                         <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
                     </div>
                     <div class="col-md-8 col-md-offset-2 letters">
-                        <textarea name="songtext-story" class="story" cols="70" rows="5" data-number="2" placeholder="Write down your songtext or idea here" maxlength="2500" required></textarea>
+                        <textarea name="songtext-story" class="story" cols="70" rows="5" data-number="10" placeholder="Write down your songtext or idea here" maxlength="2500" required></textarea>
                         <p data-number="10" class="hidden error-message"></p>
                         <p>0 / 2500 characters</p>
                     </div>
@@ -408,8 +415,8 @@
                         <p>Choose one or up to 5 instruments for your song.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-5 groups-of-genre instrument-choose">
+                <div class="row choosen-content-commercial">
+                    <div class="col-md-4  col-sm-4 groups-of-genre instrument-choose">
                         <div class="instrument-image">
                             <img src="images/instrumentals/instr.jpg" alt="">
                         </div>
@@ -421,11 +428,13 @@
                 </div>
             </div>
             <div class="button">
-                <div class="col-md-6">
-                    <button type="button" class="btn" data-slide-number="12" data-slide-to="11" index="11">Back to Voicetype</button>
-                </div>
-                <div class="col-md-6">
-                    <button type="button" class="btn" data-slide-number="12" data-slide-to="13" index="13">Next Step</button>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="12" data-slide-to="11" index="11">Back to Voicetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="12" data-slide-to="13" index="13">Next Step</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -452,7 +461,7 @@
                     <div class="col-md-6">
                         <button type="button" class="btn" data-slide-number="13" data-slide-to="12" index="12">Back to Instruments</button>
                     </div>
-                    <div class="row">
+                    <div class="col-md-6">
                         <button type="button" class="btn" data-slide-number="13" data-slide-to="14" index="14">Next Step</button>
                     </div>
                 </div>
@@ -496,7 +505,8 @@
                         <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
                         <p>Let the musician know until when you need the service to be done.</p>
                     </div>
-                    <div class="col-md-4 offset-md-4 calendar">
+                    <div class="col-md-4 offset-md-4 calendar deadline">
+                        <h3>Deadline</h3>
                         <input type="date" placeholder="Select Date" data-number="15">
                         <p data-number="15" class="hidden error-message"></p>
                     </div>
@@ -524,6 +534,7 @@
                         <p>Let the musician know what's your maximum budget that you're willing to pay for the service.</p>
                     </div>
                     <div class="col-md-4 offset-md-4  calendar">
+                        <h3>Budget</h3>
                         <input type="number" placeholder="CHF 50" data-number="16">
                         <p data-number="16" class="hidden error-message"></p>
                         <p>Average price for this service: CHF 60</p>
@@ -533,10 +544,10 @@
             <div class="button">
                 <div class="row">
                     <div class="col-md-6">
-                        <button type="button" class="btn" data-slide-number="16" data-slide-to="15">Back to Deadline</button>
+                        <button type="button" class="btn" data-slide-number="16" data-slide-to="15" index="15">Back to Deadline</button>
                     </div>
                     <div class="col-md-6">
-                        <button type="button" class="btn" data-slide-number="16" data-slide-to="17">Review data</button>
+                        <button type="button" class="btn" data-slide-number="16" data-slide-to="17" index="17">Review data</button>
                     </div>
                 </div>
             </div>
@@ -569,7 +580,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-5 groups-of-genre">
+                            <div class="col-md-4 groups-of-genre">
                                 <div class="instrument-image" id="elem_1">
                                     <img src="" alt="">
                                     <div class="instruments-name">
@@ -605,21 +616,14 @@
                            </div>
                        </div>
                         <hr>
-                        <div class="row choosed-genre">
-                            <div class="col-md-4 groups-of-genre">
+                        <div class="row choosed-genre choosen-content-review">
+                            <div class="col-md-4  col-sm-4 groups-of-genre instrument-choose">
                                 <div class="instrument-image">
-                                    <img src="images/instrumentals/genre/accordeon/accordion-musical-instrument.jpeg" alt="">
+                                    <img src="images/instrumentals/instr.jpg" alt="">
                                 </div>
+                                <p data-number="1" class="hidden error-message"></p>
                                 <div class="instrument-name">
-                                    <h3>Accordion</h3>
-                                </div>
-                            </div>
-                            <div class="col-md-4 groups-of-genre">
-                                <div class="instrument-image">
-                                    <img src="images/instrumentals/genre/accordeon/accordion-musical-instrument.jpeg" alt="">
-                                </div>
-                                <div class="instrument-name">
-                                    <h3>Accordion</h3>
+                                    <h3>Choose Instrument</h3>
                                 </div>
                             </div>
                         </div>
@@ -643,7 +647,7 @@
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="col-md-6 calendar">
+                            <div class="col-md-6 calendar deadline">
                                 <h3>Deadline</h3>
                                 <input name="doneDate"  placeholder="Select Date "type="date" value="" id="elem_7" data-number="10"><br>
                                 <p data-number="10" class="hidden error-message"></p>
@@ -670,11 +674,15 @@
 </div>
 
 <div class="dialog-modal modal-1 main-modal hidden ">
-    <div class="wrapper"  id="contact-details-modal1">
+    <div class="wrapper leaves-page"  id="contact-details-modal1">
         <h3>If you leave this page you will lose all the data.Do you want to continue?</h3>
         <div class="row">
-            <div class="col-md-6"><button type="button" class="submit close-modal">Cancel</button></div>
-            <div class="col-md-6"><button type="button" class="submit confirm">Continue</button></div>
+            <div class="col-md-6">
+                <button type="button" class="submit close-modal">Cancel</button>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="submit confirm">Continue</button>
+            </div>
         </div>
     </div>
 </div>
@@ -704,8 +712,9 @@
         <div class="container-fluid choose-your-genre">
             <form>
                 <input type="text" id="instrument-filter" placeholder="Enter Instrument here ... (Filter)">
+                <p data-number="4" class="hidden error-message"></p>
             </form>
-            <button href="#"> DONE</button>
+            <button class="done"> DONE</button>
             <button class="close-modal">CANCEL</button>
             <div id="instrument-content">
                 <div class="row">
@@ -1355,6 +1364,7 @@
                 "name" : "Saxophone",
             },
         ];
+        var inReview = false;
 
         for( var i = 0, len = selected.length; i < len; i++ ) {
             var bullet = document.createElement( 'li' );
@@ -1384,7 +1394,6 @@
         }, false );
 
         function canNavigate(index) {
-            return true;
             var slide = selected[+index].value;
             var slidePrev= '';
             if(selected[+index - 1 ]) {
@@ -1412,213 +1421,212 @@
         });
 //        countSlider.pause();
         $('button').on('click', function (event) {
+          if($(this).data('slide-to') || $(this).data('slide-to') == 0) {
             debugger;
             var isValid = true;
             var element = '';
             var number = 0;
             var error = "";
             //validate input before going next page
-            switch ($(this).data('slide-to')) {
-                case 0:
-                    number = 0;
-                    break;
-                case 1:
-                    selected = privateUse;
-                    selected[0].value = 'private';
-                    number = 1;
-                    break;
-                case 2:
-                    if(!selected[1].value){
-                        element = null;
-                        isValid = false;
-                        error = selected[1].validation.required;
-                    }else {
-                        number = 2;
-                    }
-                    break;
-                case 3:
-                    element = $('textarea[data-number="2"]');
-                    if (element.val() != '') {
-                        selected[2].value = element.val();
-                        number = 3;
-                    } else {
-                        isValid = false;
-                        error = selected[2].validation.required;
-                    }
-                    break;
-                case 4:
-                    element = $(this);
-                    if(element.html() == 'Male voice') {
-                        selected[3].value = 'male';
-                    }else{
-                        selected[3].value = 'female';
-                    }
-                    number = 4;
-                    break;
-                case 5:
-                    number = 5;
-
-                   /* if(!selected[4].value){
-                        element = null;
-                        isValid = false;
-                        error = selected[4].validation.required;
-                    }else {
-                        number = 5;
-                    }*/
-                    break;
-                case 6:
-                    element = $('label[for="file-upload-private"]');
-                    if (!selected[5].value) {
-                        isValid = false;
-                        error = selected[5].validation.required;
-                    } else {
-                        number = 6;
-                    }
-                    break;
-                case 7:
-                    element = $('input[data-number="6"]');
-                    if (element.val() == '' || element.val().length > 50) {
-                        isValid = false;
-                        error = selected[6].validation.length;
-                    } else {
-                        selected[6].value = element.val();
-                        number = 7;
-                    }
-                    break;
-                case 8:
-                    element = $('input[data-number="7"]');
-                    if (element.val() == '') {
-                        isValid = false;
-                        error = selected[7].validation.required;
-                    } else {
-                        selected[7].value = element.val();
-                        number = 8;
-                    }
-                    break;
-                case 9:
-                    selected = commercialUse;
-                    selected[0].value = 'commercial';
-                    number = 1;
-                    break;
-                case 10:
-                    if(!selected[1].value){
-                        element = null;
-                        isValid = false;
-                        error = selected[1].validation.required;
-                    }else {
-                        number = 2;
-                    }
-                    break;
-                case 11:
-                    element = $('textarea[data-number="2"]');
-                    if (element.val() != '') {
-                        selected[2].value = element.val();
-                        number = 3;
-                    } else {
-                        isValid = false;
-                        error = selected[2].validation.required;
-                    }
-                    break;
-                case 12:
-                    element = $(this);
-                    if(element.html() == 'Male voice') {
-                        selected[3].value = 'male';
-                    }else{
-                        selected[3].value = 'female';
-                    }
-                    number = 4;
-                    break;
-                case 13:
-                    if(!selected[4].value){
+            switch($(this).data('slide-to')) {
+              case 0:
+                number = 0;
+                break;
+              case 1:
+                selected = privateUse;
+                selected[0].value = 'private';
+                number = 1;
+                break;
+              case 2:
+                if(!selected[1].value) {
+                  element = null;
+                  isValid = false;
+                  error = selected[1].validation.required;
+                } else {
+                  number = 2;
+                }
+                break;
+              case 3:
+                element = $('textarea[data-number="2"]');
+                if(element.val() != '') {
+                  selected[2].value = element.val();
+                  number = 3;
+                } else {
+                  isValid = false;
+                  error = selected[2].validation.required;
+                }
+                break;
+              case 4:
+                element = $(this);
+                if(element.html() == 'Male voice') {
+                  selected[3].value = 'male';
+                } else {
+                  selected[3].value = 'female';
+                }
+                number = 4;
+                break;
+              case 5:
+                 if(!selected[4].value || !selected[4].value.length){
                         element = null;
                         isValid = false;
                         error = selected[4].validation.required;
                     }else {
                         number = 5;
                     }
-                    break;
-                case 14:
-                    element = $('label[for="file-upload-commercial"]');
-                    if (!selected[5].value) {
-                        isValid = false;
-                        error = selected[5].validation.required;
-                    } else {
-                        number = 6;
-                    }
-                    break;
-                case 15:
-                    element = $('input[data-number="6"]');
-                    if (element.val() == '' || element.val().length > 50) {
-                        isValid = false;
-                        error = selected[6].validation.length;
-                    } else {
-                        selected[6].value = element.val();
-                        number = 7;
-                    }
-                    break;
-                case 16:
-                    element = $('input[data-number="7"]');
-                    if (element.val() == '') {
-                        isValid = false;
-                        error = selected[7].validation.required;
-                    } else {
-                        selected[7].value = element.val();
-                        number = 8;
-                    }
-                    break;
-                case 17:
-                    if ($(this).data('slide-number') == 8) {
-                        element = $('input[data-number="8"]');
-                    } else {
-                        element = $('input[data-number="16"]');
-                    }
-                    if (element.val() != '') {
-                        if(element.val() < 0 || element.val() >999999){
-                            isValid = false;
-                            error = selected[8].validation.range;
-                        }
-                        selected[8].value = element.val();
-                    } else {
-                        isValid = false;
-                        error = selected[8].validation.required;
-                    }
-                    break;
+                break;
+              case 6:
+                element = $('label[for="file-upload-private"]');
+                if(!selected[5].value) {
+                  isValid = false;
+                  error = selected[5].validation.required;
+                } else {
+                  number = 6;
+                }
+                break;
+              case 7:
+                element = $('input[data-number="6"]');
+                if(element.val() == '' || element.val().length > 50) {
+                  isValid = false;
+                  error = selected[6].validation.length;
+                } else {
+                  selected[6].value = element.val();
+                  number = 7;
+                }
+                break;
+              case 8:
+                element = $('input[data-number="7"]');
+                if(element.val() == '') {
+                  isValid = false;
+                  error = selected[7].validation.required;
+                } else {
+                  selected[7].value = element.val();
+                  number = 8;
+                }
+                break;
+              case 9:
+                selected = commercialUse;
+                selected[0].value = 'commercial';
+                number = 1;
+                break;
+              case 10:
+                if(!selected[1].value) {
+                  element = null;
+                  isValid = false;
+                  error = selected[1].validation.required;
+                } else {
+                  number = 2;
+                }
+                break;
+              case 11:
+                element = $('textarea[data-number="10"]');
+                if(element.val() != '') {
+                  selected[2].value = element.val();
+                  number = 3;
+                } else {
+                  isValid = false;
+                  error = selected[2].validation.required;
+                }
+                break;
+              case 12:
+                element = $(this);
+                if(element.html() == 'Male voice') {
+                  selected[3].value = 'male';
+                } else {
+                  selected[3].value = 'female';
+                }
+                number = 4;
+                break;
+              case 13:
+                if(!selected[4].value || !selected[4].value.length){
+                  element = null;
+                  isValid = false;
+                  error = selected[4].validation.required;
+                }else {
+                  number = 5;
+                }
+                break;
+              case 14:
+                element = $('label[for="file-upload-commercial"]');
+                if(!selected[5].value) {
+                  isValid = false;
+                  error = selected[5].validation.required;
+                } else {
+                  number = 6;
+                }
+                break;
+              case 15:
+                element = $('input[data-number="14"]');
+                if(element.val() == '' || element.val().length > 50) {
+                  isValid = false;
+                  error = selected[6].validation.length;
+                } else {
+                  selected[6].value = element.val();
+                  number = 7;
+                }
+                break;
+              case 16:
+                element = $('input[data-number="15"]');
+                if(element.val() == '') {
+                  isValid = false;
+                  error = selected[7].validation.required;
+                } else {
+                  selected[7].value = element.val();
+                  number = 8;
+                }
+                break;
+              case 17:
+                if($(this).data('slide-number') == 8) {
+                  element = $('input[data-number="8"]');
+                } else {
+                  element = $('input[data-number="16"]');
+                }
+                if(element.val() != '') {
+                  if(element.val() < 0 || element.val() > 999999) {
+                    isValid = false;
+                    error = selected[8].validation.range;
+                  }
+                  selected[8].value = element.val();
+                } else {
+                  isValid = false;
+                  error = selected[8].validation.required;
+                }
+                break;
             }
             if(isValid) {
-                if(element) {
-                    element.removeClass('error');
-                }
+              if(element) {
+                element.removeClass('error');
+              }
 
-                var selector = 'p[data-number="' + $(this).data('slide-number') + '"]'
-                $(selector).addClass('hidden');
+              var selector = 'p[data-number="' + $(this).data('slide-number') + '"]'
+              $(selector).addClass('hidden');
 
-                if($(this).data('slide-to') == 17){
-                    setData(selected);
-                    $('.bullets').hide();
-                }
-//                slide($(this));
-                k.show(event.target.getAttribute('index'));
-                var bullets = document.body.querySelectorAll( '.bullets li' );
-                for( var i = 0, len = bullets.length; i < len; i++ ) {
-                    bullets[i].className = (i == number ? 'active' : '');
-                }
-                changeCounter(number+1);
-            }else{
-                if(element) {
-                    element.addClass('error');
-                }
-                var selector = 'p[data-number="' + $(this).data('slide-number')+'"]';
-                $(selector).html(error);
-                $(selector).removeClass('hidden');
+              if($(this).data('slide-to') == 17) {
+                setData(selected);
+                $('.bullets').hide();
+                $('.nav-counter').hide();
+                inReview = true;
+              }
+              //                slide($(this));
+              k.show(event.target.getAttribute('index'));
+              var bullets = document.body.querySelectorAll('.bullets li');
+              for(var i = 0, len = bullets.length; i < len; i++) {
+                bullets[i].className = (i == number ? 'active' : '');
+              }
+              changeCounter(number + 1);
+            } else {
+              if(element) {
+                element.addClass('error');
+              }
+              var selector = 'p[data-number="' + $(this).data('slide-number') + '"]';
+              $(selector).html(error);
+              $(selector).removeClass('hidden');
             }
+          }
         });
 
         function setData(data) {
-            debugger;
             var selector = '';
-            console.log(data);
             if(data[0].value == 'private'){
-                console.log($('#elem_0_p'));
                 $('#elem_0_p').prop('checked',true);
             }else{
                 $('#elem_0_c').prop('checked',true);
@@ -1635,6 +1643,8 @@
                     }else{
                         $('#elem_3_f').prop('checked',true);
                     }
+                }else if(data[i].number == 4){
+                  drowChosenInstruments('.choosen-content-review');
                 }else if(data[i].number == 5){
                     element.find('label').text(data[i].value)
                 }else {
@@ -1684,28 +1694,6 @@
             $(".main-modal").hide();
         });
 
-
-
-
-        //choose instrument
-        $('.instrument-item').click(function () {
-            debugger;
-            if(!selected[1].value) {
-                selected[1].value = [];
-            }
-
-            if(selected[1].value.length >= 0 && selected[1].value.length <= 5) {
-                selected[1].value.push({
-                    "name": $(this).find('h3').html(),
-                    "image": $(this).find('img').attr('src')
-                });
-            }
-
-            //todo fill instruments
-
-            $(".choose-instruments-types-modal").hide(200);
-        });
-
         $('input[type="file"]').on('change', function(){
             debugger;
             var value = $(this).val().split('\\').pop();
@@ -1718,6 +1706,7 @@
 
         //open genre modal
         $(".genre-choose").click(function () {
+            $('#genre-filter').val('');
             drowGenreContent(genreArray);
             $(".genre-modal").show(200);
         });
@@ -1787,48 +1776,147 @@
         });
 
         //open instrument modal
-        $(".instrument-choose").click(function () {
-            debugger;
-            drowInstrumentContent(instrumentsArray);
-            $(".choose-instruments-types-modal").show(200);
-           /* if(!selected[1].value || selected[1].value.length < 5) {
-                drowInstrumentContent(instrumentsArray);
-                $(".choose-instruments-types-modal").show(200);
-            }else{
-                var selector = 'p[data-number=""]';
-                console.log(selected[1].validation.limit);
-                $(selector).text(selected[1].validation.limit);
-                $(selector).removeClass('hidden');
-            }*/
-        });
+        $(document).on('click','.instrument-choose',function() {
+          $('#instrument-filter').val('');
+        drowInstrumentContent(instrumentsArray);
+        $(".choose-instruments-types-modal").show(200);
 
-        //drow instrument modal content
-        function drowInstrumentContent(instruments){
-            var content = '<div class="row">';
-            var needClose = true;
-            for(var i=0;i<instruments.length;i++){
-                content += ' <div class="col-md-3 col-sm-4  col-xs-6 instrument-image-and-name">'+
-                    '<div class="instrument-image instrument-item">'+
-                    '<div class="csscheckbox"><span>&#10004;</span></div>'+
-                    '<img src="' + instruments[i].src +'" alt="">' +
-                    '<div class="instruments-name">'+
-                    '<h3>' + instruments[i].name + '</h3></div></div></div>';
+      });
 
-                if(i %  4 == 3){
-                    content +="</div>";
-                    needClose = false;
-
-                    if(i != instruments.length -1){
-                        content += '<div class="row">';
-                        needClose = true;
-                    }
-                }
+       //drow instrument modal content
+       function drowInstrumentContent(instruments) {
+        var content = '<div class="row">';
+        var needClose = true;
+        for(var i = 0; i < instruments.length; i++) {
+          var hidden = true;
+          var dataId = instruments[i].id;
+          if(selected[4].value && selected[4].value.length){
+            var filtered = selected[4].value.filter(function(t) {
+              return t.id == dataId;
+            }, dataId);
+            if(filtered.length){
+              hidden = false;
             }
-            if(needClose){
-                content +="</div>";
+          }
+
+          content += ' <div class="col-md-3 col-sm-4  col-xs-6 instrument-image-and-name">' +
+            '<div class="instrument-image instrument-item" data-id="' + instruments[i].id + '">' +
+            '<div class="csscheckbox ' + (hidden ? 'hidden' : '') + '"><span>&#10004;</span></div>' +
+            '<img src="' + instruments[i].src + '" alt="">' +
+            '<div class="instruments-name">' +
+            '<h3>' + instruments[i].name + '</h3></div></div></div>';
+
+          if(i % 4 == 3) {
+            content += "</div>";
+            needClose = false;
+
+            if(i != instruments.length - 1) {
+              content += '<div class="row">';
+              needClose = true;
             }
-            $('#instrument-content').html(content);
+          }
         }
+        if(needClose) {
+          content += "</div>";
+        }
+        $('#instrument-content').html(content);
+      }
+
+       //choose instrument
+       $(document).on('click', '.instrument-item', function() {
+        debugger;
+        var dataId = $(this).data('id');
+        if(!selected[4].value) {
+          selected[4].value = [];
+        }
+
+        if(selected[4].value.length >= 0) {
+          var filtered = selected[4].value.filter(function(t) {
+            return t.id == dataId;
+          }, dataId);
+          if(filtered.length) {
+            $(this).find('.csscheckbox').addClass('hidden');
+            selected[4].value.splice(selected[4].value.indexOf(filtered[0]),1);
+            $('.choose-instruments-types-modal').find('p[data-number="1"]').addClass('hidden');
+          } else {
+            if(selected[4].value.length < 5) {
+              $(this).find('.csscheckbox').removeClass('hidden');
+              selected[4].value.push({
+                "id": dataId,
+                "name": $(this).find('h3').html(),
+                "image": $(this).find('img').attr('src')
+              });
+            }else{
+              $('.choose-instruments-types-modal').find('p[data-number="4"]').removeClass('hidden');
+              $('.choose-instruments-types-modal').find('p[data-number="4"]').html(selected[4].validation.limit);
+            }
+          }
+        }
+
+      });
+
+
+       $('.done').on('click',function() {
+        var selector = '';
+        if(inReview){
+          selector = '.choosen-content-review';
+        }else {
+          if(selected[0].value == 'private') {
+            selector = '.choosen-content-private';
+          } else {
+            selector = '.choosen-content-commercial';
+          }
+        }
+
+        drowChosenInstruments(selector);
+
+      })
+
+       //show selected instruments
+       function drowChosenInstruments(selector) {
+        var count = selected[4].value.length;
+        var col = '';
+        switch(count){
+          case 1:
+          case 2:
+          case 3:
+            col = 'col-md-4';
+            break;
+          case 4:
+            col = 'col-md-3';
+            break;
+          case 5:
+            col = 'col-md-2';
+            break;
+        }
+        var html = '';
+        if(selected[4].value.length) {
+          for(var i = 0; i < selected[4].value.length; i++) {
+            html += ' <div class="' + col + '  col-sm-4 groups-of-genre instrument-choose">' +
+              '                        <div class="instrument-image">' +
+              '                            <img src="' + selected[4].value[i].image + '" alt="">' +
+              '                        </div>\n' +
+              '                        <p data-number="1" class="hidden error-message"></p>' +
+              '                        <div class="instrument-name">' +
+              '                            <h3>' + selected[4].value[i].name + '</h3>' +
+              '                        </div>' +
+              '                    </div>'
+          }
+        }else{
+          html = '<div class="col-md-4  col-sm-4 groups-of-genre instrument-choose">' +
+            '                        <div class="instrument-image">\n' +
+            '                            <img src="images/instrumentals/instr.jpg" alt="">' +
+            '                        </div>\n' +
+            '                        <p data-number="1" class="hidden error-message"></p>' +
+            '                        <div class="instrument-name">' +
+            '                            <h3>Choose Instrument</h3>' +
+            '                        </div>' +
+            '                    </div>'
+        }
+
+        $(selector).html(html);
+        $('.choose-instruments-types-modal').hide(200);
+      }
 
         //handle instrument filter change
         $('#instrument-filter').on('change',function () {
@@ -1844,6 +1932,13 @@
                 drowInstrumentContent(instrumentsArray)
             }
         });
+
+
+      window.addEventListener("keydown", function(e) {
+        if(e.keyCode == 37 || e.keyCode == 39){
+          e.preventDefault();
+        }
+      }, false);
     });
 
 

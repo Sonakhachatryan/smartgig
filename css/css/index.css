@@ -1,8 +1,13 @@
 html, body {
   position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background: #1b1e21;
   /* header */
   /* modals style */ }
   html .hidden, body .hidden {
@@ -27,7 +32,7 @@ html, body {
         font-weight: 700;
         text-align: center;
         border-radius: 1px;
-        width: 260px;
+        width: 300px;
         background-color: rgba(255, 255, 255, 0);
         -webkit-box-shadow: 1px 2px 6px #ffffff;
         box-shadow: 1px 2px 6px #ffffff;
@@ -627,24 +632,6 @@ html, body {
     -webkit-appearance: none; }
   html .nav-top, body .nav-top {
     background-color: #171a1d !important; }
-    html .nav-top .navbar-toggler, body .nav-top .navbar-toggler {
-      position: relative;
-      float: right;
-      padding: 5px 10px;
-      margin-top: 8px;
-      margin-right: 15px;
-      margin-bottom: 8px;
-      background-color: transparent;
-      background-image: none;
-      border: 2px solid #8DB835;
-      border-radius: 5px; }
-      html .nav-top .navbar-toggler .icon-bar, body .nav-top .navbar-toggler .icon-bar {
-        display: block;
-        width: 22px;
-        height: 2px;
-        border-radius: 1px;
-        background: #8DB835;
-        margin: 5px; }
     html .nav-top a, body .nav-top a {
       margin-left: 25px; }
       html .nav-top a > :first-child, body .nav-top a > :first-child {
@@ -664,31 +651,15 @@ html, body {
         padding-left: 25px;
         font-size: 18px;
         text-shadow: 1px 2px 7px black; }
-    html .nav-top .nav-counter, body .nav-top .nav-counter {
-      padding-top: 21px; }
-      html .nav-top .nav-counter .counter, body .nav-top .nav-counter .counter {
-        position: relative; }
-        html .nav-top .nav-counter .counter .page-indicator, body .nav-top .nav-counter .counter .page-indicator {
-          font-family: 'Arial Fett', 'Arial Standard', 'Arial';
-          font-weight: 700;
-          font-style: normal;
-          color: white;
-          padding: 0 0 0 10px;
-          font-size: 25px;
-          margin-right: 15px;
-          width: 50px;
-          height: 50px; }
-        html .nav-top .nav-counter .counter .total-counter, body .nav-top .nav-counter .counter .total-counter {
-          font-family: 'Arial Fett', 'Arial Standard', 'Arial';
-          font-weight: 700;
-          font-style: normal;
-          color: white;
-          position: absolute;
-          top: -50px;
-          left: 20px;
-          font-size: 25px;
-          width: 50px;
-          height: auto; }
+    html .nav-top .page-indicator, body .nav-top .page-indicator {
+      font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+      font-weight: 700;
+      font-style: normal;
+      color: white;
+      padding: 0 0 0 10px;
+      font-size: 25px;
+      text-shadow: 1px 2px 7px black;
+      margin-right: 105px; }
     html .nav-top .main-menu li, body .nav-top .main-menu li {
       padding: 0 0 0 25px;
       font-size: 25px;
@@ -697,14 +668,9 @@ html, body {
         font-family: 'Arial Fett', 'Arial Standard', 'Arial';
         font-weight: 700;
         font-style: normal;
-        color: white;
-        margin: 0px auto; }
-        html .nav-top .main-menu li .item-link:focus, body .nav-top .main-menu li .item-link:focus {
-          color: white  !important; }
+        color: white; }
       html .nav-top .main-menu li:hover a, body .nav-top .main-menu li:hover a {
         color: #8DB835 !important; }
-      html .nav-top .main-menu li:active a, body .nav-top .main-menu li:active a {
-        color: white  !important; }
     html .nav-top .main-menu .active a, body .nav-top .main-menu .active a {
       color: #8DB835 !important; }
     html .nav-top .collapse ul li a, body .nav-top .collapse ul li a {
@@ -793,134 +759,123 @@ html, body {
     bottom: 0;
     background-color: rgba(23, 26, 29, 0.2);
     overflow-y: scroll; }
-    html .choose-modals .singing_choose_genre, body .choose-modals .singing_choose_genre {
-      height: 100%; }
-      html .choose-modals .singing_choose_genre .choose-your-genre, body .choose-modals .singing_choose_genre .choose-your-genre {
-        padding-top: 30px;
-        background-color: black;
+    html .choose-modals .singing_choose_genre .choose-your-genre, body .choose-modals .singing_choose_genre .choose-your-genre {
+      padding-top: 30px;
+      background-color: black;
+      position: relative; }
+      html .choose-modals .singing_choose_genre .choose-your-genre .first-paragrafh, body .choose-modals .singing_choose_genre .choose-your-genre .first-paragrafh {
+        display: inline-block; }
+      html .choose-modals .singing_choose_genre .choose-your-genre button, body .choose-modals .singing_choose_genre .choose-your-genre button {
+        display: inline-block;
+        text-transform: uppercase;
         position: relative;
-        min-height: 100%;
-        width: 100%; }
-        html .choose-modals .singing_choose_genre .choose-your-genre .error-message, body .choose-modals .singing_choose_genre .choose-your-genre .error-message {
-          color: #e74c3c !important;
-          text-align: center;
-          font-size: 17px;
-          font-weight: 600;
-          margin: 0 auto;
-          text-shadow: 1px 2px 7px black; }
-        html .choose-modals .singing_choose_genre .choose-your-genre .first-paragrafh, body .choose-modals .singing_choose_genre .choose-your-genre .first-paragrafh {
-          display: inline-block; }
-        html .choose-modals .singing_choose_genre .choose-your-genre button, body .choose-modals .singing_choose_genre .choose-your-genre button {
-          display: inline-block;
-          text-transform: uppercase;
-          position: relative;
-          width: 13%;
-          top: -62px;
+        width: 13%;
+        top: -62px;
+        cursor: pointer;
+        color: #8c8c8c;
+        background: transparent;
+        border: 3px solid rgba(64, 64, 64, 0.5);
+        text-align: center;
+        font-size: 1.5vw;
+        font-weight: bold;
+        padding: 0.5vw 0;
+        text-shadow: 1px 1px rgba(13, 12, 12, 0.3), 2px 2px rgba(13, 12, 12, 0.3);
+        overflow: hidden;
+        -webkit-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+        html .choose-modals .singing_choose_genre .choose-your-genre button:hover, body .choose-modals .singing_choose_genre .choose-your-genre button:hover {
+          color: rgba(38, 38, 38, 0.5);
+          background: white; }
+        html .choose-modals .singing_choose_genre .choose-your-genre button:focus, body .choose-modals .singing_choose_genre .choose-your-genre button:focus {
+          color: #0d0d0d; }
+      html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name {
+        position: relative;
+        padding: 20px;
+        -webkit-transition: 3000ms;
+        -o-transition: 3000ms;
+        transition: 3000ms;
+        text-align: center; }
+        html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image {
           cursor: pointer;
-          color: #8c8c8c;
-          background: transparent;
-          border: 3px solid rgba(64, 64, 64, 0.5);
-          text-align: center;
-          font-size: 1.5vw;
-          font-weight: bold;
-          padding: 0.5vw 0;
-          text-shadow: 1px 1px rgba(13, 12, 12, 0.3), 2px 2px rgba(13, 12, 12, 0.3);
           overflow: hidden;
-          -webkit-transition: all 0.3s ease-in;
-          -o-transition: all 0.3s ease-in;
-          transition: all 0.3s ease-in; }
-          html .choose-modals .singing_choose_genre .choose-your-genre button:hover, body .choose-modals .singing_choose_genre .choose-your-genre button:hover {
-            color: rgba(38, 38, 38, 0.5);
-            background: white; }
-          html .choose-modals .singing_choose_genre .choose-your-genre button:focus, body .choose-modals .singing_choose_genre .choose-your-genre button:focus {
-            color: #0d0d0d; }
-        html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name {
-          position: relative;
-          padding: 20px;
-          -webkit-transition: 3000ms;
-          -o-transition: 3000ms;
-          transition: 3000ms;
-          text-align: center; }
-          html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image {
-            cursor: pointer;
-            overflow: hidden;
-            height: 220px;
-            width: 100%;
-            -webkit-box-shadow: 4px 0px 4px darkslategrey;
-            box-shadow: 4px 0px 4px darkslategrey;
-            border-radius: 2px; }
-            html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox {
+          height: 220px;
+          width: 100%;
+          -webkit-box-shadow: 4px 0px 4px darkslategrey;
+          box-shadow: 4px 0px 4px darkslategrey;
+          border-radius: 2px; }
+          html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox {
+            width: 40px;
+            height: 40px;
+            background: #73a427;
+            color: #fff;
+            line-height: 36px;
+            position: absolute; }
+            html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox span, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox span, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox span, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox span {
+              float: right;
+              width: 43px;
+              text-align: center; }
+            html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox div, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox div, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox div, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox div {
+              background: #111;
               width: 40px;
-              height: 40px;
-              background: #73a427;
-              color: #fff;
-              line-height: 36px;
-              position: absolute; }
-              html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox span, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox span, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox span, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox span {
-                float: right;
-                width: 43px;
-                text-align: center; }
-              html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox div, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox div, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox div, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox div {
-                background: #111;
-                width: 40px;
-                height: 36px;
-                position: absolute;
-                top: 0;
-                left: 40px;
-                -moz-transition: left 200ms ease-in;
-                -webkit-transition: left 200ms ease-in;
-                -o-transition: left 200ms ease-in;
-                transition: left 200ms ease-in; }
-            html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image img, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image img, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image img, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image img {
-              width: 100%;
-              height: 100%; }
-            html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .instruments-name, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .instruments-name {
-              cursor: pointer;
-              display: block;
-              position: -webkit-sticky;
-              position: sticky;
-              bottom: -155px;
-              height: 100%;
-              border-radius: 42px;
-              -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-              color: white;
-              background-color: rgba(0, 0, 0, 0.3); }
-            html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image:hover .instruments-name, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image:hover .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image:hover .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image:hover .instruments-name {
-              cursor: pointer;
-              bottom: -90px;
-              display: block;
-              -webkit-transition: 400ms;
-              -o-transition: 400ms;
-              transition: 400ms; }
-        html .choose-modals .singing_choose_genre .choose-your-genre form input, body .choose-modals .singing_choose_genre .choose-your-genre form input {
-          background-color: rgba(255, 255, 255, 0.2);
-          border-top: 2px solid black;
-          text-shadow: 1px 2px 7px black;
-          font-size: 24px;
+              height: 36px;
+              position: absolute;
+              top: 0;
+              left: 40px;
+              -moz-transition: left 200ms ease-in;
+              -webkit-transition: left 200ms ease-in;
+              -o-transition: left 200ms ease-in;
+              transition: left 200ms ease-in; }
+          html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image img, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image img, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image img, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image img {
+            width: 100%;
+            height: 100%; }
+          html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .instruments-name, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .instruments-name {
+            cursor: pointer;
+            display: block;
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: -230px;
+            height: 100%;
+            border-radius: 42px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3); }
+          html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image:hover .instruments-name, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image:hover .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image:hover .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image:hover .instruments-name {
+            cursor: pointer;
+            bottom: -145px;
+            display: block;
+            -webkit-transition: 400ms;
+            -o-transition: 400ms;
+            transition: 400ms; }
+      html .choose-modals .singing_choose_genre .choose-your-genre form input, body .choose-modals .singing_choose_genre .choose-your-genre form input {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-top: 2px solid black;
+        text-shadow: 1px 2px 7px black;
+        font-size: 23px;
+        font-weight: 400;
+        color: white;
+        display: block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        margin: 10px auto 10px;
+        padding: 10px 20px; }
+        html .choose-modals .singing_choose_genre .choose-your-genre form input:focus, body .choose-modals .singing_choose_genre .choose-your-genre form input:focus {
+          outline: none; }
+        html .choose-modals .singing_choose_genre .choose-your-genre form input::-webkit-input-placeholder, body .choose-modals .singing_choose_genre .choose-your-genre form input::-webkit-input-placeholder {
+          text-align: center;
+          text-shadow: 1px 1px 4px black;
+          font-size: 25px;
           font-weight: 400;
           color: white;
-          display: block;
-          height: 56px;
-          line-height: 50px;
-          position: relative;
-          margin: 10px auto 10px;
-          padding: 10px 20px; }
-          html .choose-modals .singing_choose_genre .choose-your-genre form input:focus, body .choose-modals .singing_choose_genre .choose-your-genre form input:focus {
-            outline: none; }
-          html .choose-modals .singing_choose_genre .choose-your-genre form input::-webkit-input-placeholder, body .choose-modals .singing_choose_genre .choose-your-genre form input::-webkit-input-placeholder {
-            text-align: center;
-            text-shadow: 1px 1px 4px black;
-            font-size: 19px;
-            font-weight: 400;
-            color: white;
-            margin: 10px 0 0 10px;
-            text-overflow: ellipsis; }
-          html .choose-modals .singing_choose_genre .choose-your-genre form input:focus::-webkit-input-placeholder, body .choose-modals .singing_choose_genre .choose-your-genre form input:focus::-webkit-input-placeholder {
-            opacity: 0;
-            -webkit-transition: opacity 0.3s ease;
-            -o-transition: opacity 0.3s ease;
-            transition: opacity 0.3s ease; }
+          margin: 10px 0 0 10px;
+          text-overflow: ellipsis; }
+        html .choose-modals .singing_choose_genre .choose-your-genre form input:focus::-webkit-input-placeholder, body .choose-modals .singing_choose_genre .choose-your-genre form input:focus::-webkit-input-placeholder {
+          opacity: 0;
+          -webkit-transition: opacity 0.3s ease;
+          -o-transition: opacity 0.3s ease;
+          transition: opacity 0.3s ease; }
 
 /* dots style */
 .kontext {
@@ -1150,17 +1105,18 @@ body .home {
   background-image: url("../images/bg/singing.jpeg");
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat; }
-  body .home .hidingScrollBar .header-top-area .home-page span {
+  background-repeat: no-repeat;
+  overflow: scroll; }
+  body .home .hidescrool .header-top-area .home-page span {
     font-family: 'Arial Fett', 'Arial Standard', 'Arial';
     font-weight: 600;
     font-style: normal;
     color: white;
     font-size: 28px;
     padding: 30px 0 10px 30px; }
-  body .home .hidingScrollBar .home-page-question {
+  body .home .hidescrool .home-page-question {
     padding-top: 70px; }
-    body .home .hidingScrollBar .home-page-question h1 {
+    body .home .hidescrool .home-page-question h1 {
       font-family: 'Arial Fett', 'Arial Standard', 'Arial';
       font-weight: 600;
       font-style: normal;
@@ -1168,14 +1124,14 @@ body .home {
       text-align: center;
       font-size: 36px;
       padding: 80px 0 60px 0; }
-  body .home .hidingScrollBar .groups {
+  body .home .hidescrool .groups {
     position: relative;
     padding: 20px;
     -webkit-transition: 3000ms;
     -o-transition: 3000ms;
     transition: 3000ms;
     text-align: center; }
-    body .home .hidingScrollBar .groups .group-content {
+    body .home .hidescrool .groups .group-content {
       cursor: pointer;
       overflow: hidden;
       height: 500px;
@@ -1183,11 +1139,11 @@ body .home {
       -webkit-box-shadow: 4px 0 4px darkslategrey;
       box-shadow: 4px 0 4px darkslategrey;
       border-radius: 2px; }
-      body .home .hidingScrollBar .groups .group-content img {
+      body .home .hidescrool .groups .group-content img {
         width: 100%;
         height: 100%;
         border-radius: 5px; }
-      body .home .hidingScrollBar .groups .group-content .description {
+      body .home .hidescrool .groups .group-content .description {
         cursor: pointer;
         display: block;
         position: -webkit-sticky;
@@ -1198,12 +1154,12 @@ body .home {
         box-sizing: border-box;
         color: white;
         background-color: rgba(0, 0, 0, 0.3); }
-        body .home .hidingScrollBar .groups .group-content .description a {
+        body .home .hidescrool .groups .group-content .description a {
           text-decoration: none;
           -webkit-text-emphasis: none;
           text-emphasis: none;
           text-align: center; }
-          body .home .hidingScrollBar .groups .group-content .description a p {
+          body .home .hidescrool .groups .group-content .description a h3 {
             font-weight: 300;
             color: #fff;
             display: block;
@@ -1212,13 +1168,13 @@ body .home {
             text-align: center;
             text-shadow: 2px 3px 7px black;
             padding: 95px 20px; }
-      body .home .hidingScrollBar .groups .group-content:hover .description {
+      body .home .hidescrool .groups .group-content:hover .description {
         bottom: 0;
         display: block;
         -webkit-transition: 400ms;
         -o-transition: 400ms;
         transition: 400ms; }
-    body .home .hidingScrollBar .groups .group-text a {
+    body .home .hidescrool .groups .group-text a {
       width: 200px;
       text-align: center;
       font-size: 30px;
@@ -1378,191 +1334,15 @@ body .complete_song-general-page {
   body .complete_song-general-page .songpiece_budget1 {
     background-image: url("../images/complete_song/photo8.jpeg"); }
 
-@media screen and (max-width: 768px) {
-  html, body {
-    overflow-y: scroll;
-    background-size: cover;
-    background-attachment: fixed; }
-    html .home, body .home {
-      overflow-y: scroll; }
-      html .home .hidingScrollBar .header .home-page, body .home .hidingScrollBar .header .home-page {
-        max-width: 100%; }
-        html .home .hidingScrollBar .header .home-page h1, body .home .hidingScrollBar .header .home-page h1 {
-          text-align: center; }
-        html .home .hidingScrollBar .header .home-page p, body .home .hidingScrollBar .header .home-page p {
-          text-align: center; }
-      html .home .hidingScrollBar .groups, body .home .hidingScrollBar .groups {
-        position: relative;
-        padding: 20px;
-        -webkit-transition: 3000ms;
-        -o-transition: 3000ms;
-        transition: 3000ms;
-        text-align: center; }
-        html .home .hidingScrollBar .groups .group-content, body .home .hidingScrollBar .groups .group-content {
-          cursor: pointer;
-          overflow: hidden;
-          height: 500px;
-          width: 100%;
-          -webkit-box-shadow: 4px 0 4px darkslategrey;
-          box-shadow: 4px 0 4px darkslategrey;
-          border-radius: 2px; }
-          html .home .hidingScrollBar .groups .group-content img, body .home .hidingScrollBar .groups .group-content img {
-            width: 100%;
-            height: 100%;
-            border-radius: 5px; }
-          html .home .hidingScrollBar .groups .group-content .description, body .home .hidingScrollBar .groups .group-content .description {
-            cursor: pointer;
-            display: block;
-            position: -webkit-sticky;
-            position: sticky;
-            bottom: 0px;
-            height: 100%;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.3); }
-            html .home .hidingScrollBar .groups .group-content .description a, body .home .hidingScrollBar .groups .group-content .description a {
-              text-decoration: none;
-              -webkit-text-emphasis: none;
-              text-emphasis: none;
-              text-align: center; }
-              html .home .hidingScrollBar .groups .group-content .description a h3, body .home .hidingScrollBar .groups .group-content .description a h3 {
-                font-weight: 300;
-                color: #fff;
-                display: block;
-                font-size: 30px;
-                text-decoration: none;
-                text-align: center;
-                text-shadow: 2px 3px 7px black;
-                padding: 95px 20px; }
-          html .home .hidingScrollBar .groups .group-content:hover .description, body .home .hidingScrollBar .groups .group-content:hover .description {
-            bottom: 0;
-            display: block;
-            -webkit-transition: 400ms;
-            -o-transition: 400ms;
-            transition: 400ms; }
-        html .home .hidingScrollBar .groups .group-text a, body .home .hidingScrollBar .groups .group-text a {
-          width: 200px;
-          text-align: center;
-          font-size: 30px;
-          text-shadow: 2px 3px 7px black;
-          color: white;
-          text-decoration: none;
-          cursor: pointer;
-          padding-top: 50px; }
-    html .main-general, body .main-general {
-      height: auto;
-      width: 100%;
-      background-size: cover; }
-      html .main-general .page-question, body .main-general .page-question {
-        padding-top: 100px; }
-      html .main-general .bullets, body .main-general .bullets {
-        top: 230px; }
-      html .main-general .button, body .main-general .button {
-        text-align: center; }
-        html .main-general .button .btn, body .main-general .button .btn {
-          display: inline-block;
-          height: 56px;
-          line-height: 50px;
-          position: relative;
-          border: 3px solid #8DB835;
-          padding: 0 1rem;
-          color: white;
-          font-size: 25px;
-          font-weight: 700;
-          text-align: center;
-          border-radius: 1px;
-          width: 88%;
-          background-color: rgba(255, 255, 255, 0);
-          -webkit-box-shadow: 1px 2px 6px #ffffff;
-          box-shadow: 1px 2px 6px #ffffff;
-          text-shadow: 1px 2px 7px black;
-          margin: 40px auto; }
-          html .main-general .button .btn:hover, body .main-general .button .btn:hover {
-            color: white;
-            background-color: #8DB835;
-            -webkit-transition: 2000ms;
-            -o-transition: 2000ms;
-            transition: 2000ms; }
-        html .main-general .button ul li input[type=radio]:checked ~ label, body .main-general .button ul li input[type=radio]:checked ~ label {
-          color: white;
-          background-color: #8DB835;
-          width: 100%;
-          margin: 20px auto; }
-        html .main-general .button ul li label, body .main-general .button ul li label {
-          cursor: pointer;
-          display: block;
-          height: 56px;
-          line-height: 50px;
-          border: 3px solid #8DB835;
-          padding: 0 1rem;
-          color: white;
-          font-size: 25px;
-          font-weight: 700;
-          text-align: center;
-          border-radius: 1px;
-          width: 100%;
-          background-color: rgba(255, 255, 255, 0);
-          -webkit-box-shadow: 1px 2px 6px #ffffff;
-          box-shadow: 1px 2px 6px #ffffff;
-          text-shadow: 1px 2px 7px black;
-          margin: 30px auto; }
-        html .main-general .button p, body .main-general .button p {
-          display: inline-block;
-          color: white;
-          font-size: 18px;
-          font-weight: 600;
-          text-align: center;
-          text-shadow: 1px 2px 8px black; }
-      html .main-general .final-submit-page .review-page, body .main-general .final-submit-page .review-page {
-        background-attachment: scroll; }
-    html .contact-modal .wrapper, html .main-modal .wrapper, body .contact-modal .wrapper, body .main-modal .wrapper {
-      width: auto;
-      height: auto; }
-      html .contact-modal .wrapper input, html .main-modal .wrapper input, body .contact-modal .wrapper input, body .main-modal .wrapper input {
-        margin: 0 auto;
-        width: 100%;
-        height: 30px; } }
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  html .home, body .home {
-    overflow-y: scroll; }
-    html .home .hidingScrollBar .header .home-page, body .home .hidingScrollBar .header .home-page {
-      max-width: 100%; }
-    html .home .hidingScrollBar .groups .group-content, body .home .hidingScrollBar .groups .group-content {
-      cursor: pointer;
-      overflow: hidden;
-      height: 500px;
-      width: 100%; }
-      html .home .hidingScrollBar .groups .group-content img, body .home .hidingScrollBar .groups .group-content img {
-        width: 100%;
-        height: 100%;
-        border-radius: 5px; }
-      html .home .hidingScrollBar .groups .group-content .description, body .home .hidingScrollBar .groups .group-content .description {
-        bottom: -545px; }
-      html .home .hidingScrollBar .groups .group-content:hover .description, body .home .hidingScrollBar .groups .group-content:hover .description {
-        bottom: 0;
-        display: block;
-        -webkit-transition: 400ms;
-        -o-transition: 400ms;
-        transition: 400ms; }
-    html .home .hidingScrollBar .groups .group-text a, body .home .hidingScrollBar .groups .group-text a {
-      width: 200px;
-      text-align: center;
-      font-size: 30px;
-      text-shadow: 2px 3px 7px black;
-      color: white;
-      text-decoration: none;
-      cursor: pointer;
-      padding-top: 50px; }
-  html .main-general, body .main-general {
+@media screen and (max-width: 1024px) {
+  body .songwriting_choose_usagetype .main-general, body .singing-general-page .main-general, body .instrumentals-general-page .main-general, body .complete_song-general-page .main-general {
     height: 100%;
     height: auto;
     width: 100%;
     background-size: cover; }
-    html .main-general .button, body .main-general .button {
+    body .songwriting_choose_usagetype .main-general .button, body .singing-general-page .main-general .button, body .instrumentals-general-page .main-general .button, body .complete_song-general-page .main-general .button {
       text-align: center; }
-      html .main-general .button .btn, body .main-general .button .btn {
+      body .songwriting_choose_usagetype .main-general .button .btn, body .singing-general-page .main-general .button .btn, body .instrumentals-general-page .main-general .button .btn, body .complete_song-general-page .main-general .button .btn {
         display: inline-block;
         height: 56px;
         line-height: 50px;
@@ -1580,180 +1360,114 @@ body .complete_song-general-page {
         box-shadow: 1px 2px 6px #ffffff;
         text-shadow: 1px 2px 7px black;
         margin: 20px auto; }
-        html .main-general .button .btn:hover, body .main-general .button .btn:hover {
+        body .songwriting_choose_usagetype .main-general .button .btn:hover, body .singing-general-page .main-general .button .btn:hover, body .instrumentals-general-page .main-general .button .btn:hover, body .complete_song-general-page .main-general .button .btn:hover {
           color: white;
           background-color: #8DB835;
           -webkit-transition: 2000ms;
           -o-transition: 2000ms;
           transition: 2000ms; }
-      html .main-general .button p, body .main-general .button p {
+      body .songwriting_choose_usagetype .main-general .button p, body .singing-general-page .main-general .button p, body .instrumentals-general-page .main-general .button p, body .complete_song-general-page .main-general .button p {
         display: inline-block;
         color: white;
         font-size: 18px;
         font-weight: 600;
         text-align: center;
-        text-shadow: 1px 2px 8px black; } }
-
-@media screen and (min-width: 1024px) {
-  body .home {
-    overflow-y: scroll; }
-    body .home .hidingScrollBar .header .home-page {
-      max-width: 100%; }
-      body .home .hidingScrollBar .header .home-page h1 {
-        text-align: center; }
-      body .home .hidingScrollBar .header .home-page p {
-        text-align: center; }
-    body .home .hidingScrollBar .groups {
-      position: relative;
-      padding: 20px;
-      -webkit-transition: 3000ms;
-      -o-transition: 3000ms;
-      transition: 3000ms;
+        text-shadow: 1px 2px 8px black; }
+  body .songwriting_choose_usagetype .home .header .home-page, body .singing-general-page .home .header .home-page, body .instrumentals-general-page .home .header .home-page, body .complete_song-general-page .home .header .home-page {
+    max-width: 100%; }
+    body .songwriting_choose_usagetype .home .header .home-page h1, body .singing-general-page .home .header .home-page h1, body .instrumentals-general-page .home .header .home-page h1, body .complete_song-general-page .home .header .home-page h1 {
       text-align: center; }
-      body .home .hidingScrollBar .groups .group-content {
-        cursor: pointer;
-        overflow: hidden;
-        height: 500px;
-        width: 100%;
-        -webkit-box-shadow: 4px 0 4px darkslategrey;
-        box-shadow: 4px 0 4px darkslategrey;
-        border-radius: 2px; }
-        body .home .hidingScrollBar .groups .group-content img {
-          width: 100%;
-          height: 100%;
-          border-radius: 5px; }
-        body .home .hidingScrollBar .groups .group-content .description {
-          cursor: pointer;
-          display: block;
-          position: -webkit-sticky;
-          position: sticky;
-          bottom: -545px;
-          height: 100%;
-          -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-          color: white;
-          background-color: rgba(0, 0, 0, 0.3); }
-          body .home .hidingScrollBar .groups .group-content .description a {
-            text-decoration: none;
-            -webkit-text-emphasis: none;
-            text-emphasis: none;
-            text-align: center; }
-            body .home .hidingScrollBar .groups .group-content .description a h3 {
-              font-weight: 300;
-              color: #fff;
-              display: block;
-              font-size: 30px;
-              text-decoration: none;
-              text-align: center;
-              text-shadow: 2px 3px 7px black;
-              padding: 95px 20px; }
-        body .home .hidingScrollBar .groups .group-content:hover .description {
-          bottom: 0;
-          display: block;
-          -webkit-transition: 400ms;
-          -o-transition: 400ms;
-          transition: 400ms; }
-      body .home .hidingScrollBar .groups .group-text a {
-        width: 200px;
-        text-align: center;
-        font-size: 30px;
-        text-shadow: 2px 3px 7px black;
-        color: white;
-        text-decoration: none;
-        cursor: pointer;
-        padding-top: 50px; } }
+    body .songwriting_choose_usagetype .home .header .home-page p, body .singing-general-page .home .header .home-page p, body .instrumentals-general-page .home .header .home-page p, body .complete_song-general-page .home .header .home-page p {
+      text-align: center; }
+  body .songwriting_choose_usagetype .home .groups, body .singing-general-page .home .groups, body .instrumentals-general-page .home .groups, body .complete_song-general-page .home .groups {
+    max-width: 95%; }
+    body .songwriting_choose_usagetype .home .groups .group-content, body .singing-general-page .home .groups .group-content, body .instrumentals-general-page .home .groups .group-content, body .complete_song-general-page .home .groups .group-content {
+      height: auto; }
+      body .songwriting_choose_usagetype .home .groups .group-content img, body .singing-general-page .home .groups .group-content img, body .instrumentals-general-page .home .groups .group-content img, body .complete_song-general-page .home .groups .group-content img {
+        width: auto;
+        height: auto;
+        margin-left: 18px; }
+      body .songwriting_choose_usagetype .home .groups .group-content .description, body .singing-general-page .home .groups .group-content .description, body .instrumentals-general-page .home .groups .group-content .description, body .complete_song-general-page .home .groups .group-content .description {
+        display: none; }
+        body .songwriting_choose_usagetype .home .groups .group-content .description a h3, body .singing-general-page .home .groups .group-content .description a h3, body .instrumentals-general-page .home .groups .group-content .description a h3, body .complete_song-general-page .home .groups .group-content .description a h3 {
+          display: none; }
+    body .songwriting_choose_usagetype .home .groups .group-text a, body .singing-general-page .home .groups .group-text a, body .instrumentals-general-page .home .groups .group-text a, body .complete_song-general-page .home .groups .group-text a {
+      margin: 0 auto;
+      text-align: center;
+      font-size: 30px;
+      display: block;
+      cursor: pointer; } }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  html, body {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-size: cover;
-    background-attachment: fixed; }
-    html .home, body .home {
-      overflow-y: scroll; }
-      html .home .hidingScrollBar .header .home-page, body .home .hidingScrollBar .header .home-page {
-        max-width: 100%; }
-        html .home .hidingScrollBar .header .home-page h1, body .home .hidingScrollBar .header .home-page h1 {
-          text-align: center; }
-        html .home .hidingScrollBar .header .home-page p, body .home .hidingScrollBar .header .home-page p {
-          text-align: center; }
-      html .home .hidingScrollBar .groups, body .home .hidingScrollBar .groups {
+@media screen and (max-width: 700px) {
+  body {
+    overflow-y: scroll;
+    background-size: cover; }
+    body .page-question {
+      padding-top: 40px; }
+    body .bullets {
+      top: 145px; }
+    body .button {
+      text-align: center; }
+      body .button .btn {
+        display: inline-block;
+        height: 56px;
+        line-height: 50px;
         position: relative;
-        padding: 20px; }
-        html .home .hidingScrollBar .groups .group-content, body .home .hidingScrollBar .groups .group-content {
-          cursor: pointer;
-          overflow: hidden;
-          height: 500px;
-          width: 100%; }
-          html .home .hidingScrollBar .groups .group-content img, body .home .hidingScrollBar .groups .group-content img {
-            width: 100%;
-            height: 100%;
-            border-radius: 5px; }
-          html .home .hidingScrollBar .groups .group-content .description, body .home .hidingScrollBar .groups .group-content .description {
-            display: block;
-            bottom: 0px;
-            height: 100%; }
-            html .home .hidingScrollBar .groups .group-content .description a p, body .home .hidingScrollBar .groups .group-content .description a p {
-              font-size: 22px; }
-          html .home .hidingScrollBar .groups .group-content:hover .description, body .home .hidingScrollBar .groups .group-content:hover .description {
-            bottom: 0;
-            display: block;
-            -webkit-transition: 400ms;
-            -o-transition: 400ms;
-            transition: 400ms; }
-        html .home .hidingScrollBar .groups .group-text a, body .home .hidingScrollBar .groups .group-text a {
-          width: 200px;
-          text-align: center;
-          font-size: 30px;
-          text-shadow: 2px 3px 7px black;
+        border: 3px solid #8DB835;
+        padding: 0 1rem;
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 1px;
+        width: 88%;
+        background-color: rgba(255, 255, 255, 0);
+        -webkit-box-shadow: 1px 2px 6px #ffffff;
+        box-shadow: 1px 2px 6px #ffffff;
+        text-shadow: 1px 2px 7px black;
+        margin: 40px auto; }
+        body .button .btn:hover {
           color: white;
-          text-decoration: none;
-          cursor: pointer;
-          padding-top: 50px; }
-    html .main-general, body .main-general {
-      background-size: cover; }
-      html .main-general .main-content, body .main-general .main-content {
-        margin: 100px auto;
-        text-align: center; }
-      html .main-general .button, body .main-general .button {
-        text-align: center; }
-        html .main-general .button .btn, body .main-general .button .btn {
-          display: inline-block;
-          height: 56px;
-          line-height: 50px;
-          position: relative;
-          border: 3px solid #8DB835;
-          padding: 0 1rem;
-          color: white;
-          font-size: 25px;
-          font-weight: 700;
-          text-align: center;
-          border-radius: 1px;
-          width: 88%;
-          background-color: rgba(255, 255, 255, 0);
-          -webkit-box-shadow: 1px 2px 6px #ffffff;
-          box-shadow: 1px 2px 6px #ffffff;
-          text-shadow: 1px 2px 7px black;
-          margin: 20px auto; }
-          html .main-general .button .btn:hover, body .main-general .button .btn:hover {
-            color: white;
-            background-color: #8DB835;
-            -webkit-transition: 2000ms;
-            -o-transition: 2000ms;
-            transition: 2000ms; }
-        html .main-general .button p, body .main-general .button p {
-          display: inline-block;
-          color: white;
-          font-size: 18px;
-          font-weight: 600;
-          text-align: center;
-          text-shadow: 1px 2px 8px black; }
-    html .bullets, body .bullets {
-      position: relative;
-      width: 100%;
-      top: 145px;
-      padding: 0;
-      margin: 0;
-      text-align: center; } }
+          background-color: #8DB835;
+          -webkit-transition: 2000ms;
+          -o-transition: 2000ms;
+          transition: 2000ms; }
+      body .button ul li input[type=radio]:checked ~ label {
+        color: white;
+        background-color: #8DB835;
+        width: 100%;
+        margin: 20px auto; }
+      body .button ul li label {
+        cursor: pointer;
+        display: block;
+        height: 56px;
+        line-height: 50px;
+        border: 3px solid #8DB835;
+        padding: 0 1rem;
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 1px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        -webkit-box-shadow: 1px 2px 6px #ffffff;
+        box-shadow: 1px 2px 6px #ffffff;
+        text-shadow: 1px 2px 7px black;
+        margin: 30px auto; }
+      body .button p {
+        display: inline-block;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 1px 2px 8px black; }
+    body .final-submit-page .review-page {
+      background-attachment: scroll; }
+    body .contact-modal .wrapper, body .main-modal .wrapper {
+      width: auto;
+      height: auto; }
+      body .contact-modal .wrapper input, body .main-modal .wrapper input {
+        margin: 0 auto;
+        width: 100%;
+        height: 30px; } }

@@ -1,4 +1,4 @@
-AOS.init();
+// AOS.init();
 
 window.kontext = function( container ) {
 
@@ -152,15 +152,58 @@ $('.close-modal').on('click',function () {
 });
 
 $('.nav-item').on('click',function (e) {
-    e.preventDefault();
-    var url = $(this).find('a').attr('href');
     console.log($('.main-modal .confirm'));
-    $('.main-modal .confirm').attr('data-page',url);
-    $('.main-modal').show(200);
+    if($('.main-modal .confirm').length) {
+      e.preventDefault();
+      var url = $(this).find('a').attr('href');
+      console.log($('.main-modal .confirm'));
+      $('.main-modal .confirm').attr('data-page', url);
+      $('.main-modal').show(200);
+    }
 });
 
 $('.confirm').on('click',function () {
     var url=$(this).data('page');
     document.location.href = url;
 });
+
+
+//counter slider js
+
+
+var countSlider = simpleslider.getSlider({
+  container: document.getElementById('countSlider'),
+  prop: 'top',
+  init: -612,
+  show: 0,
+  end: 1,
+  unit: 'px',
+  delay: 0.5,
+  paused: true
+});
+
+function slideCounter(number) {
+  var currentIndex = countSlider.currentIndex();
+  var selector;
+  var index = 0;
+  if(currentIndex == 0) {
+    index = 1;
+    selector = 'span[data-index="2"]';
+    $('span[data-index="2"]').css({"color": "#fff"});
+    $(selector).html(number);
+    countSlider.change(index);
+    $('span[data-index="1"]').css({"color": "#171a1d"});
+  } else {
+    selector = 'span[data-index="1"]';
+    $('span[data-index="1"]').css({"color": "#fff"});
+    $(selector).html(number);
+    countSlider.change(index);
+    $('span[data-index="2"]').css({"color": "#171a1d"});
+  }
+
+}
+
+function changeCounter(number) {
+  slideCounter(number);
+}
 
