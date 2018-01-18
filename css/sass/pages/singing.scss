@@ -1,0 +1,82 @@
+@mixin large-text{
+  font: {
+    family: 'Arial Fett', 'Arial Standard', 'Arial';
+    weight: 700;
+    style: normal;
+  };
+  color: white;
+}
+@mixin bg-properties {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+@mixin font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+}
+//$animate:all 0.2s ease-in-out;
+body {
+  .singing-general-page {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    .singing_choose_usagetype {
+      background-image: url("../images/singing/singer.jpg");
+    }
+    .singing_songtext {
+      background-image: url("../images/singing/singers.jpg");
+    }
+    .singing_genre {
+      background-image: url("../images/singing/singer2.jpg");
+    }
+    .singing_genre_ambiente_choosed {
+      background-image: url("../images/singing/singing.jpeg");
+    }
+    .singing_choose_voicetype {
+      background-image: url("../images/singing/singer3.jpg");
+    }
+    .singing_choose_melody {
+      background-image: url("../images/singing/ph.jpeg");
+    }
+    .singing_song_mood {
+      background-image: url("../images/singing/instr.jpg");
+    }
+    .singing_deadline {
+      background-image: url("../images/singing/photo.jpeg");
+    }
+    .singing_budget {
+      background-image: url("../images/singing/singer.jpeg");
+    }
+
+    .singing_use_songtext {
+      background-image: url("../images/singing/jj.jpeg");
+    }
+    .singing_use_genre {
+      background-image: url("../images/singing/hand-microphone-mic-hold.jpg");
+    }
+    .singing_use_genre_ambiente_choosed {
+      background-image: url("../images/singing/pexels-photo-167378.jpeg");
+    }
+    .singing_use_choose_voicetype {
+      background-image: url("../images/singing/pexels-photo-122635.jpeg");
+    }
+    .singing_use_choose_melody {
+      background-image: url("../images/singing/photo1.jpg");
+    }
+    .singing_use_song_mood {
+      background-image: url("../images/singing/pexe.jpeg")
+    }
+    .singing_use_deadline {
+      background-image: url("../images/singing/pexels-photo-127712.jpeg");
+    }
+    .singing_use_budget {
+      background-image: url("../images/singing/mic-music-sound-singer-675960.jpeg");
+    }
+
+    }
+  }
+
+

@@ -1,0 +1,65 @@
+@media screen and (max-width: 1024px) {
+  body .songwriting_choose_usagetype, body .singing-general-page, body .instrumentals-general-page {
+    padding-left: -15px;
+    padding-right: -15px; }
+    body .songwriting_choose_usagetype .main-general, body .singing-general-page .main-general, body .instrumentals-general-page .main-general {
+      height: auto;
+      width: 100%;
+      background-size: cover; }
+      body .songwriting_choose_usagetype .main-general .button, body .singing-general-page .main-general .button, body .instrumentals-general-page .main-general .button {
+        text-align: center; }
+        body .songwriting_choose_usagetype .main-general .button .btn, body .singing-general-page .main-general .button .btn, body .instrumentals-general-page .main-general .button .btn {
+          display: inline-block;
+          height: 56px;
+          line-height: 50px;
+          position: relative;
+          border: 3px solid #8DB835;
+          padding: 0 1rem;
+          color: white;
+          font-size: 25px;
+          font-weight: 700;
+          text-align: center;
+          border-radius: 1px;
+          width: 88%;
+          background-color: rgba(255, 255, 255, 0);
+          -webkit-box-shadow: 1px 2px 6px #ffffff;
+          box-shadow: 1px 2px 6px #ffffff;
+          text-shadow: 1px 2px 7px black;
+          margin: 20px auto; }
+          body .songwriting_choose_usagetype .main-general .button .btn:hover, body .singing-general-page .main-general .button .btn:hover, body .instrumentals-general-page .main-general .button .btn:hover {
+            color: white;
+            background-color: #8DB835;
+            -webkit-transition: 2000ms;
+            -o-transition: 2000ms;
+            transition: 2000ms; }
+        body .songwriting_choose_usagetype .main-general .button p, body .singing-general-page .main-general .button p, body .instrumentals-general-page .main-general .button p {
+          display: inline-block;
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          text-shadow: 1px 2px 8px black; }
+    body .songwriting_choose_usagetype .home .header .home-page, body .singing-general-page .home .header .home-page, body .instrumentals-general-page .home .header .home-page {
+      max-width: 100%; }
+      body .songwriting_choose_usagetype .home .header .home-page h1, body .singing-general-page .home .header .home-page h1, body .instrumentals-general-page .home .header .home-page h1 {
+        text-align: center; }
+      body .songwriting_choose_usagetype .home .header .home-page p, body .singing-general-page .home .header .home-page p, body .instrumentals-general-page .home .header .home-page p {
+        text-align: center; }
+    body .songwriting_choose_usagetype .home .groups, body .singing-general-page .home .groups, body .instrumentals-general-page .home .groups {
+      max-width: 95%; }
+      body .songwriting_choose_usagetype .home .groups .group-content, body .singing-general-page .home .groups .group-content, body .instrumentals-general-page .home .groups .group-content {
+        height: auto; }
+        body .songwriting_choose_usagetype .home .groups .group-content img, body .singing-general-page .home .groups .group-content img, body .instrumentals-general-page .home .groups .group-content img {
+          width: auto;
+          height: auto;
+          margin-left: 18px; }
+        body .songwriting_choose_usagetype .home .groups .group-content .description, body .singing-general-page .home .groups .group-content .description, body .instrumentals-general-page .home .groups .group-content .description {
+          display: none; }
+          body .songwriting_choose_usagetype .home .groups .group-content .description a h3, body .singing-general-page .home .groups .group-content .description a h3, body .instrumentals-general-page .home .groups .group-content .description a h3 {
+            display: none; }
+      body .songwriting_choose_usagetype .home .groups .group-text a, body .singing-general-page .home .groups .group-text a, body .instrumentals-general-page .home .groups .group-text a {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 30px;
+        display: block;
+        cursor: pointer; } }

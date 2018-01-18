@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Songwriting_choose_usagetype</title>
+    <meta charset="utf-8">
+    <meta name="Song project">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Song">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/aos.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light nav-top">
+    <a class="navbar-brand logo_slogan" href="index.html">
+        <p>Smartgig.ch</p>
+        <p>We bring your song idea to life</p>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto main-menu">
+            <li class="nav-item active">
+                <a class="nav-link item-link" href="songwriting.html" title="Songwriting">Songwriting</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link item-link" href="singing.html" title="Singing">Singing</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link item-link" href="instrumentals.html" title="Instrumentals">Instrumentals</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link item-link" href="complete_song.html" title="complete_song">Complete song</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+            <span class="page-indicator" id="countSlider">
+                <span data-index="1">1</span>
+                <span data-index="2"></span>
+                <span>/4</span>
+            </span>
+        </span>
+    </div>
+</nav>
+
+<div class="songwriting_choose_usagetype kontext">
+    <!--private use-->
+    <div class="main-general step-1 songwriting_choose_usagetype_private_use layer show" data-number="0">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <h1 class="hover hover-1">Will you use the voice for private or commercial use? * </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example"> ?</span>
+                        <p>Some musicians only allow private use. That's why it has to be defined.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" id="private-use-button" data-slide-number="0" data-slide-to="1" index="1">  For private use</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" id="commercial-use-button" data-slide-number="0" data-slide-to="4" index="4">  For commercial use</button>
+                    </div>
+                </div>
+            </div>
+            <div class="button-back-home">
+                <a href="index.html">
+                    <button type="button" class="btn btn-secondary back-to-home">Back to home</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-2  songwriting_songtext    layer" data-number="1">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>What's your story for the songtext? * </h1><span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                    </div>
+                    <div class="letters col-md-8 col-md-offset-2">
+                            <textarea name="songtext-story" class="story" cols="100" rows="6" data-number="1" placeholder="Write down your idea here." maxlength="2500" required></textarea>
+                        <p data-number="1" class="hidden error-message">Please fill this field</p>
+                        <p>0 / 2500 characters</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="1" data-slide-to="0" index="0">Back to Usage Type</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class=" btn" data-slide-number="1" data-slide-to="2" index="2">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3  songwriting_deadline    layer" data-number="2">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>Until when do you need the job to be done?* </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Let the musician know until when you need the service to be done.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-4 calendar">
+                        <h3>Deadline</h3>
+                        <input type="date" placeholder="Select Date" data-number="2">
+                        <p data-number="2" class="hidden error-message">Please fild this field</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="2" data-slide-to="1" index="1">Back to Usagetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="2" data-slide-to="3" index="3">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3  songwriting_budget      layer" data-number="3">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>What's your budget for the service?* </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Let the musician know what's your maximum budget that you're willing to pay for the
+                            service.</p>
+                    </div>
+                    <div class="col-md-6 calendar">
+                        <h3>Budget</h3>
+                        <input type="number" placeholder="CHF 50" data-number="3">
+                        <p data-number="3" class="hidden error-message">Please fild this field</p>
+                        <p>Average price for this service: CHF 60</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="3" data-slide-to="2" index="2">Back to Deadline</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="3" data-slide-to="7" index="7">Review data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--commercial use-->
+    <div class="main-general step-2  commercial_use-songtext layer" data-number="4">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>What's your story for the songtext? * </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2 letters ">
+                        <textarea name="songtext-story" id="story" class="story" cols="100" rows="6" data-number="4" placeholder="Write down your idea here." maxlength="2500" required ></textarea>
+                        <p data-number="4" class="hidden error-message">Please fill this field.</p>
+                        <p>0 / 2500 characters</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="4" data-slide-to="0" index="0">Back to Usagetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class=" btn" data-slide-number="4" data-slide-to="5" index="5">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3  commercial_use-deadline layer" data-number="5">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>Until when do you need the job to be done?*</h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Let the musician know until when you need the service to be done.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-4 calendar">
+                        <h3>Deadline</h3>
+                        <input type="date" placeholder="Select Date" data-number="5">
+                        <p data-number="5" class="hidden error-message">Please fild this field</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="5" data-slide-to="4" index="4">Back to Usagetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="5" data-slide-to="6" index="6">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3  commercial_use-budget   layer" data-number="6">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>What's your budget for the service?* </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Let the musician know what's your maximum budget that you're willing to pay for the service.</p>
+                    </div>
+                    <div class="col-md-6 calendar">
+                        <h3>Budget</h3>
+                        <input type="number" placeholder="CHF 50" data-number="6">
+                        <p data-number="6" class="hidden error-message">Please fild this field</p>
+                        <p>Average price for this service: CHF 60</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="6" data-slide-to="5" index="5">Back to Deadline </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="6" data-slide-to="7" index="7">Review data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="final-submit-page                            layer" data-number="7">
+        <div class="main-general review-page ">
+            <div class="container main-content">
+                <div class="row">
+                    <div class="col-md-12 for-submit">
+                        <h2>Please Review & Submit</h2>
+                    </div>
+                    <form class="preview-form" name="preview-form-name">
+                        <div class="button">
+                            <div class="row">
+                                <ul class="col-md-12">
+                                    <li class="col-md-6">
+                                        <input type="radio" id="elem_0_p" name="usage_type">
+                                        <label for="elem_0_p">For private use</label>
+                                        <div class="check"></div>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <input type="radio" id="elem_0_c" name="usage_type">
+                                        <label for="elem_0_c">For commercial use</label>
+                                        <div class="check"><div class="inside"></div></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="col-md-8 letters">
+                                <input type="hidden" name="isPrivate" id="private">
+                                <textarea name="about" id="elem_1" class="preview-story story"  cols="100" rows="6" data-number="10" placeholder="Write down your idea here." maxlength="2500" required ></textarea>
+                                <p data-number="10" class="hidden error-message"></p>
+                                <p>0 / 2500 characters</p>
+                            </div>
+                        <div class="col-md-6 calendar">
+                            <h3>Deadline</h3>
+                            <input name="doneDate" id="elem_2" placeholder="Select Date "type="date"  data-number="10"><br>
+                            <p data-number="10" class="hidden error-message"></p>
+                            <h3>Budget</h3>
+                            <input  name="cost"  id="elem_3" type="number" placeholder="CHF 50" data-number="10">
+                            <p data-number="10" class="hidden error-message"></p>
+                            <hr>
+                        </div>
+                        <div class="button-back-home">
+                            <button type="button" class="btn back-to-home" id="modal-open">Send Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="bullets"></ul>
+</div>
+
+<div class="dialog-modal main-modal modal-1 hidden">
+    <div class="wrapper"  id="contact-details-modal1">
+        <h3>If you leave this page you will lose all the data.Do you want to continue?</h3>
+        <div class="row">
+            <div class="col-md-6"><button type="button" class="submit close-modal">Cancel</button></div>
+            <div class="col-md-6"><button type="button" class="submit confirm">Continue</button></div>
+        </div>
+    </div>
+</div>
+<div class="dialog-modal contact-modal modal-1 hidden">
+    <div class="wrapper"  id="contact-details-modal">
+            <h3>Please provide your details to be in touch</h3>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <input type="text" placeholder="please write your name" class="input-name">
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <input type="text" placeholder="please write your email" class="input-email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"><button type="button" class="submit">CANCEL</button></div>
+            <div class="col-md-6"><button type="button" class="submit">SUBMIT</button></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/aos.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<script src="js/simpleSlider.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // Create a new instance of kontext
+        var k = kontext( document.querySelector( '.kontext' ) );
+        var bulletsContainer = document.body.querySelector( '.bullets' );
+        var privateUse = [
+            {
+                "index" : 0,
+                "number" : 0,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 1,
+                "number" : 1,
+
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 2,
+                "number" : 2,
+                "validation" : {
+                    "required" :"Please select the date.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 3,
+                "number" : 3,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                    "range" : "Number must be less then 99999 and greater then 0",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 7,
+                "number" : 4,
+                "value" : null,
+            },
+
+        ];
+        var commercialUse = [
+            {
+                "index" : 0,
+                "number" : 0,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 4,
+                "number" : 1,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 5,
+                "number" : 2,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 6,
+                "number" : 3,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                    "range" : "Number must be less then 99999 and greater then 0",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 7,
+                "number" : 5,
+                "value" : null,
+            }
+        ];
+        var selected = privateUse;
+
+        for( var i = 0, len = selected.length -1; i < len; i++ ) {
+            var bullet = document.createElement( 'li' );
+            bullet.className = i === 0 ? 'active' : '';
+            bullet.setAttribute( 'index', selected[i].index);
+            bullet.onclick = function( event ) {
+                if(canNavigate(event.target.getAttribute( 'index' ))) {
+                    var navigateTo = selected[event.target.getAttribute('index')];
+                    k.show(navigateTo.index);
+                    changeCounter(navigateTo.number + 1);
+                }
+            };
+            bullet.ontouchstart = function( event ) { k.show( event.target.getAttribute( 'index' ) ) };
+            bulletsContainer.appendChild( bullet );
+        }
+        // Update the bullets when the layer changes
+        k.changed.add( function( layer, index ) {
+            var bullets = document.body.querySelectorAll( '.bullets li' );
+            for( var i = 0, len = bullets.length; i < len; i++ ) {
+                bullets[i].className = i === index ? 'active' : '';
+            }
+        } );
+
+        document.addEventListener( 'keyup', function( event ) {
+            if( event.keyCode === 37 ) k.prev();
+            if( event.keyCode === 39 ) k.next();
+        }, false );
+
+        function canNavigate(index) {
+            var slide = selected[+index].value;
+            var slidePrev= '';
+            if(selected[+index - 1 ]) {
+                 slidePrev = selected[+index - 1].value;
+            }
+            if( slide || slidePrev)
+                return true;
+            return false;
+        }
+
+
+        //current step indicator
+        var filedStep = 0;
+        var data = {};
+        var countSlider = simpleslider.getSlider({
+            container: document.getElementById('countSlider'),
+            prop: 'top',
+            init: -612,
+            show: 0,
+            end: 1,
+            unit: 'px',
+            delay: 0.5,
+            paused:true
+        });
+//        countSlider.pause();
+        $('button').on('click', function (event) {
+            debugger;
+            var isValid = true;
+            var element = '';
+            var number = 0;
+            var error = "";
+            //validate input before going next page
+            switch ($(this).data('slide-to')) {
+                case 0:
+                    number = 0;
+                    break;
+                case 1:
+                    selected[0].value = 'private';
+                    number = 1;
+                    break;
+                case 2:
+                    element = $('textarea[data-number="1"]');
+                    if (element.val() != '') {
+                        selected[1].value = element.val();
+                        number = 2;
+                    } else {
+                        isValid = false;
+                        error = selected[1].validation.required;
+                    }
+                    break;
+                case 3:
+                    element = $('input[data-number="2"]');
+                    if (element.val() != '') {
+                        selected[2].value = element.val();
+                        number = 3;
+                    } else {
+                        isValid = false;
+                        error = selected[2].validation.required;
+                    }
+                    break;
+                case 4:
+                    selected = commercialUse;
+                    selected[0].value = 'commercial';
+                    number = 1;
+                    break;
+                case 5:
+                    element = $('textarea[data-number="4"]');
+                    if (element.val() != '') {
+                        selected[1].value = element.val();
+                        number = 2;
+                    } else {
+                        isValid = false;
+                        error = selected[1].validation.required;
+                    }
+                    break;
+                case 6:
+                    element = $('input[data-number="5"]');
+                    if (element.val() != '') {
+                        selected[2].value = element.val();
+                        number = 3;
+                    } else {
+                        isValid = false;
+                        error = selected[2].validation.required;
+                    }
+                    break;
+                case 7:
+                    if ($(this).data('slide-number') == 3) {
+                        element = $('input[data-number="3"]');
+                    } else {
+                        element = $('input[data-number="6"]');
+                    }
+                    if (element.val() != '') {
+                        if(element.val() < 0 || element.val() >999999){
+                            isValid = false;
+                            error = selected[3].validation.range;
+                        }
+                        selected[3].value = element.val();
+                    } else {
+                        isValid = false;
+                        error = selected[3].validation.required;
+                    }
+                    break;
+            }
+            if(isValid) {
+                if(element) {
+                    element.removeClass('error');
+                    var selector = 'p[data-number="' + $(this).data('slide-number') + '"]'
+                    $(selector).addClass('hidden');
+                }
+
+                if($(this).data('slide-to') == 7){
+                    setData(selected);
+                    $('.bullets').hide();
+                }
+//                slide($(this));
+                k.show(event.target.getAttribute('index'));
+                var bullets = document.body.querySelectorAll( '.bullets li' );
+                for( var i = 0, len = bullets.length; i < len; i++ ) {
+                    bullets[i].className = (i == number ? 'active' : '');
+                }
+                changeCounter(number+1);
+            }else{
+                element.addClass('error');
+                var selector = 'p[data-number="' + $(this).data('slide-number')+'"]';
+                $(selector).html(error);
+                $(selector).removeClass('hidden');
+            }
+        });
+
+        function setData(data) {
+            var selector = '';
+            if(data[0].value == 'private'){
+                selector = "#private-selected"
+            }else{
+                selector = "#commercial-selected"
+            }
+            $(selector).addClass('active');
+            for(var i=1;i<data.leading-1;i++){
+                selector = '#elem_' + data[i].number;
+                $(selector).val(data[i].value);
+                console.log(selector);
+                console.log(data[i].value);
+                console.log( $(selector));
+            }
+//            $('.preview-story').val(data.story);
+//            $('#preview-cost').val(data.cost);
+//            $('#preview-done-date').val(data.doneDate);
+        }
+
+        function slideCounter(number) {
+            var currentIndex = countSlider.currentIndex();
+            var selector;
+            var index = 0;
+            if(currentIndex == 0){
+                index=1;
+                selector = 'span[data-index="2"]';
+                $('span[data-index="2"]').css({"color" : "#fff"});
+                $(selector).html(number);
+                countSlider.change(index);
+                $('span[data-index="1"]').css({"color" :"black"});
+            }else{
+                selector = 'span[data-index="1"]';
+                $('span[data-index="1"]').css({"color" : "#fff"});
+                $(selector).html(number);
+                countSlider.change(index);
+                $('span[data-index="2"]').css({"color" : "black"});
+            }
+
+        }
+
+        function changeCounter(number) {
+            slideCounter(number);
+//            countSlider.resume();
+//            setTimeout(function(){ countSlider.pause(); }, 500);
+        }
+
+        $("#modal-open").click(function () {
+          $(".contact-modal").show(200);
+        });
+
+        $(".submit").click(function(){
+            $(".contact-modal").hide();
+            $('input').attr('disabled','disabled');
+            $('textarea').attr('disabled','disabled');
+        });
+
+        $(".cancel").click(function(){
+            $(".main-modal").hide();
+        });
+
+    });
+
+</script>
+</body>
+</html>

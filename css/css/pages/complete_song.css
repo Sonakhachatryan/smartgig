@@ -1,0 +1,465 @@
+body {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  body .complete_song-general-page {
+    width: 100%; }
+    body .complete_song-general-page .main-general {
+      height: 100%;
+      width: 100%;
+      background-size: cover; }
+      body .complete_song-general-page .main-general .button {
+        text-align: center; }
+        body .complete_song-general-page .main-general .button .btn {
+          cursor: pointer;
+          display: inline-block;
+          height: 56px;
+          line-height: 50px;
+          position: relative;
+          border: 3px solid #8DB835;
+          padding: 0 1rem;
+          color: white;
+          font-size: 25px;
+          font-weight: 700;
+          text-align: center;
+          border-radius: 1px;
+          width: 300px;
+          background-color: rgba(255, 255, 255, 0);
+          -webkit-box-shadow: 1px 2px 6px #ffffff;
+          box-shadow: 1px 2px 6px #ffffff;
+          text-shadow: 1px 2px 7px black;
+          margin: 20px 50px; }
+          body .complete_song-general-page .main-general .button .btn.active {
+            color: white;
+            background-color: #8DB835; }
+          body .complete_song-general-page .main-general .button .btn:hover {
+            color: white;
+            background-color: #8DB835;
+            -webkit-transition: 2000ms;
+            -o-transition: 2000ms;
+            transition: 2000ms; }
+        body .complete_song-general-page .main-general .button p {
+          display: inline-block;
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          text-shadow: 1px 2px 8px black; }
+      body .complete_song-general-page .main-general .error {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 2px solid #e74c3c; }
+      body .complete_song-general-page .main-general .error-message {
+        color: #e74c3c !important;
+        text-align: right;
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        text-shadow: 1px 2px 7px black; }
+      body .complete_song-general-page .main-general .calendar {
+        margin: 30px auto;
+        margin-bottom: 20px;
+        padding: 10px;
+        text-align: right; }
+        body .complete_song-general-page .main-general .calendar input {
+          width: 100%;
+          height: 56px;
+          display: inline-block;
+          position: relative;
+          padding: 0 1rem;
+          background-color: rgba(255, 255, 255, 0.2);
+          color: white;
+          border-top: 2px solid black;
+          text-shadow: 1px 2px 7px black;
+          font-size: 23px;
+          font-weight: 400;
+          line-height: 50px; }
+          body .complete_song-general-page .main-general .calendar input:focus {
+            outline: none; }
+          body .complete_song-general-page .main-general .calendar input::-webkit-input-placeholder {
+            text-align: center;
+            text-shadow: 1px 1px 4px black;
+            font-size: 25px;
+            font-weight: 400;
+            color: white;
+            margin: 10px 0 0 10px;
+            text-overflow: ellipsis; }
+          body .complete_song-general-page .main-general .calendar input:focus::-webkit-input-placeholder {
+            opacity: 0;
+            -webkit-transition: opacity 0.3s ease;
+            -o-transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease; }
+        body .complete_song-general-page .main-general .calendar p {
+          color: white;
+          text-shadow: 1px 2px 7px black;
+          font-size: 13px;
+          font-weight: 600; }
+        body .complete_song-general-page .main-general .calendar h3 {
+          font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+          font-weight: 700;
+          font-style: normal;
+          color: white;
+          font-size: 30px;
+          text-shadow: 1px 2px 7px black;
+          text-align: center;
+          margin: 20px; }
+      body .complete_song-general-page .main-general .letters {
+        text-align: center;
+        margin: 15px auto; }
+        body .complete_song-general-page .main-general .letters textarea {
+          overflow: hidden; }
+          body .complete_song-general-page .main-general .letters textarea:focus {
+            outline: none; }
+        body .complete_song-general-page .main-general .letters p {
+          text-align: right;
+          font-size: 17px;
+          font-weight: 600;
+          color: white;
+          width: 75%;
+          margin: 0 auto; }
+        body .complete_song-general-page .main-general .letters #story {
+          font-size: 25px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border-top: 2px solid black;
+          height: auto;
+          width: 75%;
+          color: white; }
+          body .complete_song-general-page .main-general .letters #story::-webkit-input-placeholder {
+            text-align: left;
+            text-shadow: 1px 1px 4px black;
+            font-size: 15px;
+            font-weight: 400;
+            color: white;
+            margin: 10px 0 0 10px;
+            text-overflow: ellipsis; }
+          body .complete_song-general-page .main-general .letters #story:focus::-webkit-input-placeholder {
+            opacity: 0;
+            -webkit-transition: opacity 0.3s ease;
+            -o-transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease; }
+          body .complete_song-general-page .main-general .letters #story:-moz-placeholder {
+            text-align: left;
+            text-shadow: 1px 2px 7px black;
+            font-size: 23px;
+            font-weight: 400;
+            color: white;
+            margin: 10px 0 0 10px;
+            text-overflow: ellipsis;
+            text-indent: 0;
+            -webkit-transition: text-indent 0.3s ease;
+            -o-transition: text-indent 0.3s ease;
+            transition: text-indent 0.3s ease; }
+      body .complete_song-general-page .main-general .active:active {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        padding: 30px 0 3px 25px;
+        font-size: 25px;
+        color: #8DB835;
+        text-decoration: none;
+        text-shadow: 1px 2px 7px black; }
+    body .complete_song-general-page .songpiece_choose_usagetype {
+      background-image: url("../images/complete_song/complete  song.jpeg"); }
+    body .complete_song-general-page .step-1 .page-question {
+      padding-top: 150px; }
+      body .complete_song-general-page .step-1 .page-question .center {
+        text-align: center;
+        margin: 20px 0; }
+        body .complete_song-general-page .step-1 .page-question .center h1 {
+          font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+          font-weight: 700;
+          font-style: normal;
+          color: white;
+          font-size: 30px;
+          text-shadow: 1px 2px 7px black;
+          display: inline-block;
+          text-align: center;
+          margin: 10px;
+          vertical-align: middle;
+          position: relative; }
+          body .complete_song-general-page .step-1 .page-question .center h1:before {
+            content: " ";
+            position: absolute;
+            left: 0%;
+            bottom: 4px;
+            height: 3px;
+            width: 0%;
+            background-color: #fff;
+            -webkit-transition: width 0.5s ease-in-out;
+            -o-transition: width 0.5s ease-in-out;
+            transition: width 0.5s ease-in-out; }
+          body .complete_song-general-page .step-1 .page-question .center h1:after {
+            content: " ";
+            position: absolute;
+            right: 0%;
+            bottom: 4px;
+            height: 3px;
+            width: 0%;
+            background-color: #fff;
+            -webkit-transition: width 0.5s ease-in-out;
+            -o-transition: width 0.5s ease-in-out;
+            transition: width 0.5s ease-in-out; }
+          body .complete_song-general-page .step-1 .page-question .center h1:hover:before, body .complete_song-general-page .step-1 .page-question .center h1:focus:before {
+            width: 50%; }
+          body .complete_song-general-page .step-1 .page-question .center h1:hover:after, body .complete_song-general-page .step-1 .page-question .center h1:focus:after {
+            width: 50%; }
+        body .complete_song-general-page .step-1 .page-question .center span {
+          border: 2px solid white;
+          border-radius: 50px;
+          top: 5px;
+          padding: 0 13px;
+          font-size: 23px; }
+        body .complete_song-general-page .step-1 .page-question .center p {
+          font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+          font-weight: 700;
+          font-style: normal;
+          color: white;
+          font-size: 20px;
+          margin: 0 0 60px 0;
+          font-weight: 600;
+          text-align: center;
+          text-shadow: 1px 2px 7px black; }
+    body .complete_song-general-page .step-1 .button-back-home {
+      text-align: center;
+      cursor: pointer; }
+      body .complete_song-general-page .step-1 .button-back-home a .back-to-home {
+        cursor: pointer;
+        position: relative;
+        line-height: 50px;
+        height: 56px;
+        font-size: 25px;
+        font-weight: 700;
+        padding: 0 1rem;
+        text-align: center;
+        background-color: rgba(156, 156, 156, 0.5);
+        color: white;
+        margin: 20px;
+        text-shadow: 1px 2px 7px black;
+        border: 1px solid black; }
+        body .complete_song-general-page .step-1 .button-back-home a .back-to-home:hover {
+          color: black;
+          background-color: gray;
+          -webkit-transition: 2000ms;
+          -o-transition: 2000ms;
+          transition: 2000ms; }
+    body .complete_song-general-page .step-2 .main-content {
+      padding-top: 130px; }
+    body .complete_song-general-page .step-2 .page-question .center {
+      text-align: center; }
+      body .complete_song-general-page .step-2 .page-question .center h1 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        position: relative; }
+        body .complete_song-general-page .step-2 .page-question .center h1:before {
+          content: " ";
+          position: absolute;
+          left: 0%;
+          bottom: 4px;
+          height: 3px;
+          width: 0%;
+          background-color: #fff;
+          -webkit-transition: width 0.5s ease-in-out;
+          -o-transition: width 0.5s ease-in-out;
+          transition: width 0.5s ease-in-out; }
+        body .complete_song-general-page .step-2 .page-question .center h1:after {
+          content: " ";
+          position: absolute;
+          right: 0%;
+          bottom: 4px;
+          height: 3px;
+          width: 0%;
+          background-color: #fff;
+          -webkit-transition: width 0.5s ease-in-out;
+          -o-transition: width 0.5s ease-in-out;
+          transition: width 0.5s ease-in-out; }
+        body .complete_song-general-page .step-2 .page-question .center h1:hover:before, body .complete_song-general-page .step-2 .page-question .center h1:focus:before {
+          width: 50%; }
+        body .complete_song-general-page .step-2 .page-question .center h1:hover:after, body .complete_song-general-page .step-2 .page-question .center h1:focus:after {
+          width: 50%; }
+      body .complete_song-general-page .step-2 .page-question .center span {
+        border: 2px solid white;
+        border-radius: 50px;
+        top: 5px;
+        padding: 0 13px;
+        font-size: 23px; }
+    body .complete_song-general-page .step-3 .page-question .genre .instruments-2 {
+      display: block;
+      margin-top: 30px; }
+      body .complete_song-general-page .step-3 .page-question .genre .instruments-2 img {
+        width: 65%;
+        height: 150px;
+        border: none; }
+    body .complete_song-general-page .step-3 .page-question .genre a {
+      text-decoration: none;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 600;
+      font-family: Arial;
+      color: #fff3cd;
+      text-shadow: 1px 2px 6px gray; }
+      body .complete_song-general-page .step-3 .page-question .genre a p {
+        text-align: center;
+        width: 80%; }
+      body .complete_song-general-page .step-3 .page-question .genre a img {
+        width: 80%;
+        height: 230px;
+        border-radius: 10px;
+        -webkit-box-shadow: 1px 2px 6px white;
+        box-shadow: 1px 2px 6px white;
+        margin: 20px 0 0 0; }
+    body .complete_song-general-page .step-3 .page-question .groups-of-genre {
+      margin: 0 auto; }
+      body .complete_song-general-page .step-3 .page-question .groups-of-genre .genre-image {
+        height: 400px;
+        overflow: hidden; }
+        body .complete_song-general-page .step-3 .page-question .groups-of-genre .genre-image img {
+          width: 100%;
+          height: 300px;
+          border-radius: 10px; }
+        body .complete_song-general-page .step-3 .page-question .groups-of-genre .genre-image .genre-name {
+          display: block;
+          border-radius: 150px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.3); }
+          body .complete_song-general-page .step-3 .page-question .groups-of-genre .genre-image .genre-name h3 {
+            text-align: center; }
+    body .complete_song-general-page .step-3 .upload-file-button {
+      margin: 50px auto;
+      text-align: center;
+      padding: 10px; }
+      body .complete_song-general-page .step-3 .upload-file-button input[type="file"] {
+        display: none; }
+      body .complete_song-general-page .step-3 .upload-file-button .custom-file-upload {
+        border: 3px solid white;
+        cursor: pointer;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-top: 2px solid black;
+        text-shadow: 1px 2px 7px black;
+        font-size: 23px;
+        font-weight: 400;
+        display: inline-block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        padding: 0 1rem;
+        width: 100%; }
+    body .complete_song-general-page .step-3 .main-content .groups-of-genre {
+      margin: 0 auto; }
+      body .complete_song-general-page .step-3 .main-content .groups-of-genre .genre-image {
+        height: 400px;
+        overflow: hidden; }
+        body .complete_song-general-page .step-3 .main-content .groups-of-genre .genre-image img {
+          width: 100%;
+          height: 300px;
+          border-radius: 10px; }
+        body .complete_song-general-page .step-3 .main-content .groups-of-genre .genre-image .genre-name {
+          display: block;
+          border-radius: 150px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.3); }
+          body .complete_song-general-page .step-3 .main-content .groups-of-genre .genre-image .genre-name h3 {
+            text-align: center; }
+    body .complete_song-general-page .step-3 .main-content .characters-input {
+      margin: 50px auto; }
+      body .complete_song-general-page .step-3 .main-content .characters-input input {
+        border: 3px solid white;
+        padding: 14px 36px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-top: 2px solid black;
+        font-size: 23px;
+        font-weight: 400;
+        display: inline-block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        width: 100%; }
+      body .complete_song-general-page .step-3 .main-content .characters-input h3 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        text-align: center;
+        margin: 20px; }
+      body .complete_song-general-page .step-3 .main-content .characters-input p {
+        color: white;
+        text-align: right;
+        font-size: 20px;
+        font-weight: 600; }
+    body .complete_song-general-page .step-3 .main-content, body .complete_song-general-page .step-4 .main-content {
+      padding-top: 100px; }
+    body .complete_song-general-page .step-3 .page-question, body .complete_song-general-page .step-4 .page-question {
+      line-height: 40px; }
+      body .complete_song-general-page .step-3 .page-question .center, body .complete_song-general-page .step-4 .page-question .center {
+        margin-top: 40px;
+        text-align: center; }
+        body .complete_song-general-page .step-3 .page-question .center h1, body .complete_song-general-page .step-4 .page-question .center h1 {
+          font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+          font-weight: 700;
+          font-style: normal;
+          color: white;
+          font-size: 30px;
+          text-shadow: 1px 2px 7px black;
+          display: inline-block;
+          text-align: center;
+          margin: 0;
+          vertical-align: middle;
+          position: relative; }
+          body .complete_song-general-page .step-3 .page-question .center h1:before, body .complete_song-general-page .step-4 .page-question .center h1:before {
+            content: " ";
+            position: absolute;
+            left: 0%;
+            bottom: 4px;
+            height: 3px;
+            width: 0%;
+            background-color: #fff;
+            -webkit-transition: width 0.5s ease-in-out;
+            -o-transition: width 0.5s ease-in-out;
+            transition: width 0.5s ease-in-out; }
+          body .complete_song-general-page .step-3 .page-question .center h1:after, body .complete_song-general-page .step-4 .page-question .center h1:after {
+            content: " ";
+            position: absolute;
+            right: 0%;
+            bottom: 4px;
+            height: 3px;
+            width: 0%;
+            background-color: #fff;
+            -webkit-transition: width 0.5s ease-in-out;
+            -o-transition: width 0.5s ease-in-out;
+            transition: width 0.5s ease-in-out; }
+          body .complete_song-general-page .step-3 .page-question .center h1:hover:before, body .complete_song-general-page .step-3 .page-question .center h1:focus:before, body .complete_song-general-page .step-4 .page-question .center h1:hover:before, body .complete_song-general-page .step-4 .page-question .center h1:focus:before {
+            width: 50%; }
+          body .complete_song-general-page .step-3 .page-question .center h1:hover:after, body .complete_song-general-page .step-3 .page-question .center h1:focus:after, body .complete_song-general-page .step-4 .page-question .center h1:hover:after, body .complete_song-general-page .step-4 .page-question .center h1:focus:after {
+            width: 50%; }
+        body .complete_song-general-page .step-3 .page-question .center span, body .complete_song-general-page .step-4 .page-question .center span {
+          border: 2px solid white;
+          border-radius: 50px;
+          top: 5px;
+          padding: 0 13px;
+          font-size: 23px; }
+        body .complete_song-general-page .step-3 .page-question .center p, body .complete_song-general-page .step-4 .page-question .center p {
+          font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+          font-weight: 700;
+          font-style: normal;
+          color: white;
+          font-size: 20px;
+          margin: 0 0 24px 0;
+          font-weight: 600;
+          text-align: center;
+          text-shadow: 1px 2px 7px black; }

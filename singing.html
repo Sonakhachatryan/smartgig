@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Singing</title>
+    <meta charset="utf-8">
+    <meta name="Song project">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Song">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/aos.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light nav-top">
+    <a class="navbar-brand logo_slogan" href="index.html">
+        <p>Smartgig.ch</p>
+        <p>We bring your song idea to life</p>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto main-menu">
+            <li class="nav-item">
+                <a class="nav-link item-link" href="songwriting.html" title="Songwriting">Songwriting</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link item-link" href="singing.html" title="Singing">Singing</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link item-link" href="instrumentals.html" title="Instrumentals">Instrumentals</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link item-link" href="complete_song.html" title="complete_song">Complete song</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+            <span class="page-indicator" id="countSlider">
+                <span data-index="1">1</span>
+                <span data-index="2"></span>
+                /4
+            </span>
+    </span>
+    </div>
+</nav>
+
+<div class="singing-general-page kontext">
+    <div class="main-general step-1 singing_choose_usagetype           layer  show" data-number="0">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <h1 class="hover hover-1"> Will you use the voice for private or commercial use? * </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Some musicians only allow private use. That's why it has to be defined.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" id="private-use-button" data-slide-number="0" data-slide-to="1" index="1">  For private use</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" id="commercial-use-button" data-slide-number="0" data-slide-to="8" index="8">  For commercial use</button>
+                    </div>
+                </div>
+            </div>
+            <div class="button-back-home">
+                <a href="index.html">
+                    <button type="button" class=" btn btn-secondary btn back-to-home">Back to home</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-general step-2 singing_songtext                   layer" data-number="1">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>What's your songtext or idea? *</h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 letters ">
+                        <textarea name="songtext-story" class="story" id="story" cols="70" rows="5" data-number="1" placeholder="Write down your songtext here" maxlength="2500" required></textarea>
+                        <p data-number="1" class="hidden error-message">Please fill this field</p>
+                        <p>0 / 2500 characters</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="1" data-slide-to="0" index="0">Back to Usagetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class=" btn" data-slide-number="1" data-slide-to="2" index="2">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3 singing_genre                      layer" data-number="2">
+        <div class="container main-content ">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <h1> What's the Genre of the song? *</h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example">?</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 groups-of-genre genre-choose">
+                        <div class="genre-image">
+                            <img src="images/singing/genre.jpg" alt="">
+                        </div>
+                        <p data-number="2" class="hidden error-message"></p>
+                        <div class="genre-name" >
+                            <h3>Choose your Genre</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="2" data-slide-to="1" index="1">Back to Usagetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn hidden" data-slide-number="2" data-slide-to="3" index="3">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-1 singing_choose_voicetype           layer" data-number="3">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1> Which voice do you need? * </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Please specify if a male or female voice should sing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" id="male-voice-button" data-slide-number="3" data-slide-to="4" index="4">Male voice</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" id="female-voice-button" data-slide-number="3" data-slide-to="4" index="4">Female voice</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3 singing_choose_melody              layer" data-number="4">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>Do you already have a melody on your mind? </h1><span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>If you already have a melody on your mind, you can upload it here. Otherwise the musician will be the one who chooses the melody for your song..</p>
+                    </div>
+                    <div class="col-md-4 offset-md-4 upload-file-button">
+                        <label for="file-upload-private" class="custom-file-upload">UPLOAD A MELODY FILE</label>
+                        <img src="images/singing/if_icon-upload_211937.png" alt="">
+                        <input id="file-upload-private"class="file-upload upload" type="file" name="melody"/>
+                        <p data-number="4" class="hidden error-message"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="4" data-slide-to="3" index="3">Back to Voicetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="4" data-slide-to="5" index="5">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3 singing_song_mood                  layer" data-number="5">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>Which mood should the song create? </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Tell the musician if the song should sound cheerful or rather romantic. You will find a list of mood types on <a href="https://www.allmusic.com/moods" target="_blank">https://www.allmusic.com/moods</a>.</p>
+                    </div>
+                    <div class="col-md-8 characters-input">
+                        <input type="text" name="mood" data-number="5"/>
+                        <p data-number="5" class="hidden error-message"></p>
+                        <p>1/50 characters</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="5" data-slide-to="4" index="4">Back to Melody</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="5" data-slide-to="6" index="6">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3 singing_deadline                   layer" data-number="6">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>Until when do you need the job to be done?* </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Let the musician know until when you need the service to be done.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-4 calendar">
+                        <h3>Deadline</h3>
+                        <input type="date" placeholder="Select Date" data-number="6">
+                        <p data-number="6" class="hidden error-message"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="6" data-slide-to="5" index="5">Back to Usagetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="6" data-slide-to="7" index="7">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3 singing_budget                     layer" data-number="7">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>What's your budget for the service?* </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Let the musician know what's your maximum budget that you're willing to pay for the service.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-4  calendar">
+                        <h3>Budget</h3>
+                        <input type="number" placeholder="CHF 50" data-number="7">
+                        <p data-number="7" class="hidden error-message"></p>
+                        <p>Average price for this service: CHF 60</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="7" data-slide-to="6" index="6">Back to Deadline</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="7" data-slide-to="15" index="15">Review data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- commercial use -->
+    <div class="main-general step-2 singing_use_songtext               layer" data-number="8">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>What's your songtext or idea? *</h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                    </div>
+                    <div class="letters col-md-8 col-md-offset-2">
+                        <textarea name="songtext-story" class="story" cols="70" rows="5" data-number="8" placeholder="Write down your idea here." maxlength="2500" required></textarea>
+                        <p data-number="8" class="hidden error-message"></p>
+                        <p>0 / 2500 characters</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="8" data-slide-to="0" index="0">Back to Usagetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="8" data-slide-to="9" index="9">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3 singing_use_genre                  layer" data-number="9">
+        <div class="container main-content ">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <h1> What's the Genre of the song? *</h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example">?</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 groups-of-genre genre-choose">
+                        <div class="genre-image">
+                            <img src="images/singing/genre.jpg" alt="">
+                        </div>
+                        <p data-number="9" class="hidden error-message"></p>
+                        <div class="genre-name">
+                            <h3>Choose your Genre</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="9" data-slide-to="8" index="8">Back to Usagetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="9" data-slide-to="10" index="10">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-1 singing_use_choose_voicetype       layer" data-number="10">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <h1> Which voice do you need? * </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Please specify if a male or female voice should sing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" id="male-voice-c" data-slide-number="10" data-slide-to="11" index="11">Male voice</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" id="female-voice-c" data-slide-number="10" data-slide-to="11" index="11">Female voice</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3 singing_use_choose_melody          layer" data-number="11">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>Do you already have a melody on your mind?</h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>If you already have a melody on your mind, you can upload it here. Otherwise the musician will be the one who chooses the melody for your song..</p>
+                    </div>
+                    <div class="col-md-4 offset-md-4 upload-file-button">
+                        <label for="file-upload-commercial" class="custom-file-upload">
+                            Upload a melody file
+                        </label>
+                        <img src="images/singing/if_icon-upload_211937.png" alt="">
+                        <input id="file-upload-commercial" type="file" class="upload" name="myfiles[]" multiple/>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="11" data-slide-to="10" index="10">Back to Voicetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="11" data-slide-to="12" index="12">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3 singing_use_song_mood              layer" data-number="12">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>Which mood should the song create? </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Tell the musician if the song should sound cheerful or rather romantic. You will find a list of mood types on https://www.allmusic.com/moods.</p>
+                    </div>
+                    <div class="col-md-8 characters-input">
+                        <input type="text" name="" data-number="12">
+                        <p data-number="12" class="hidden error-message"></p>
+                        <p>1/50 characters</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="12" data-slide-to="11" index="11">Back to Melody</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="12" data-slide-to="13" index="13">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3 singing_use_deadline               layer" data-number="13">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>Until when do you need the job to be done?* </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Let the musician know until when you need the service to be done.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-4 calendar">
+                        <h3>Deadline</h3>
+                        <input type="date" placeholder="Select Date" data-number="13">
+                        <p data-number="13" class="hidden error-message"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="13" data-slide-to="12" index="12">Back to Usagetype</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="13" data-slide-to="14" index="14">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-general step-3 singing_use_budget                 layer" data-number="14">
+        <div class="container main-content">
+            <div class="page-question">
+                <div class="row">
+                    <div class="col-md-12 center ">
+                        <h1>What's your budget for the service?* </h1>
+                        <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
+                        <p>Let the musician know what's your maximum budget that you're willing to pay for the service.</p>
+                    </div>
+                    <div class="col-md-4 offset-md-4  calendar">
+                        <h3>Budget</h3>
+                        <input type="number" placeholder="CHF 50" data-number="14">
+                        <p data-number="14" class="hidden error-message"></p>
+                        <p>Average price for this service: CHF 60</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="14" data-slide-to="13" index="13">Back to Deadline</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn" data-slide-number="14" data-slide-to="15" index="15">Review data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="final-submit-page step-3                               layer" data-number="15">
+        <div class="main-general review-page ">
+            <div class="container main-content">
+                <div class="row">
+                    <div class="col-md-12 for-submit">
+                        <h2>Please Review & Submit</h2>
+                    </div>
+                </div>
+                <form class="preview-form" name="preview-form-name">
+                    <div class="button">
+                        <div class="row">
+                            <ul class="col-md-12">
+                                <li class="col-md-6">
+                                    <input type="radio" id="elem_0_p" name="usage_type">
+                                    <label for="elem_0_p">For private use</label>
+                                    <div class="check"></div>
+                                </li>
+                                <li class="col-md-6">
+                                    <input type="radio" id="elem_0_c" name="usage_type">
+                                    <label for="elem_0_c">For commercial use</label>
+                                    <div class="check"><div class="inside"></div></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-8 letters">
+                            <input type="hidden" name="isPrivate" id="private">
+                            <textarea name="about" id="elem_1" class="preview-story story" cols="100" rows="6" data-number="10" placeholder="Write down your idea here." maxlength="2500" required ></textarea>
+                            <p data-number="10" class="hidden error-message">Please fill this field.</p>
+                            <p>0 / 2500 characters</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4 groups-of-genre genre-choose">
+                            <div class="instrument-image" id="elem_2">
+                                <img src="" alt="">
+                                <div class="instruments-name">
+                                    <h3></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="button">
+                        <div class="row">
+                            <ul class="col-md-12">
+                                <li class="col-md-6">
+                                    <input type="radio" id="elem_3_m" name="voice">
+                                    <label for="elem_3_m">Male voice</label>
+                                    <div class="check"></div>
+                                </li>
+                                <li class="col-md-6">
+                                    <input type="radio" id="elem_3_f" name="voice">
+                                    <label for="elem_3_f">Female voice</label>
+                                    <div class="check"><div class="inside"></div></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3 characters-input upload-file-button" id="elem_4">
+                            <label for="file-upload-review" class="custom-file-upload">UPLOAD A MELODY FILE</label>
+                            <img src="images/singing/if_icon-upload_211937.png" alt="">
+                            <input id="file-upload-review" type="file" class="upload" name="myfiles[]" multiple/>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6 calendar">
+                            <h3>Song Mood</h3>
+                            <input type="text" name="" id="elem_5">
+                            <p>1/50 characters</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6 calendar">
+                            <h3>Deadline</h3>
+                            <input name="doneDate"  placeholder="Select Date "type="date" id="elem_6"><br>
+                            <p data-number="10" class="hidden error-message">Please fild this field.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6 calendar">
+                            <h3>Budget</h3>
+                            <input  name="cost"  id="elem_7" type="number" placeholder="CHF 50">
+                            <p data-number="10" class="hidden error-message">Please fill this field.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="button-back-home">
+                        <button type="button" class="btn back-to-home" id="modal-open">Send Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <ul class="bullets"></ul>
+</div>
+
+<div class="dialog-modal main-modal modal-1  hidden">
+    <div class="wrapper"  id="contact-details-modal1">
+        <h3>If you leave this page you will lose all the data.Do you want to continue?</h3>
+        <div class="row">
+            <div class="col-md-6"><button type="button" class="submit close-modal">Cancel</button></div>
+            <div class="col-md-6"><button type="button" class="submit confirm">Continue</button></div>
+        </div>
+    </div>
+</div>
+<div class="dialog-modal contact-modal modal-1  hidden">
+    <div class="wrapper"  id="contact-details-modal">
+        <h3>Please provide your details to be in touch</h3>
+        <div>
+            <input type="text" placeholder="please write your name" class="input-name">
+        </div>
+        <div>
+            <input type="text" placeholder="please write your email" class="input-email">
+        </div>
+        <div class="row">
+            <div class="col-md-6"><button type="button" class="submit">CANCEL</button></div>
+            <div class="col-md-6"><button type="button" class="submit">SUBMIT</button></div>
+        </div>
+    </div>
+</div>
+<div class="dialog-modal choose-modals genre-modal  hidden" >
+    <div class="singing_choose_genre">
+        <div class="container-fluid choose-your-genre">
+            <span class="close-modal">X</span>
+            <form>
+                <input type="text" id="genre-filter" placeholder="Enter Genre here ... (Filter)">
+            </form>
+            <button href="#"> DONE</button>
+            <button href="#"> CANCEL</button>
+            <div id="genre-content">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image" >
+                            <img src="images/singing/genre/soul/soul.jpg" alt="">
+                            <div class="instruments-name">
+                                <h3>Soul</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/blues/music-blues-01.jpg" alt="">
+                            <div class="instruments-name">
+                                <h3>Blues</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3  col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/classic/classic2.jpeg" alt="">
+                            <div class="instruments-name">
+                                <h3>Classic</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/funk/soulsounds-funk-music.jpg" alt="">
+                            <div class="instruments-name">
+                                <h3>Funk</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/disco/disco2.jpg" alt="">
+                            <div class="instruments-name">
+                                <h3>Disco</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/electro/electronic.jpg" alt="">
+                            <div class="instruments-name">
+                                <h3>Electro</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6  col-xs-6  groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/disco/disco3.jpeg" alt="">
+                            <div class="instruments-name">
+                                <h3>Disco</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/pop/music-ppcorn-vinyl.jpg" alt="">
+                            <div class="instruments-name">
+                                <h3>Pop</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/singer.jpg" alt="">
+                            <div class="instruments-name">
+                                <h3>Hindi</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/punk/punk1.jpg" alt="">
+                            <div class="instruments-name">
+                                <h3>Punk</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/rock/rock-man.jpeg" alt="">
+                            <div class="instruments-name">
+                                <h3>Rock</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/schalger/schalger.jpg" alt="">
+                            <div class="instruments-name">
+                                <h3>Schlager</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-3 col-sm-6  col-xs-6  groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/pop/pop-music.jpg" alt="">
+                            <div class="instruments-name">
+                                <h3>Ambiente</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
+                        <div class="instrument-image">
+                            <img src="images/singing/genre/soul/soul-music.jpg" alt="">
+                            <div class="instruments-name">
+                                <h3>Soul</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/aos.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<script src="js/simpleSlider.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // Create a new instance of kontext
+        var k = kontext( document.querySelector( '.kontext' ) );
+        // Demo page JS
+        var bulletsContainer = document.body.querySelector( '.bullets' );
+        var privateUse = [
+            {
+                "index" : 0,
+                "number" : 0,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 1,
+                "number" : 1,
+
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 2,
+                "number" : 2,
+                "validation" : {
+                    "required" :"Please select the genre.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 3,
+                "number" : 3,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 4,
+                "number" : 4,
+                "validation" : {
+                    "required" :"Please upload the file.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 5,
+                "number" : 5,
+                "validation" : {
+                    "length" :"Please insert 1 - 50 characters.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 6,
+                "number" : 6,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 7,
+                "number" : 7,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                    "range" : "Number must be less then 99999 and greater then 0",
+                },
+                "value" : null,
+            },
+
+        ];
+        var commercialUse = [
+            {
+                "index" : 0,
+                "number" : 0,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 8,
+                "number" : 1,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 9,
+                "number" : 2,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 10,
+                "number" : 3,
+                "validation" : {
+                    "required" :"Please select the genre.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 11,
+                "number" : 4,
+                "validation" : {
+                    "required" :"Please upload the file.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 12,
+                "number" : 5,
+                "validation" : {
+                    "length" :"Please insert 1 - 50 characters.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 13,
+                "number" : 6,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                },
+                "value" : null,
+            },
+            {
+                "index" : 14,
+                "number" : 7,
+                "validation" : {
+                    "required" :"Please fill this field.",
+                    "range" : "Number must be less then 99999 and greater then 0",
+                },
+                "value" : null,
+            },
+        ];
+        var selected = privateUse;
+        var genreArray = [
+            {
+                "id" : 1,
+                "src" : "images/singing/genre/soul/soul.jpg",
+                "name" : "Soul",
+            },
+            {
+                "id" : 2,
+                "src" : "images/singing/genre/blues/music-blues-01.jpg",
+                "name" : "Blues",
+            },
+            {
+                "id" : 3,
+                "src" : "images/singing/genre/classic/classic2.jpeg",
+                "name" : "Classic",
+            },
+            {
+                "id" : 4,
+                "src" : "images/singing/genre/funk/soulsounds-funk-music.jpg",
+                "name" : "Funk",
+            },
+            {
+                "id" : 5,
+                "src" : "images/singing/genre/disco/disco2.jpg",
+                "name" : "Disco",
+            },
+            {
+                "id" : 6,
+                "src" : "images/singing/genre/electro/electronic.jpg",
+                "name" : "Electro",
+            },
+            {
+                "id" : 7,
+                "src" : "images/singing/genre/disco/disco3.jpeg",
+                "name" : "Disco",
+            },
+            {
+                "id" : 8,
+                "src" : "images/singing/genre/pop/music-ppcorn-vinyl.jpg",
+                "name" : "Pop",
+            },
+            {
+                "id" : 9,
+                "src" : "images/singing/singer.jpg",
+                "name" : "Hindi",
+            },
+            {
+                "id" : 10,
+                "src" : "images/singing/genre/punk/punk1.jpg",
+                "name" : "Punk",
+            },
+            {
+                "id" : 11,
+                "src" : "images/singing/genre/rock/rock-man.jpeg",
+                "name" : "Rock",
+            },
+            {
+                "id" : 12,
+                "src" : "images/singing/genre/schalger/schalger.jpg",
+                "name" : "Schalger",
+            },
+            {
+                "id" : 13,
+                "src" : "images/singing/genre/pop/pop-music.jpg",
+                "name" : "Ambiente",
+            },
+            {
+                "id" : 14,
+                "src" : "images/singing/genre/soul/soul-music.jpg",
+                "name" : "Soul",
+            },
+        ];
+
+        for( var i = 0, len = selected.length; i < len; i++ ) {
+            var bullet = document.createElement( 'li' );
+            bullet.className = i === 0 ? 'active' : '';
+            bullet.setAttribute( 'index', selected[i].index);
+            bullet.onclick = function( event ) {
+                debugger;
+                if(canNavigate(event.target.getAttribute( 'index' ))) {
+                    var navigateTo = selected[event.target.getAttribute('index')];
+                    k.show(navigateTo.index);
+                    changeCounter(navigateTo.number + 1);
+                }
+            };
+            bullet.ontouchstart = function( event ) { k.show( event.target.getAttribute( 'index' ) ) };
+            bulletsContainer.appendChild( bullet );
+        }
+        // Update the bullets when the layer changes
+        k.changed.add( function( layer, index ) {
+            var bullets = document.body.querySelectorAll( '.bullets li' );
+            for( var i = 0, len = bullets.length; i < len; i++ ) {
+                bullets[i].className = i === index ? 'active' : '';
+            }
+        } );
+
+        document.addEventListener( 'keyup', function( event ) {
+            if( event.keyCode === 37 ) k.prev();
+            if( event.keyCode === 39 ) k.next();
+        }, false );
+
+        function canNavigate(index) {
+            var slide = selected[+index].value;
+            var slidePrev= '';
+            if(selected[+index - 1 ]) {
+                slidePrev = selected[+index - 1].value;
+            }
+            if( slide || slidePrev)
+                return true;
+            return false;
+        }
+
+
+        //current step indicator
+        var filedStep = 0;
+        var data = {};
+        var countSlider = simpleslider.getSlider({
+            container: document.getElementById('countSlider'),
+            prop: 'top',
+            init: -612,
+            show: 0,
+            end: 1,
+            unit: 'px',
+            delay: 0.5,
+            paused:true
+        });
+//        countSlider.pause();
+        $('button').on('click', function (event) {
+            var isValid = true;
+            var element = '';
+            var number = 0;
+            var error = "";
+            //validate input before going next page
+            switch ($(this).data('slide-to')) {
+                case 0:
+                    number = 0;
+                    break;
+                case 1:
+                    selected = privateUse;
+                    selected[0].value = 'private';
+                    number = 1;
+                    break;
+                case 2:
+                    element = $('textarea[data-number="1"]');
+                    if (element.val() != '') {
+                        selected[1].value = element.val();
+                        number = 2;
+                    } else {
+                        isValid = false;
+                        error = selected[1].validation.required;
+                    }
+                    break;
+                case 3:
+                    if(!selected[2].value){
+                        element = null;
+                        isValid = false;
+                        error = selected[2].validation.required;
+                    }else {
+                        number = 3;
+                    }
+                    break;
+                case 4:
+                    element = $(this);
+                    if(element.html() == 'Male voice') {
+                        selected[3].value = 'male';
+                    }else{
+                        selected[3].value = 'female';
+                    }
+                    number = 4;
+                    break;
+                case 5:
+                    element = $('input[data-number="4"]');
+                    if (!selected[4].value) {
+                        isValid = false;
+                        error = selected[4].validation.required;
+                    } else {
+                        number = 5;
+                    }
+                  break;
+                case 6:
+                    element = $('input[data-number="5"]');
+                    if (element.val() == '' || element.val().length > 50) {
+                        isValid = false;
+                        error = selected[5].validation.length;
+                    } else {
+                        selected[5].value = element.val();
+                        number = 6;
+                    }
+                    break;
+                case 7:
+                    debugger;
+                    element = $('input[data-number="6"]');
+                    if (element.val() == '') {
+                        isValid = false;
+                        error = selected[6].validation.required;
+                    } else {
+                        selected[6].value = element.val();
+                        number = 7;
+                    }
+                    break;
+                case 8:
+                    selected = commercialUse;
+                    selected[0].value = 'commercial';
+                    number = 1;
+                    break;
+                case 9:
+                    element = $('textarea[data-number="8"]');
+                    if (element.val() != '') {
+                        selected[1].value = element.val();
+                        number = 2;
+                    } else {
+                        isValid = false;
+                        error = selected[1].validation.required;
+                    }
+                    break;
+                case 10:
+                    if(!selected[2].value){
+                        element = null;
+                        isValid = false;
+                        error = selected[2].validation.required;
+                    }else {
+                        number = 3;
+                    }
+                    break;
+                case 11:
+                    element = $(this);
+                    if(element.html() == 'Male voice') {
+                        selected[3].value = 'male';
+                    }else{
+                        selected[3].value = 'female';
+                    }
+                    number = 4;
+                    break;
+                case 12:
+                    element = $('input[data-number="11"]');
+                    if (!selected[4]) {
+                        isValid = false;
+                        error = selected[4].validation.required;
+                    } else {
+                        number = 5;
+                    }
+                    break;
+                case 13:
+                    element = $('input[data-number="12"]');
+                    if (element.val() == '' || element.val().length > 50) {
+                        isValid = false;
+                        error = selected[5].validation.length;
+                    } else {
+                        selected[5].value = element.val();
+                        number = 6;
+                    }
+                    break;
+                case 14:
+                    debugger;
+                    element = $('input[data-number="13"]');
+                    if (element.val() == '') {
+                        isValid = false;
+                        error = selected[6].validation.required;
+                    } else {
+                        selected[6].value = element.val();
+                        number = 7;
+                    }
+                    break;
+                case 15:
+                    debugger;
+                    if ($(this).data('slide-number') == 7) {
+                        element = $('input[data-number="7"]');
+                    } else {
+                        element = $('input[data-number="14"]');
+                    }
+                    if (element.val() != '') {
+                        if(element.val() < 0 || element.val() >999999){
+                            isValid = false;
+                            error = selected[7].validation.range;
+                        }
+                        selected[7].value = element.val();
+                    } else {
+                        isValid = false;
+                        error = selected[7].validation.required;
+                    }
+                    break;
+            }
+            if(isValid) {
+                if(element) {
+                    element.removeClass('error');
+                }
+
+                var selector = 'p[data-number="' + $(this).data('slide-number') + '"]'
+                $(selector).addClass('hidden');
+
+                if($(this).data('slide-to') == 15){
+                    setData(selected);
+                    $('.bullets').hide();
+                }
+//                slide($(this));
+                k.show(event.target.getAttribute('index'));
+                var bullets = document.body.querySelectorAll( '.bullets li' );
+                for( var i = 0, len = bullets.length; i < len; i++ ) {
+                    bullets[i].className = (i == number ? 'active' : '');
+                }
+                changeCounter(number+1);
+            }else{
+                if(element) {
+                    element.addClass('error');
+                }
+                var selector = 'p[data-number="' + $(this).data('slide-number')+'"]';
+                $(selector).html(error);
+                $(selector).removeClass('hidden');
+            }
+        });
+
+        function setData(data) {
+            debugger;
+            var selector = '';
+            if(data[0].value == 'private'){
+                $('#elem_0_p').prop('checked',true);
+            }else{
+                $('#elem_0_c').prop('checked',true);
+            }
+            for(var i=1;i<data.length;i++){
+                selector = '#elem_' + data[i].number;
+                var element = $(selector);
+                if(data[i].number == 2){
+                    element.find('img').attr('src',data[i].value.image);
+                    element.find('h3').text(data[i].value.name);
+                }else if(data[i].number == 3){
+                    if(data[i].value == 'male'){
+                        $('#elem_3_m').prop('checked',true);
+                    }else{
+                        $('#elem_3_f').prop('checked',true);
+                    }
+                }else if(data[i].number == 4){
+                    element.find('label').text(data[i].value)
+                }else {
+                    element.val(data[i].value);
+                }
+            }
+        }
+
+        function slideCounter(number) {
+            var currentIndex = countSlider.currentIndex();
+            var selector;
+            var index = 0;
+            if(currentIndex == 0){
+                index=1;
+                selector = 'span[data-index="2"]';
+                $('span[data-index="2"]').css({"color" : "#fff"});
+                $(selector).html(number);
+                countSlider.change(index);
+                $('span[data-index="1"]').css({"color" :"black"});
+            }else{
+                selector = 'span[data-index="1"]';
+                $('span[data-index="1"]').css({"color" : "#fff"});
+                $(selector).html(number);
+                countSlider.change(index);
+                $('span[data-index="2"]').css({"color" : "black"});
+            }
+
+        }
+
+        function changeCounter(number) {
+            slideCounter(number);
+//            countSlider.resume();
+//            setTimeout(function(){ countSlider.pause(); }, 500);
+        }
+
+        $("#modal-open").click(function () {
+            $(".contact-modal").show(200);
+        });
+
+        $(".submit").click(function(){
+            $(".contact-modal").hide();
+            $('input').attr('disabled','disabled');
+            $('textarea').attr('disabled','disabled');
+        });
+
+        $(".cancel").click(function(){
+            $(".main-modal").hide();
+        });
+
+        $('input[type="file"]').on('change', function(){
+            var value = $(this).val().split('\\').pop();
+            var label = $(this).closest('.upload-file-button').find('label');
+            console.log(label);
+            label.text(value);
+            console.log(label.text());
+            selected[4].value = value;
+        });
+
+        //open genre modal
+        $(".genre-choose").click(function () {
+            drowGenreContent(genreArray);
+            $(".genre-modal").show(200);
+        });
+
+        //drow genre modal content
+        function drowGenreContent(genres){
+            var content = '<div class="row">';
+            var needClose = true;
+            for(var i=0;i<genres.length;i++){
+                content += ' <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">' +
+                                '<div class="instrument-image">' +
+                                    '<img src="' + genres[i].src + '" alt="">' +
+                                    '<div class="instruments-name">' +
+                                        '<h3>' + genres[i].name + '</h3>\n' +
+                                    '</div>' +
+                                '</div>' +
+                           '</div>';
+
+               if(i%  4 == 3){
+                   content +="</div>";
+                   needClose = false;
+
+                   if(i != genres.length -1){
+                       content += '<div class="row">';
+                       needClose = true;
+                   }
+               }
+            }
+
+            if(needClose){
+                content +="</div>";
+            }
+
+            $('#genre-content').html(content);
+        }
+
+        //handle genre filter change
+        $('#genre-filter').on('change',function () {
+            var filteredArray = [];
+            var value = $(this).val().toLowerCase();
+            if(value != ''){
+                filteredArray = genreArray.filter(function (t) {
+                    return  t.name.toLowerCase().indexOf(value) == -1 ? false : true;
+                },value);
+                console.log(filteredArray);
+                drowGenreContent(filteredArray);
+            }else{
+                drowGenreContent(genreArray)
+            }
+        });
+
+        //handle genre choose event
+        $(document).on('click','.instrument-image',function () {
+            debugger;
+            selected[2].value = {
+                "name" : $(this).find('h3').html(),
+                "image" : $(this).find('img').attr('src')
+            };
+
+            if(selected[0].value == 'private') {
+                $('.singing_genre').find('img').attr('src', selected[2].value.image);
+                $('.singing_genre').find('h3').html(selected[2].value.name);
+                $('button[data-slide-to="3"]').removeClass('hidden');
+            }else{
+                $('.singing_use_genre').find('img').attr('src', selected[2].value.image);
+                $('.singing_use_genre').find('h3').html(selected[2].value.name);
+                $('button[data-slide-to="10"]').removeClass('hidden');
+            }
+
+            $(".genre-modal").hide(200);
+        });
+
+    });
+
+</script>
+</body>
+</html>

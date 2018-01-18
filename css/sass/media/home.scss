@@ -1,0 +1,265 @@
+@mixin bg-propertis{
+  height: auto;
+  width: 100%;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    //padding-left: -15px;
+    //padding-right: -15px;
+    .songwriting_choose_usagetype, .singing-general-page, .instrumentals-general-page, .complete_song-general-page {
+      .main-general {
+        height: 100%;
+       @include bg-propertis;
+        .button {
+          text-align: center;
+          .btn {
+            display: inline-block;
+            height: 56px;
+            line-height: 50px;
+            position: relative;
+            border: 3px solid #8DB835;
+            padding: 0 1rem;
+            color: white;
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 1px;
+            width: 88%;
+            background-color: rgba(255, 255, 255, 0);
+            box-shadow: 1px 2px 6px #ffffff;
+            text-shadow: 1px 2px 7px black;
+            margin: 20px auto;
+
+            &:hover {
+              color: white;
+              background-color: #8DB835;
+              transition: 2000ms;
+            }
+          }
+          p {
+            display: inline-block;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            text-shadow: 1px 2px 8px black;
+          }
+        }
+      }
+      //home  page//
+      .home {
+        .header {
+          .home-page {
+            max-width: 100%;
+            h1 {
+              text-align: center;
+            }
+            p {
+              text-align: center;
+            }
+          }
+        }
+        .groups {
+          max-width: 95%;
+          .group-content {
+            height: auto;
+            img {
+              width: auto;
+              height: auto;
+              margin-left: 18px;
+            }
+            .description {
+              display: none;
+              a {
+                h3 {
+                  display: none;
+                }
+              }
+            }
+          }
+          .group-text {
+            a {
+              margin: 0 auto;
+              text-align: center;
+              font-size: 30px;
+              display: block;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px){
+  body{
+    overflow-y:scroll;
+    background-size: cover;
+
+    .page-question {
+      padding-top: 40px;
+    }
+
+    .bullets{
+      top: 145px;
+    }
+
+    .button  {
+      text-align: center;
+      .btn {
+        display: inline-block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        border: 3px solid #8DB835;
+        padding: 0 1rem;
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 1px;
+        width: 88%;
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: 1px 2px 6px #ffffff;
+        text-shadow: 1px 2px 7px black;
+        margin: 40px auto;
+
+      &:hover {
+        color: white;
+        background-color: #8DB835;
+        transition: 2000ms;
+      }
+    }
+      ul {
+        li {
+          input[type=radio]:checked ~ label {
+            color: white;
+            background-color: #8DB835;
+            width: 100%;
+            margin: 20px auto;
+
+          }
+          label {
+            cursor: pointer;
+            display: block;
+            height: 56px;
+            line-height: 50px;
+            border: 3px solid #8DB835;
+            padding: 0 1rem;
+            color: white;
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 1px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0);
+            -webkit-box-shadow: 1px 2px 6px #ffffff;
+            box-shadow: 1px 2px 6px #ffffff;
+            text-shadow: 1px 2px 7px black;
+            margin: 30px auto;
+          }
+        }
+      }
+      p {
+        display: inline-block;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 1px 2px 8px black;
+      }
+    }
+
+    .final-submit-page{
+      .review-page{
+        background-attachment: scroll;
+      }
+    }
+
+    .contact-modal, .main-modal{
+      .wrapper{
+        width: auto;
+        height: auto;
+
+        input{
+          margin: 0 auto;
+          width: 100%;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+//@media only screen and (max-device-width : 768px) {
+//  .instrumentals-general-page {
+//    .instrumentals_choose_usagetype {
+//      .main-general {
+//        height: auto;
+//        width: 100%;
+//        background-size: cover;
+//      }
+//      .main-general {
+//        height: auto;
+//        width: 100%;
+//        background-size: cover;
+//      }
+//    }
+//  }
+//}
+//@media only screen and (max-device-width : 768px) and (max-device-width : 1024px){
+//  body {
+//    .bullets{
+//      position: relative;
+//      width: 100%;
+//      top: 145px;
+//      padding: 0;
+//      margin: 0;
+//      text-align: center;
+//    }
+//    .songwriting_choose_usagetype, .singing-general-page, .instrumentals-general-page, .complete_song-general-page {
+//      .step-3, .step-1, .step-2{
+//
+//      }
+//      .main-general {
+//        .button {
+//          text-align: center;
+//          .btn {
+//            display: inline-block;
+//            height: 56px;
+//            line-height: 50px;
+//            position: relative;
+//            border: 3px solid #8DB835;
+//            padding: 0 1rem;
+//            color: white;
+//            font-size: 25px;
+//            font-weight: 700;
+//            text-align: center;
+//            border-radius: 1px;
+//            width: 88%;
+//            background-color: rgba(255, 255, 255, 0);
+//            box-shadow: 1px 2px 6px #ffffff;
+//            text-shadow: 1px 2px 7px black;
+//            margin: 20px auto;
+//
+//            &:hover {
+//              color: white;
+//              background-color: #8DB835;
+//              transition: 2000ms;
+//            }
+//          }
+//          p {
+//            display: inline-block;
+//            color: white;
+//            font-size: 18px;
+//            font-weight: 600;
+//            text-align: center;
+//            text-shadow: 1px 2px 8px black;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}

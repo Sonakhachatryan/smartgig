@@ -1,0 +1,78 @@
+@mixin large-text{
+  font: {
+    family: 'Arial Fett', 'Arial Standard', 'Arial';
+    weight: 700;
+    style: normal;
+  };
+  color: white;
+}
+@mixin bg-properties {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+@mixin font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Lato Hairline'), local('Lato-Hairline'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/boeCNmOCCh-EWFLSfVffDg.woff) format('woff');
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  .instrumentals-general-page {
+    .instrumentals_choose_usagetype {
+      background-image: url("../images/instrumentals/accordeon2.jpg");
+    }
+    .instrumentals_choose_instrument{
+      background-image: url("../images/instrumentals/song1.jpeg");
+    }
+    .instrumentals_topic{
+      background-image: url("../images/instrumentals/guitar-bass-instrument-black.jpg");
+    }
+    .instrumentals_genre{
+      background-image: url("../images/instrumentals/photo-1472312656035-eeef4726de6c.jpg");
+    }
+    .instrumentals_genre_ambiente_choosed{
+      background-image: url("../images/instrumentals/pexels-photo-237464.jpeg");
+    }
+    .instrumentals_choose_melody{
+      background-image: url("../images/instrumentals/instrumentals_bg2.jpg");
+    }
+    .instrumentals_deadline{
+      background-image: url("../images/instrumentals/instrumentals_bg3.jpg");
+    }
+    .instrumentals_budget{
+      background-image: url("../images/instrumentals/instrumentss.jpg");
+    }
+
+    .instrumentals_instruments{
+      background-image: url("../images/instrumentals/pexels-photo-343683.jpeg");
+    }
+    .instrumentals_topic1{
+      background-image: url("../images/instrumentals/pexels-photo-241687.jpeg");
+    }
+    .instrumentals_genre1{
+      background-image: url("../images/instrumentals/pexels-photo-237459.jpeg");
+    }
+    .instrumentals_genre_ambiente_choosed1{
+      background-image: url("../images/instrumentals/abstract-music-instruments-bg.jpg");
+    }
+    .instrumentals_choose_melody1{
+      background-image: url("../images/instrumentals/pexels-photo-122635.jpeg");
+    }
+    .instrumentals_deadline1{
+      background-image: url("../images/instrumentals/drums-musical-instrument-music-sound-60636.jpeg");
+    }
+    .instrumentals_budget1{
+      background-image: url("../images/instrumentals/photo-1472312656035-eeef4726de6c.jpg");
+    }
+  }
+}
+
+
+
+
+

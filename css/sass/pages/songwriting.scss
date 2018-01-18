@@ -1,0 +1,49 @@
+@mixin large-text{
+    font: {
+        family: 'Arial Fett', 'Arial Standard', 'Arial';
+        weight: 700;
+        style: normal;
+    };
+    color: white;
+}
+@mixin bg-properties {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Lato Hairline'), local('Lato-Hairline'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/boeCNmOCCh-EWFLSfVffDg.woff) format('woff');
+}
+
+body {
+  .songwriting_choose_usagetype {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    .songwriting_choose_usagetype_private_use {
+      background-image: url("../images/songwriting/photo20.jpg");
+    }
+    .songwriting_songtext {
+      background-image: url("../images/songwriting/photo4.jpg");
+    }
+    .songwriting_deadline {
+      background-image: url("../images/songwriting/photo14.jpeg");
+    }
+    .songwriting_budget {
+      background-image: url("../images/songwriting/photo5.jpg");
+    }
+    .commercial_use-songtext {
+      background-image: url("../images/songwriting/photo12.jpeg");
+    }
+    .commercial_use-deadline {
+      background-image: url("../images/songwriting/photo18.jpeg");
+    }
+    .commercial_use-budget {
+      background-image: url("../images/songwriting/photo6.jpeg");
+    }
+  }
+}
+

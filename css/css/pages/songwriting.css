@@ -1,0 +1,675 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Lato Hairline"), local("Lato-Hairline"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/boeCNmOCCh-EWFLSfVffDg.woff) format("woff"); }
+
+body .songwriting_choose_usagetype {
+  width: 100%;
+  height: 100%; }
+  body .songwriting_choose_usagetype .main-general {
+    height: 100%;
+    width: 100%;
+    background-size: cover; }
+    body .songwriting_choose_usagetype .main-general .button {
+      text-align: center; }
+      body .songwriting_choose_usagetype .main-general .button .btn {
+        display: inline-block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        border: 3px solid #8DB835;
+        padding: 0 1rem;
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 1px;
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0);
+        -webkit-box-shadow: 1px 2px 6px #ffffff;
+        box-shadow: 1px 2px 6px #ffffff;
+        text-shadow: 1px 2px 7px black;
+        margin: 20px 50px; }
+        body .songwriting_choose_usagetype .main-general .button .btn.active {
+          color: white;
+          background-color: #8DB835; }
+        body .songwriting_choose_usagetype .main-general .button .btn:hover {
+          color: white;
+          background-color: #8DB835;
+          -webkit-transition: 2000ms;
+          -o-transition: 2000ms;
+          transition: 2000ms; }
+      body .songwriting_choose_usagetype .main-general .button p {
+        display: inline-block;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 1px 2px 8px black; }
+    body .songwriting_choose_usagetype .main-general .table {
+      width: 100%;
+      height: 100%;
+      display: table; }
+      body .songwriting_choose_usagetype .main-general .table .cell {
+        display: table-caption;
+        vertical-align: middle;
+        margin: auto;
+        text-align: center; }
+        body .songwriting_choose_usagetype .main-general .table .cell .dots {
+          position: relative;
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          cursor: default; }
+          body .songwriting_choose_usagetype .main-general .table .cell .dots .active a {
+            -webkit-transform: scale3d(1.3, 1.3, 1.3);
+            transform: scale3d(1.3, 1.3, 1.3); }
+            body .songwriting_choose_usagetype .main-general .table .cell .dots .active a:after {
+              height: 100%; }
+          body .songwriting_choose_usagetype .main-general .table .cell .dots li {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 10px 16px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer; }
+            body .songwriting_choose_usagetype .main-general .table .cell .dots li a {
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              outline: none;
+              border-radius: 50%;
+              text-indent: -999em;
+              cursor: pointer;
+              position: absolute;
+              overflow: hidden;
+              background-color: transparent;
+              -webkit-box-shadow: inset 0 0 0 2px white;
+              box-shadow: inset 0 0 0 2px white;
+              -webkit-transition: all 0.3s ease;
+              -o-transition: all 0.3s ease;
+              transition: all 0.3s ease;
+              -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1); }
+              body .songwriting_choose_usagetype .main-general .table .cell .dots li a:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                height: 0;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                -webkit-box-shadow: 0 0 1px #fff;
+                box-shadow: 0 0 1px #fff;
+                -webkit-transition: height 0.3s ease;
+                -o-transition: height 0.3s ease;
+                transition: height 0.3s ease; }
+    body .songwriting_choose_usagetype .main-general .error {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 2px solid #e74c3c; }
+    body .songwriting_choose_usagetype .main-general .error-message {
+      color: #e74c3c !important;
+      text-align: right;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      text-shadow: 1px 2px 7px black; }
+    body .songwriting_choose_usagetype .main-general .calendar {
+      text-align: right;
+      margin: 0 auto;
+      padding: 10px; }
+      body .songwriting_choose_usagetype .main-general .calendar input {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-top: 2px solid black;
+        text-shadow: 1px 2px 7px black;
+        font-size: 23px;
+        font-weight: 400;
+        color: white;
+        display: inline-block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        padding: 0 1rem;
+        width: 100%; }
+        body .songwriting_choose_usagetype .main-general .calendar input:focus {
+          outline: none; }
+        body .songwriting_choose_usagetype .main-general .calendar input::-webkit-input-placeholder {
+          text-align: center;
+          text-shadow: 1px 1px 4px black;
+          font-size: 25px;
+          font-weight: 400;
+          color: white;
+          margin: 10px 0 0 10px;
+          text-overflow: ellipsis; }
+        body .songwriting_choose_usagetype .main-general .calendar input:focus::-webkit-input-placeholder {
+          opacity: 0;
+          -webkit-transition: opacity 0.3s ease;
+          -o-transition: opacity 0.3s ease;
+          transition: opacity 0.3s ease; }
+      body .songwriting_choose_usagetype .main-general .calendar p {
+        color: white;
+        text-shadow: 1px 2px 7px black;
+        font-size: 12px;
+        font-weight: 600; }
+      body .songwriting_choose_usagetype .main-general .calendar h3 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        text-align: center;
+        margin: 20px; }
+    body .songwriting_choose_usagetype .main-general .letters {
+      text-align: center;
+      margin: 15px auto; }
+      body .songwriting_choose_usagetype .main-general .letters textarea {
+        overflow: hidden; }
+        body .songwriting_choose_usagetype .main-general .letters textarea:focus {
+          outline: none; }
+      body .songwriting_choose_usagetype .main-general .letters p {
+        text-align: right;
+        font-size: 17px;
+        font-weight: 600;
+        color: white;
+        width: 75%;
+        margin: 0 auto; }
+      body .songwriting_choose_usagetype .main-general .letters #story {
+        font-size: 25px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-top: 2px solid black;
+        height: auto;
+        width: 75%;
+        color: white; }
+        body .songwriting_choose_usagetype .main-general .letters #story::-webkit-input-placeholder {
+          text-align: left;
+          text-shadow: 1px 1px 4px black;
+          font-size: 15px;
+          font-weight: 400;
+          color: white;
+          margin: 10px 0 0 10px;
+          text-overflow: ellipsis; }
+        body .songwriting_choose_usagetype .main-general .letters #story:focus::-webkit-input-placeholder {
+          opacity: 0;
+          -webkit-transition: opacity 0.3s ease;
+          -o-transition: opacity 0.3s ease;
+          transition: opacity 0.3s ease; }
+        body .songwriting_choose_usagetype .main-general .letters #story:-moz-placeholder {
+          text-align: left;
+          text-shadow: 1px 2px 7px black;
+          font-size: 23px;
+          font-weight: 400;
+          color: white;
+          margin: 10px 0 0 10px;
+          text-overflow: ellipsis;
+          text-indent: 0;
+          -webkit-transition: text-indent 0.3s ease;
+          -o-transition: text-indent 0.3s ease;
+          transition: text-indent 0.3s ease; }
+    body .songwriting_choose_usagetype .main-general .active:active {
+      font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+      font-weight: 700;
+      font-style: normal;
+      color: white;
+      padding: 30px 0 3px 25px;
+      font-size: 25px;
+      color: #8DB835;
+      text-decoration: none;
+      text-shadow: 1px 2px 7px black; }
+  body .songwriting_choose_usagetype .songwriting_choose_usagetype_private_use {
+    background-image: url("../images/songwriting/photo20.jpg"); }
+    body .songwriting_choose_usagetype .songwriting_choose_usagetype_private_use .page-question {
+      padding-top: 150px; }
+      body .songwriting_choose_usagetype .songwriting_choose_usagetype_private_use .page-question .center {
+        text-align: center;
+        margin: 20px 0; }
+        body .songwriting_choose_usagetype .songwriting_choose_usagetype_private_use .page-question .center h1 {
+          font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+          font-weight: 700;
+          font-style: normal;
+          color: white;
+          font-size: 30px;
+          text-shadow: 1px 2px 7px black;
+          display: inline-block;
+          text-align: center;
+          margin: 10px;
+          vertical-align: middle; }
+          body .songwriting_choose_usagetype .songwriting_choose_usagetype_private_use .page-question .center h1 span {
+            border: 2px solid white;
+            border-radius: 50px;
+            padding: 8px 12px;
+            font-size: 23px; }
+        body .songwriting_choose_usagetype .songwriting_choose_usagetype_private_use .page-question .center p {
+          font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+          font-weight: 700;
+          font-style: normal;
+          color: white;
+          font-size: 20px;
+          margin: 0 0 60px 0;
+          font-weight: 600;
+          text-align: center;
+          text-shadow: 1px 2px 7px black; }
+    body .songwriting_choose_usagetype .songwriting_choose_usagetype_private_use .button-back-home {
+      text-align: center; }
+      body .songwriting_choose_usagetype .songwriting_choose_usagetype_private_use .button-back-home a .back-to-home {
+        position: relative;
+        line-height: 50px;
+        height: 56px;
+        font-size: 25px;
+        font-weight: 700;
+        padding: 0 1rem;
+        text-align: center;
+        background-color: rgba(156, 156, 156, 0.5);
+        color: white;
+        margin: 20px;
+        text-shadow: 1px 2px 7px black;
+        border: 1px solid black; }
+        body .songwriting_choose_usagetype .songwriting_choose_usagetype_private_use .button-back-home a .back-to-home:hover {
+          color: black;
+          background-color: gray;
+          -webkit-transition: 2000ms;
+          -o-transition: 2000ms;
+          transition: 2000ms; }
+  body .songwriting_choose_usagetype .songwriting_songtext {
+    background-image: url("../images/songwriting/photo4.jpg"); }
+  body .songwriting_choose_usagetype .songwriting_deadline {
+    background-image: url("../images/songwriting/photo14.jpeg"); }
+  body .songwriting_choose_usagetype .songwriting_budget {
+    background-image: url("../images/songwriting/photo5.jpg"); }
+  body .songwriting_choose_usagetype .commercial_use-songtext {
+    background-image: url("../images/songwriting/photo12.jpeg"); }
+  body .songwriting_choose_usagetype .commercial_use-deadline {
+    background-image: url("../images/songwriting/photo18.jpeg"); }
+  body .songwriting_choose_usagetype .commercial_use-budget {
+    background-image: url("../images/songwriting/photo6.jpeg"); }
+  body .songwriting_choose_usagetype .final-submit-page {
+    text-align: center;
+    margin: 0 auto; }
+    body .songwriting_choose_usagetype .final-submit-page .main-content {
+      padding-top: 130px; }
+    body .songwriting_choose_usagetype .final-submit-page .review-page {
+      background-image: url("../images/bg/photo1.jpeg");
+      margin: 0 auto;
+      text-align: center;
+      background-attachment: fixed;
+      overflow-y: scroll; }
+      body .songwriting_choose_usagetype .final-submit-page .review-page .for-submit {
+        text-align: center; }
+        body .songwriting_choose_usagetype .final-submit-page .review-page .for-submit h2 {
+          font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+          font-weight: 700;
+          font-style: normal;
+          color: white;
+          font-size: 30px;
+          text-shadow: 1px 2px 7px black;
+          display: inline-block;
+          text-align: center;
+          margin: 20px; }
+      body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form {
+        margin: 0 auto; }
+        body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button-back-home {
+          text-align: center; }
+          body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button-back-home .back-to-home {
+            position: relative;
+            line-height: 50px;
+            height: 56px;
+            font-size: 25px;
+            font-weight: 700;
+            padding: 0 1rem;
+            text-align: center;
+            background-color: rgba(156, 156, 156, 0.5);
+            color: white;
+            margin: 20px;
+            text-shadow: 1px 2px 7px black;
+            border: 1px solid black; }
+            body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button-back-home .back-to-home:hover {
+              color: black;
+              background-color: gray;
+              -webkit-transition: 2000ms;
+              -o-transition: 2000ms;
+              transition: 2000ms; }
+  body .songwriting_choose_usagetype .step-2 .main-content {
+    padding-top: 100px; }
+  body .songwriting_choose_usagetype .step-2 .page-question {
+    margin-top: 70px; }
+    body .songwriting_choose_usagetype .step-2 .page-question .center {
+      text-align: center; }
+      body .songwriting_choose_usagetype .step-2 .page-question .center h1 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 28px;
+        text-shadow: 1px 2px 7px black;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle; }
+        body .songwriting_choose_usagetype .step-2 .page-question .center h1 span {
+          border: 2px solid white;
+          border-radius: 50px;
+          padding: 8px 12px;
+          font-size: 23px; }
+  body .songwriting_choose_usagetype .step-3 .main-content, body .songwriting_choose_usagetype .step-4 .main-content {
+    padding-top: 100px; }
+  body .songwriting_choose_usagetype .step-3 .page-question, body .songwriting_choose_usagetype .step-4 .page-question {
+    margin: 80px 0 0 0;
+    line-height: 40px; }
+    body .songwriting_choose_usagetype .step-3 .page-question .center, body .songwriting_choose_usagetype .step-4 .page-question .center {
+      text-align: center; }
+      body .songwriting_choose_usagetype .step-3 .page-question .center h1, body .songwriting_choose_usagetype .step-4 .page-question .center h1 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle; }
+        body .songwriting_choose_usagetype .step-3 .page-question .center h1 span, body .songwriting_choose_usagetype .step-4 .page-question .center h1 span {
+          border: 2px solid white;
+          border-radius: 50px;
+          padding: 8px 12px;
+          font-size: 23px; }
+      body .songwriting_choose_usagetype .step-3 .page-question .center p, body .songwriting_choose_usagetype .step-4 .page-question .center p {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 20px;
+        margin: -10px 0 10px 0;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 1px 2px 7px black; }
+
+body .step-4 .button {
+  margin-top: -20px; }
+
+body .contact-modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(23, 26, 29, 0.2);
+  display: none; }
+  body .contact-modal .wrapper {
+    width: 500px;
+    background-color: #2d3945;
+    padding: 30px;
+    height: 400px;
+    position: relative;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 2px 5px gray;
+    box-shadow: 1px 2px 5px gray;
+    top: 120px;
+    margin: 0 auto; }
+    body .contact-modal .wrapper h3 {
+      color: wheat;
+      font-size: 25px;
+      text-align: center; }
+    body .contact-modal .wrapper div {
+      text-align: center; }
+    body .contact-modal .wrapper .input-name, body .contact-modal .wrapper .input-email {
+      width: 360px;
+      height: 50px;
+      border: 2px solid black;
+      padding: 0 20px;
+      margin: 20px 0;
+      text-align: center;
+      color: #2d3945;
+      font-size: 18px;
+      background: #fff3cd; }
+      body .contact-modal .wrapper .input-name:focus, body .contact-modal .wrapper .input-email:focus {
+        outline: none; }
+    body .contact-modal .wrapper .submit {
+      padding: 10px 30px;
+      border: 2px solid #1c7430;
+      color: #fefefe;
+      background: #5F81A3;
+      cursor: pointer;
+      margin-top: 10px; }
+      body .contact-modal .wrapper .submit:hover {
+        background-color: #fefefe;
+        color: #5F81A3; }
+
+.kontext {
+  width: 100%;
+  height: 100%; }
+  .kontext .layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    /*box-shadow: 0px 0px 120px rgba( 0, 0, 0, 0.8 );*/ }
+    .kontext .layer .show {
+      visibility: visible; }
+  .kontext .capable {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+    .kontext .capable .layer {
+      -webkit-transform: translateZ(-100px);
+      -moz-transform: translateZ(-100px);
+      transform: translateZ(-100px); }
+      .kontext .capable .layer .show {
+        -webkit-transform: translateZ(0px);
+        -moz-transform: translateZ(0px);
+        transform: translateZ(0px); }
+
+.kontext.capable.animate .layer.show.right {
+  -webkit-animation: show-right 1s forwards ease;
+  -moz-animation: show-right 1s forwards ease;
+  animation: show-right 1s forwards ease; }
+
+.kontext.capable.animate .layer.hide.right {
+  -webkit-animation: hide-right 1s forwards ease;
+  -moz-animation: hide-right 1s forwards ease;
+  animation: hide-right 1s forwards ease; }
+
+.kontext.capable.animate .layer.show.left {
+  -webkit-animation: show-left 1s forwards ease;
+  -moz-animation: show-left 1s forwards ease;
+  animation: show-left 1s forwards ease; }
+
+.kontext.capable.animate .layer.hide.left {
+  -webkit-animation: hide-left 1s forwards ease;
+  -moz-animation: hide-left 1s forwards ease;
+  animation: hide-left 1s forwards ease; }
+
+/* CSS animation keyframes */
+@-webkit-keyframes show-right {
+  0% {
+    -webkit-transform: translateZ(-200px); }
+  40% {
+    -webkit-transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -webkit-transform: translateZ(0px); } }
+
+@-webkit-keyframes hide-right {
+  0% {
+    -webkit-transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -webkit-transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -webkit-transform: translateZ(-200px);
+    visibility: hidden; } }
+
+@-moz-keyframes show-right {
+  0% {
+    -moz-transform: translateZ(-200px); }
+  40% {
+    -moz-transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -moz-transform: translateZ(0px); } }
+
+@-moz-keyframes hide-right {
+  0% {
+    -moz-transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -moz-transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -moz-transform: translateZ(-200px);
+    visibility: hidden; } }
+
+@keyframes show-right {
+  0% {
+    -webkit-transform: translateZ(-200px);
+    transform: translateZ(-200px); }
+  40% {
+    -webkit-transform: translate(40%, 0) scale(0.8) rotateY(-20deg);
+    transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px); } }
+
+@keyframes hide-right {
+  0% {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -webkit-transform: translate(-40%, 0) scale(0.8) rotateY(20deg);
+    transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -webkit-transform: translateZ(-200px);
+    transform: translateZ(-200px);
+    visibility: hidden; } }
+
+@-webkit-keyframes show-left {
+  0% {
+    -webkit-transform: translateZ(-200px); }
+  40% {
+    -webkit-transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -webkit-transform: translateZ(0px); } }
+
+@-webkit-keyframes hide-left {
+  0% {
+    -webkit-transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -webkit-transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -webkit-transform: translateZ(-200px);
+    visibility: hidden; } }
+
+@-moz-keyframes show-left {
+  0% {
+    -moz-transform: translateZ(-200px); }
+  40% {
+    -moz-transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -moz-transform: translateZ(0px); } }
+
+@-moz-keyframes hide-left {
+  0% {
+    -moz-transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -moz-transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -moz-transform: translateZ(-200px);
+    visibility: hidden; } }
+
+@keyframes show-left {
+  0% {
+    -webkit-transform: translateZ(-200px);
+    transform: translateZ(-200px); }
+  40% {
+    -webkit-transform: translate(-40%, 0) scale(0.8) rotateY(20deg);
+    transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px); } }
+
+@keyframes hide-left {
+  0% {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -webkit-transform: translate(40%, 0) scale(0.8) rotateY(-20deg);
+    transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -webkit-transform: translateZ(-200px);
+    transform: translateZ(-200px);
+    visibility: hidden; } }
+
+/* Dimmer */
+.kontext .layer .dimmer {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  background: transparent; }
+
+.kontext.capable.animate .layer .dimmer {
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -o-transition: background 1s ease;
+  transition: background 1s ease; }
+
+.kontext.capable.animate .layer.hide .dimmer {
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.7); }
+
+/* Styles for the demo */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+
+body {
+  background-color: #222;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIW2NkYGD4D8SMQAwGcAY2AbBKDBUAVuYCBQPd34sAAAAASUVORK5CYII=);
+  background-repeat: repeat;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  color: #fff; }
+  body .bullets {
+    top: 120px;
+    padding: 0;
+    margin: 0;
+    text-align: center; }
+    body .bullets li {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin: 0 3px;
+      background: rgba(255, 255, 255, 0.5);
+      -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent; }
+      body .bullets li:hover {
+        background: rgba(255, 255, 255, 0.8); }
+      body .bullets li .active {
+        cursor: default;
+        background: #fff; }
+  @media screen and (max-width: 400px) {
+    body body {
+      font-size: 12px; }
+    body .layer h2 {
+      font-size: 5em; }
+    body .bullets li {
+      margin: 0 6px; } }

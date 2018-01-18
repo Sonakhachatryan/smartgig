@@ -1,0 +1,80 @@
+body {
+  overflow-y: scroll !important; }
+  body .home {
+    background-image: url("../images/bg/singing.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; }
+    body .home .header-top-area .home-page span {
+      font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+      font-weight: 600;
+      font-style: normal;
+      color: white;
+      font-size: 28px;
+      padding: 30px 0 10px 30px; }
+    body .home .home-page-question {
+      padding-top: 70px; }
+      body .home .home-page-question h1 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 600;
+        font-style: normal;
+        color: white;
+        text-align: center;
+        font-size: 36px;
+        padding: 80px 0 60px 0; }
+    body .home .groups {
+      position: relative;
+      padding: 20px;
+      overflow: hidden;
+      -webkit-transition: 3000ms;
+      -o-transition: 3000ms;
+      transition: 3000ms;
+      text-align: center; }
+      body .home .groups .group-content {
+        overflow: hidden;
+        height: 500px; }
+        body .home .groups .group-content:hover .description {
+          bottom: 0;
+          display: block;
+          -webkit-transition: 400ms;
+          -o-transition: 400ms;
+          transition: 400ms; }
+        body .home .groups .group-content img {
+          width: 600px;
+          height: 500px;
+          border-radius: 5px; }
+        body .home .groups .group-content .description {
+          display: block;
+          position: -webkit-sticky;
+          position: sticky;
+          left: 101px;
+          bottom: -566px;
+          width: 600px;
+          height: 100%;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.3); }
+          body .home .groups .group-content .description a {
+            text-decoration: none;
+            -webkit-text-emphasis: none;
+            text-emphasis: none;
+            text-align: center; }
+            body .home .groups .group-content .description a h3 {
+              font-weight: 300;
+              color: #fff;
+              display: block;
+              font-size: 30px;
+              text-decoration: none;
+              text-align: center;
+              text-shadow: 2px 3px 7px black;
+              padding: 95px 20px; }
+      body .home .groups .group-text a {
+        width: 200px;
+        text-align: center;
+        font-size: 30px;
+        text-shadow: 2px 3px 7px black;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        padding-top: 50px; }

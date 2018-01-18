@@ -1,0 +1,1093 @@
+html, body {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #1b1e21s;
+  /* header */
+  /* modals style */ }
+  html .main-general, body .main-general {
+    height: 100%;
+    height: 100%;
+    width: 100%;
+    background-size: cover; }
+    html .main-general .button, body .main-general .button {
+      text-align: center; }
+      html .main-general .button .btn, body .main-general .button .btn {
+        cursor: pointer;
+        display: inline-block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        border: 3px solid #8DB835;
+        padding: 0 1rem;
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 1px;
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0);
+        -webkit-box-shadow: 1px 2px 6px #ffffff;
+        box-shadow: 1px 2px 6px #ffffff;
+        text-shadow: 1px 2px 7px black;
+        margin: 20px 50px; }
+        html .main-general .button .btn.active, body .main-general .button .btn.active {
+          color: white;
+          background-color: #8DB835; }
+        html .main-general .button .btn:hover, body .main-general .button .btn:hover {
+          color: white;
+          background-color: #8DB835;
+          -webkit-transition: 2000ms;
+          -o-transition: 2000ms;
+          transition: 2000ms; }
+    html .main-general .error, body .main-general .error {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      border: 2px solid #e74c3c !important;
+      border-top-color: transparent; }
+    html .main-general .error-message, body .main-general .error-message {
+      color: #e74c3c !important;
+      text-align: right;
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0 auto;
+      text-shadow: 1px 2px 7px black; }
+    html .main-general .calendar, body .main-general .calendar {
+      margin: 30px auto;
+      margin-bottom: 20px;
+      padding: 10px; }
+      html .main-general .calendar input, body .main-general .calendar input {
+        width: 100%;
+        height: 56px;
+        display: inline-block;
+        position: relative;
+        padding: 0 1rem;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-top: 2px solid black;
+        text-shadow: 1px 2px 7px black;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 50px;
+        text-align: center; }
+        html .main-general .calendar input:focus, body .main-general .calendar input:focus {
+          outline: none; }
+        html .main-general .calendar input::-webkit-input-placeholder, body .main-general .calendar input::-webkit-input-placeholder {
+          text-align: center;
+          text-shadow: 1px 1px 4px black;
+          font-size: 25px;
+          font-weight: 400;
+          color: white;
+          margin: 10px 0 0 10px;
+          text-overflow: ellipsis; }
+        html .main-general .calendar input:focus::-webkit-input-placeholder, body .main-general .calendar input:focus::-webkit-input-placeholder {
+          opacity: 0;
+          -webkit-transition: opacity 0.3s ease;
+          -o-transition: opacity 0.3s ease;
+          transition: opacity 0.3s ease; }
+      html .main-general .calendar p, body .main-general .calendar p {
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+        text-align: right; }
+      html .main-general .calendar h3, body .main-general .calendar h3 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        text-align: center;
+        margin: 20px; }
+    html .main-general .letters, body .main-general .letters {
+      text-align: center;
+      margin: 15px auto; }
+      html .main-general .letters textarea, body .main-general .letters textarea {
+        overflow: hidden; }
+        html .main-general .letters textarea:focus, body .main-general .letters textarea:focus {
+          outline: none; }
+      html .main-general .letters p, body .main-general .letters p {
+        text-align: right;
+        font-size: 17px;
+        font-weight: 600;
+        color: white;
+        width: 100%;
+        margin: 0 auto; }
+      html .main-general .letters .story, body .main-general .letters .story {
+        font-size: 25px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-top: 2px solid black;
+        height: auto;
+        width: 100%;
+        color: white;
+        text-align: center; }
+        html .main-general .letters .story::-webkit-input-placeholder, body .main-general .letters .story::-webkit-input-placeholder {
+          text-align: left;
+          text-shadow: 1px 1px 4px black;
+          font-size: 15px;
+          font-weight: 400;
+          color: white;
+          margin: 10px 0 0 10px;
+          text-overflow: ellipsis; }
+        html .main-general .letters .story:focus::-webkit-input-placeholder, body .main-general .letters .story:focus::-webkit-input-placeholder {
+          opacity: 0;
+          -webkit-transition: opacity 0.3s ease;
+          -o-transition: opacity 0.3s ease;
+          transition: opacity 0.3s ease; }
+        html .main-general .letters .story:-moz-placeholder, body .main-general .letters .story:-moz-placeholder {
+          text-align: left;
+          text-shadow: 1px 2px 7px black;
+          font-size: 23px;
+          font-weight: 400;
+          color: white;
+          margin: 10px 0 0 10px;
+          text-overflow: ellipsis;
+          text-indent: 0;
+          -webkit-transition: text-indent 0.3s ease;
+          -o-transition: text-indent 0.3s ease;
+          transition: text-indent 0.3s ease; }
+    html .main-general .active:active, body .main-general .active:active {
+      font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+      font-weight: 700;
+      font-style: normal;
+      color: white;
+      padding: 30px 0 3px 25px;
+      font-size: 25px;
+      color: #8DB835;
+      text-decoration: none;
+      text-shadow: 1px 2px 7px black; }
+    html .main-general .hint, body .main-general .hint {
+      position: relative;
+      display: inline-block; }
+      html .main-general .hint:before, html .main-general .hint:after, body .main-general .hint:before, body .main-general .hint:after {
+        position: absolute;
+        opacity: 0;
+        z-index: 1000000;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        pointer-events: none; }
+      html .main-general .hint:hover:before, html .main-general .hint:hover:after, body .main-general .hint:hover:before, body .main-general .hint:hover:after {
+        opacity: 1; }
+      html .main-general .hint:before, body .main-general .hint:before {
+        content: '';
+        position: absolute;
+        background: transparent;
+        border: 6px solid transparent;
+        position: absolute; }
+      html .main-general .hint:after, body .main-general .hint:after {
+        content: attr(data-hint);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 8px 10px;
+        font-size: 12px;
+        white-space: nowrap;
+        -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); }
+    html .main-general .hint--right:before, body .main-general .hint--right:before {
+      left: 100%;
+      bottom: 50%;
+      margin: 0 0 -4px -8px;
+      border-right-color: rgba(0, 0, 0, 0.8); }
+    html .main-general .hint--right:after, body .main-general .hint--right:after {
+      left: 100%;
+      bottom: 50%;
+      margin: 0 0 -13px 4px; }
+    html .main-general .hint--right:hover:before, body .main-general .hint--right:hover:before {
+      margin: 0 0 -4px -0; }
+    html .main-general .hint--right:hover:after, body .main-general .hint--right:hover:after {
+      margin: 0 0 -13px 12px; }
+  html .step-1 .page-question, body .step-1 .page-question {
+    padding-top: 150px; }
+    html .step-1 .page-question .center, body .step-1 .page-question .center {
+      text-align: center;
+      margin: 20px 0; }
+      html .step-1 .page-question .center h1, body .step-1 .page-question .center h1 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        display: inline-block;
+        text-align: center;
+        margin: 10px;
+        vertical-align: middle;
+        position: relative; }
+        html .step-1 .page-question .center h1:before, body .step-1 .page-question .center h1:before {
+          content: " ";
+          position: absolute;
+          left: 0%;
+          bottom: 4px;
+          height: 3px;
+          width: 0%;
+          background-color: #fff;
+          -webkit-transition: width 0.5s ease-in-out;
+          -o-transition: width 0.5s ease-in-out;
+          transition: width 0.5s ease-in-out; }
+        html .step-1 .page-question .center h1:after, body .step-1 .page-question .center h1:after {
+          content: " ";
+          position: absolute;
+          right: 0%;
+          bottom: 4px;
+          height: 3px;
+          width: 0%;
+          background-color: #fff;
+          -webkit-transition: width 0.5s ease-in-out;
+          -o-transition: width 0.5s ease-in-out;
+          transition: width 0.5s ease-in-out; }
+        html .step-1 .page-question .center h1:hover:before, html .step-1 .page-question .center h1:focus:before, body .step-1 .page-question .center h1:hover:before, body .step-1 .page-question .center h1:focus:before {
+          width: 50%; }
+        html .step-1 .page-question .center h1:hover:after, html .step-1 .page-question .center h1:focus:after, body .step-1 .page-question .center h1:hover:after, body .step-1 .page-question .center h1:focus:after {
+          width: 50%; }
+      html .step-1 .page-question .center span, body .step-1 .page-question .center span {
+        border: 2px solid white;
+        border-radius: 50px;
+        top: 5px;
+        padding: 0 13px;
+        font-size: 23px;
+        color: white; }
+      html .step-1 .page-question .center p, body .step-1 .page-question .center p {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 20px;
+        margin: 0 0 60px 0;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 1px 2px 7px black; }
+  html .step-1 .button-back-home, body .step-1 .button-back-home {
+    text-align: center;
+    cursor: pointer; }
+    html .step-1 .button-back-home a .back-to-home, body .step-1 .button-back-home a .back-to-home {
+      cursor: pointer;
+      position: relative;
+      line-height: 50px;
+      height: 56px;
+      font-size: 25px;
+      font-weight: 700;
+      padding: 0 1rem;
+      text-align: center;
+      background-color: rgba(156, 156, 156, 0.5);
+      color: white;
+      margin: 20px;
+      text-shadow: 1px 2px 7px black;
+      border: 1px solid black; }
+      html .step-1 .button-back-home a .back-to-home:hover, body .step-1 .button-back-home a .back-to-home:hover {
+        color: black;
+        background-color: gray;
+        -webkit-transition: 2000ms;
+        -o-transition: 2000ms;
+        transition: 2000ms; }
+  html .step-2 .page-question, body .step-2 .page-question {
+    margin-top: 150px; }
+    html .step-2 .page-question .center, body .step-2 .page-question .center {
+      text-align: center; }
+      html .step-2 .page-question .center h1, body .step-2 .page-question .center h1 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        position: relative; }
+        html .step-2 .page-question .center h1:before, body .step-2 .page-question .center h1:before {
+          content: " ";
+          position: absolute;
+          left: 0%;
+          bottom: 4px;
+          height: 3px;
+          width: 0%;
+          background-color: #fff;
+          -webkit-transition: width 0.5s ease-in-out;
+          -o-transition: width 0.5s ease-in-out;
+          transition: width 0.5s ease-in-out; }
+        html .step-2 .page-question .center h1:after, body .step-2 .page-question .center h1:after {
+          content: " ";
+          position: absolute;
+          right: 0%;
+          bottom: 4px;
+          height: 3px;
+          width: 0%;
+          background-color: #fff;
+          -webkit-transition: width 0.5s ease-in-out;
+          -o-transition: width 0.5s ease-in-out;
+          transition: width 0.5s ease-in-out; }
+        html .step-2 .page-question .center h1:hover:before, html .step-2 .page-question .center h1:focus:before, body .step-2 .page-question .center h1:hover:before, body .step-2 .page-question .center h1:focus:before {
+          width: 50%; }
+        html .step-2 .page-question .center h1:hover:after, html .step-2 .page-question .center h1:focus:after, body .step-2 .page-question .center h1:hover:after, body .step-2 .page-question .center h1:focus:after {
+          width: 50%; }
+      html .step-2 .page-question .center span, body .step-2 .page-question .center span {
+        border: 2px solid white;
+        border-radius: 50px;
+        top: 5px;
+        padding: 0 13px;
+        font-size: 23px;
+        color: white; }
+      html .step-2 .page-question .center p, body .step-2 .page-question .center p {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 600;
+        font-style: normal;
+        color: white;
+        font-size: 20px;
+        text-shadow: 1px 2px 7px black;
+        text-align: center;
+        vertical-align: middle;
+        position: relative; }
+  html .step-3 .page-question, html .step-3 .preview-form, body .step-3 .page-question, body .step-3 .preview-form {
+    margin-top: 150px; }
+    html .step-3 .page-question .center, html .step-3 .preview-form .center, body .step-3 .page-question .center, body .step-3 .preview-form .center {
+      text-align: center; }
+      html .step-3 .page-question .center h1, html .step-3 .preview-form .center h1, body .step-3 .page-question .center h1, body .step-3 .preview-form .center h1 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        display: inline-block;
+        text-align: center;
+        margin: 0;
+        vertical-align: middle;
+        position: relative; }
+        html .step-3 .page-question .center h1:before, html .step-3 .preview-form .center h1:before, body .step-3 .page-question .center h1:before, body .step-3 .preview-form .center h1:before {
+          content: " ";
+          position: absolute;
+          left: 0%;
+          bottom: 4px;
+          height: 3px;
+          width: 0%;
+          background-color: #fff;
+          -webkit-transition: width 0.5s ease-in-out;
+          -o-transition: width 0.5s ease-in-out;
+          transition: width 0.5s ease-in-out; }
+        html .step-3 .page-question .center h1:after, html .step-3 .preview-form .center h1:after, body .step-3 .page-question .center h1:after, body .step-3 .preview-form .center h1:after {
+          content: " ";
+          position: absolute;
+          right: 0%;
+          bottom: 4px;
+          height: 3px;
+          width: 0%;
+          background-color: #fff;
+          -webkit-transition: width 0.5s ease-in-out;
+          -o-transition: width 0.5s ease-in-out;
+          transition: width 0.5s ease-in-out; }
+        html .step-3 .page-question .center h1:hover:before, html .step-3 .page-question .center h1:focus:before, html .step-3 .preview-form .center h1:hover:before, html .step-3 .preview-form .center h1:focus:before, body .step-3 .page-question .center h1:hover:before, body .step-3 .page-question .center h1:focus:before, body .step-3 .preview-form .center h1:hover:before, body .step-3 .preview-form .center h1:focus:before {
+          width: 50%; }
+        html .step-3 .page-question .center h1:hover:after, html .step-3 .page-question .center h1:focus:after, html .step-3 .preview-form .center h1:hover:after, html .step-3 .preview-form .center h1:focus:after, body .step-3 .page-question .center h1:hover:after, body .step-3 .page-question .center h1:focus:after, body .step-3 .preview-form .center h1:hover:after, body .step-3 .preview-form .center h1:focus:after {
+          width: 50%; }
+      html .step-3 .page-question .center span, html .step-3 .preview-form .center span, body .step-3 .page-question .center span, body .step-3 .preview-form .center span {
+        border: 2px solid white;
+        border-radius: 50px;
+        top: 5px;
+        padding: 0 13px;
+        font-size: 23px;
+        color: white; }
+      html .step-3 .page-question .center p, html .step-3 .preview-form .center p, body .step-3 .page-question .center p, body .step-3 .preview-form .center p {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 20px;
+        margin: 0 0 24px 0;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 1px 2px 7px black; }
+    html .step-3 .page-question .groups-of-genre, html .step-3 .preview-form .groups-of-genre, body .step-3 .page-question .groups-of-genre, body .step-3 .preview-form .groups-of-genre {
+      margin: 0 auto;
+      cursor: pointer; }
+      html .step-3 .page-question .groups-of-genre .genre-image, html .step-3 .page-question .groups-of-genre .instrument-image, html .step-3 .page-question .groups-of-genre .add_instrumnet_image, html .step-3 .preview-form .groups-of-genre .genre-image, html .step-3 .preview-form .groups-of-genre .instrument-image, html .step-3 .preview-form .groups-of-genre .add_instrumnet_image, body .step-3 .page-question .groups-of-genre .genre-image, body .step-3 .page-question .groups-of-genre .instrument-image, body .step-3 .page-question .groups-of-genre .add_instrumnet_image, body .step-3 .preview-form .groups-of-genre .genre-image, body .step-3 .preview-form .groups-of-genre .instrument-image, body .step-3 .preview-form .groups-of-genre .add_instrumnet_image {
+        margin: 15px auto 0px;
+        height: 220px;
+        width: 100%; }
+        html .step-3 .page-question .groups-of-genre .genre-image img, html .step-3 .page-question .groups-of-genre .instrument-image img, html .step-3 .page-question .groups-of-genre .add_instrumnet_image img, html .step-3 .preview-form .groups-of-genre .genre-image img, html .step-3 .preview-form .groups-of-genre .instrument-image img, html .step-3 .preview-form .groups-of-genre .add_instrumnet_image img, body .step-3 .page-question .groups-of-genre .genre-image img, body .step-3 .page-question .groups-of-genre .instrument-image img, body .step-3 .page-question .groups-of-genre .add_instrumnet_image img, body .step-3 .preview-form .groups-of-genre .genre-image img, body .step-3 .preview-form .groups-of-genre .instrument-image img, body .step-3 .preview-form .groups-of-genre .add_instrumnet_image img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px; }
+      html .step-3 .page-question .groups-of-genre .genre-name, html .step-3 .page-question .groups-of-genre .instrument-name, html .step-3 .page-question .groups-of-genre .add_instrumnet_name, html .step-3 .preview-form .groups-of-genre .genre-name, html .step-3 .preview-form .groups-of-genre .instrument-name, html .step-3 .preview-form .groups-of-genre .add_instrumnet_name, body .step-3 .page-question .groups-of-genre .genre-name, body .step-3 .page-question .groups-of-genre .instrument-name, body .step-3 .page-question .groups-of-genre .add_instrumnet_name, body .step-3 .preview-form .groups-of-genre .genre-name, body .step-3 .preview-form .groups-of-genre .instrument-name, body .step-3 .preview-form .groups-of-genre .add_instrumnet_name {
+        display: block;
+        border-radius: 150px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3); }
+        html .step-3 .page-question .groups-of-genre .genre-name h3, html .step-3 .page-question .groups-of-genre .instrument-name h3, html .step-3 .page-question .groups-of-genre .add_instrumnet_name h3, html .step-3 .preview-form .groups-of-genre .genre-name h3, html .step-3 .preview-form .groups-of-genre .instrument-name h3, html .step-3 .preview-form .groups-of-genre .add_instrumnet_name h3, body .step-3 .page-question .groups-of-genre .genre-name h3, body .step-3 .page-question .groups-of-genre .instrument-name h3, body .step-3 .page-question .groups-of-genre .add_instrumnet_name h3, body .step-3 .preview-form .groups-of-genre .genre-name h3, body .step-3 .preview-form .groups-of-genre .instrument-name h3, body .step-3 .preview-form .groups-of-genre .add_instrumnet_name h3 {
+          margin-top: 10px;
+          text-align: center;
+          width: 100%; }
+    html .step-3 .page-question .upload-file-button, html .step-3 .preview-form .upload-file-button, body .step-3 .page-question .upload-file-button, body .step-3 .preview-form .upload-file-button {
+      margin: 0 auto 40px;
+      text-align: center;
+      padding: 0; }
+      html .step-3 .page-question .upload-file-button img, html .step-3 .preview-form .upload-file-button img, body .step-3 .page-question .upload-file-button img, body .step-3 .preview-form .upload-file-button img {
+        vertical-align: middle;
+        border-style: none;
+        position: absolute;
+        top: 16px;
+        right: 22px;
+        width: 25px; }
+      html .step-3 .page-question .upload-file-button input[type="file"], html .step-3 .preview-form .upload-file-button input[type="file"], body .step-3 .page-question .upload-file-button input[type="file"], body .step-3 .preview-form .upload-file-button input[type="file"] {
+        display: none; }
+      html .step-3 .page-question .upload-file-button .custom-file-upload, html .step-3 .preview-form .upload-file-button .custom-file-upload, body .step-3 .page-question .upload-file-button .custom-file-upload, body .step-3 .preview-form .upload-file-button .custom-file-upload {
+        border: 3px solid white;
+        cursor: pointer;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-top: 2px solid black;
+        text-shadow: 1px 2px 7px black;
+        font-size: 21px;
+        font-weight: 400;
+        display: inline-block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        padding: 0 1rem;
+        width: 100%;
+        overflow-y: scroll; }
+    html .step-3 .page-question .characters-input, html .step-3 .preview-form .characters-input, body .step-3 .page-question .characters-input, body .step-3 .preview-form .characters-input {
+      margin: 50px auto; }
+      html .step-3 .page-question .characters-input input, html .step-3 .preview-form .characters-input input, body .step-3 .page-question .characters-input input, body .step-3 .preview-form .characters-input input {
+        border: 3px solid white;
+        padding: 14px 36px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-top: 2px solid black;
+        font-size: 23px;
+        font-weight: 400;
+        display: inline-block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        width: 100%;
+        text-align: center; }
+        html .step-3 .page-question .characters-input input:focus, html .step-3 .preview-form .characters-input input:focus, body .step-3 .page-question .characters-input input:focus, body .step-3 .preview-form .characters-input input:focus {
+          outline: none; }
+      html .step-3 .page-question .characters-input h3, html .step-3 .preview-form .characters-input h3, body .step-3 .page-question .characters-input h3, body .step-3 .preview-form .characters-input h3 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        text-align: center;
+        margin: 20px; }
+      html .step-3 .page-question .characters-input p, html .step-3 .preview-form .characters-input p, body .step-3 .page-question .characters-input p, body .step-3 .preview-form .characters-input p {
+        text-align: right;
+        font-size: 17px;
+        font-weight: 600;
+        color: white;
+        width: 100%;
+        margin: 0 auto; }
+  html .final-submit-page, body .final-submit-page {
+    text-align: center;
+    margin: 0 auto; }
+    html .final-submit-page .main-content, body .final-submit-page .main-content {
+      padding-top: 130px; }
+    html .final-submit-page .review-page, body .final-submit-page .review-page {
+      background-image: url("../images/bg/photo1.jpeg");
+      margin: 0 auto;
+      text-align: center;
+      background-attachment: fixed;
+      overflow-y: scroll; }
+      html .final-submit-page .review-page .for-submit, body .final-submit-page .review-page .for-submit {
+        text-align: center;
+        padding-top: 30px; }
+        html .final-submit-page .review-page .for-submit h2, body .final-submit-page .review-page .for-submit h2 {
+          font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+          font-weight: 700;
+          font-style: normal;
+          color: white;
+          font-size: 30px;
+          text-shadow: 1px 2px 7px black;
+          display: inline-block;
+          text-align: center;
+          margin: 20px; }
+      html .final-submit-page .review-page .preview-form, body .final-submit-page .review-page .preview-form {
+        margin: 0 auto; }
+        html .final-submit-page .review-page .preview-form .groups-of-genre, body .final-submit-page .review-page .preview-form .groups-of-genre {
+          margin: 0 auto;
+          cursor: pointer; }
+          html .final-submit-page .review-page .preview-form .groups-of-genre .instrument-image, body .final-submit-page .review-page .preview-form .groups-of-genre .instrument-image {
+            margin: 15px auto;
+            height: 220px; }
+            html .final-submit-page .review-page .preview-form .groups-of-genre .instrument-image img, body .final-submit-page .review-page .preview-form .groups-of-genre .instrument-image img {
+              width: 100%;
+              height: 100%;
+              border-radius: 10px; }
+            html .final-submit-page .review-page .preview-form .groups-of-genre .instrument-image .instruments-name, body .final-submit-page .review-page .preview-form .groups-of-genre .instrument-image .instruments-name {
+              color: white;
+              font-size: 30px;
+              text-align: center;
+              text-shadow: 1px 2px 7px black; }
+        html .final-submit-page .review-page .preview-form .button ul, body .final-submit-page .review-page .preview-form .button ul {
+          list-style-type: none;
+          text-align: center; }
+          html .final-submit-page .review-page .preview-form .button ul li, body .final-submit-page .review-page .preview-form .button ul li {
+            text-align: center;
+            display: inline-block;
+            margin: 0 -60px;
+            width: 100%; }
+            html .final-submit-page .review-page .preview-form .button ul li input[type=radio], body .final-submit-page .review-page .preview-form .button ul li input[type=radio] {
+              position: absolute;
+              visibility: hidden; }
+            html .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ .check, body .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ .check {
+              border: 5px solid black; }
+            html .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ label, body .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ label {
+              color: white;
+              background-color: #8DB835; }
+            html .final-submit-page .review-page .preview-form .button ul li label, body .final-submit-page .review-page .preview-form .button ul li label {
+              cursor: pointer;
+              display: inline-block;
+              height: 56px;
+              line-height: 50px;
+              position: relative;
+              border: 3px solid #8DB835;
+              padding: 0 1rem;
+              color: white;
+              font-size: 25px;
+              font-weight: 700;
+              text-align: center;
+              border-radius: 1px;
+              width: 300px;
+              background-color: rgba(255, 255, 255, 0);
+              -webkit-box-shadow: 1px 2px 6px #ffffff;
+              box-shadow: 1px 2px 6px #ffffff;
+              text-shadow: 1px 2px 7px black;
+              margin: 20px 50px; }
+              html .final-submit-page .review-page .preview-form .button ul li label.active, body .final-submit-page .review-page .preview-form .button ul li label.active {
+                color: white;
+                background-color: #8DB835; }
+              html .final-submit-page .review-page .preview-form .button ul li label:hover, body .final-submit-page .review-page .preview-form .button ul li label:hover {
+                color: white;
+                background-color: #8DB835;
+                -webkit-transition: 2000ms;
+                -o-transition: 2000ms;
+                transition: 2000ms; }
+            html .final-submit-page .review-page .preview-form .button ul li .check, body .final-submit-page .review-page .preview-form .button ul li .check {
+              display: none;
+              position: absolute;
+              border: 5px solid #AAAAAA;
+              border-radius: 100%;
+              height: 25px;
+              width: 25px;
+              top: 30px;
+              left: 20px;
+              z-index: 5;
+              -o-transition: border .25s linear;
+              transition: border .25s linear;
+              -webkit-transition: border .25s linear;
+              background-color: #1e7e34; }
+              html .final-submit-page .review-page .preview-form .button ul li .check:hover, body .final-submit-page .review-page .preview-form .button ul li .check:hover {
+                border: 5px solid #FFFFFF; }
+              html .final-submit-page .review-page .preview-form .button ul li .check::before, body .final-submit-page .review-page .preview-form .button ul li .check::before {
+                display: block;
+                position: absolute;
+                content: '';
+                border-radius: 100%;
+                height: 6px;
+                width: 6px;
+                top: 5px;
+                left: 5px;
+                margin: auto;
+                -o-transition: background 0.25s linear;
+                transition: background 0.25s linear;
+                -webkit-transition: background 0.25s linear; }
+        html .final-submit-page .review-page .preview-form .button-back-home, body .final-submit-page .review-page .preview-form .button-back-home {
+          text-align: center; }
+          html .final-submit-page .review-page .preview-form .button-back-home .back-to-home, body .final-submit-page .review-page .preview-form .button-back-home .back-to-home {
+            position: relative;
+            line-height: 50px;
+            height: 56px;
+            font-size: 25px;
+            font-weight: 700;
+            padding: 0 1rem;
+            text-align: center;
+            background-color: rgba(156, 156, 156, 0.5);
+            color: white;
+            margin: 20px;
+            text-shadow: 1px 2px 7px black;
+            border: 1px solid black; }
+            html .final-submit-page .review-page .preview-form .button-back-home .back-to-home:hover, body .final-submit-page .review-page .preview-form .button-back-home .back-to-home:hover {
+              color: black;
+              background-color: gray;
+              -webkit-transition: 2000ms;
+              -o-transition: 2000ms;
+              transition: 2000ms; }
+  html input[type=date]::-webkit-inner-spin-button,
+  html input[type=date]::-webkit-outer-spin-button, body input[type=date]::-webkit-inner-spin-button,
+  body input[type=date]::-webkit-outer-spin-button {
+    -webkit-appearance: none; }
+  html .nav-top, body .nav-top {
+    background-color: #171a1d !important; }
+    html .nav-top a, body .nav-top a {
+      margin-left: 25px; }
+      html .nav-top a > :first-child, body .nav-top a > :first-child {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 25px;
+        color: #8DB835;
+        text-shadow: 1px 2px 7px black; }
+      html .nav-top a p, body .nav-top a p {
+        margin-bottom: 0;
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        padding-left: 25px;
+        font-size: 18px;
+        text-shadow: 1px 2px 7px black; }
+    html .nav-top .page-indicator, body .nav-top .page-indicator {
+      font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+      font-weight: 700;
+      font-style: normal;
+      color: white;
+      padding: 0 0 0 10px;
+      font-size: 25px;
+      text-shadow: 1px 2px 7px black;
+      margin-right: 105px; }
+    html .nav-top .main-menu li, body .nav-top .main-menu li {
+      padding: 0 0 0 25px;
+      font-size: 25px;
+      text-shadow: 1px 2px 7px black; }
+      html .nav-top .main-menu li .item-link, body .nav-top .main-menu li .item-link {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white; }
+      html .nav-top .main-menu li:hover a, body .nav-top .main-menu li:hover a {
+        color: #8DB835 !important; }
+    html .nav-top .main-menu .active a, body .nav-top .main-menu .active a {
+      color: #8DB835 !important; }
+    html .nav-top .collapse ul li a, body .nav-top .collapse ul li a {
+      position: relative; }
+      html .nav-top .collapse ul li a:before, body .nav-top .collapse ul li a:before {
+        content: " ";
+        position: absolute;
+        left: 0%;
+        bottom: 4px;
+        height: 3px;
+        width: 0%;
+        background-color: #fff;
+        -webkit-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out; }
+      html .nav-top .collapse ul li a:after, body .nav-top .collapse ul li a:after {
+        content: " ";
+        position: absolute;
+        left: 0%;
+        bottom: 4px;
+        height: 3px;
+        width: 0%;
+        background-color: #fff;
+        -webkit-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out; }
+      html .nav-top .collapse ul li a:hover:before, html .nav-top .collapse ul li a:focus:before, body .nav-top .collapse ul li a:hover:before, body .nav-top .collapse ul li a:focus:before {
+        width: 100%; }
+  html .modal-1, body .modal-1 {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(23, 26, 29, 0.2);
+    max-height: 100vh; }
+    html .modal-1 .wrapper, body .modal-1 .wrapper {
+      width: 500px;
+      background-color: #2d3945;
+      padding: 50px;
+      height: 400px;
+      position: relative;
+      border-radius: 10px;
+      -webkit-box-shadow: 1px 2px 5px gray;
+      box-shadow: 1px 2px 5px gray;
+      top: 120px;
+      margin: 0 auto; }
+      html .modal-1 .wrapper h3, body .modal-1 .wrapper h3 {
+        color: wheat;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 10px; }
+      html .modal-1 .wrapper div, body .modal-1 .wrapper div {
+        text-align: center; }
+      html .modal-1 .wrapper .input-name, html .modal-1 .wrapper .input-email, body .modal-1 .wrapper .input-name, body .modal-1 .wrapper .input-email {
+        height: 50px;
+        border: 2px solid black;
+        padding: 0 20px;
+        margin: 20px 0;
+        text-align: center;
+        color: #2d3945;
+        font-size: 18px;
+        background: #fff3cd; }
+        html .modal-1 .wrapper .input-name:focus, html .modal-1 .wrapper .input-email:focus, body .modal-1 .wrapper .input-name:focus, body .modal-1 .wrapper .input-email:focus {
+          outline: none; }
+      html .modal-1 .wrapper .submit, body .modal-1 .wrapper .submit {
+        padding: 10px 40px;
+        border: 2px solid #1c7430;
+        color: #fefefe;
+        background: #5F81A3;
+        cursor: pointer;
+        margin-top: 20px; }
+        html .modal-1 .wrapper .submit:hover, body .modal-1 .wrapper .submit:hover {
+          background-color: #fefefe;
+          color: #5F81A3; }
+  html .choose-modals, body .choose-modals {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(23, 26, 29, 0.2);
+    overflow-y: scroll; }
+    html .choose-modals .singing_choose_genre .choose-your-genre, body .choose-modals .singing_choose_genre .choose-your-genre {
+      padding-top: 30px;
+      background-color: black;
+      position: relative; }
+      html .choose-modals .singing_choose_genre .choose-your-genre .first-paragrafh, body .choose-modals .singing_choose_genre .choose-your-genre .first-paragrafh {
+        display: inline-block; }
+      html .choose-modals .singing_choose_genre .choose-your-genre button, body .choose-modals .singing_choose_genre .choose-your-genre button {
+        display: inline-block;
+        text-transform: uppercase;
+        position: relative;
+        width: 13%;
+        top: -62px;
+        cursor: pointer;
+        color: #8c8c8c;
+        background: transparent;
+        border: 3px solid rgba(64, 64, 64, 0.5);
+        text-align: center;
+        font-size: 1.5vw;
+        font-weight: bold;
+        padding: 0.5vw 0;
+        text-shadow: 1px 1px rgba(13, 12, 12, 0.3), 2px 2px rgba(13, 12, 12, 0.3);
+        overflow: hidden;
+        -webkit-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+        html .choose-modals .singing_choose_genre .choose-your-genre button:hover, body .choose-modals .singing_choose_genre .choose-your-genre button:hover {
+          color: rgba(38, 38, 38, 0.5);
+          background: white; }
+        html .choose-modals .singing_choose_genre .choose-your-genre button:focus, body .choose-modals .singing_choose_genre .choose-your-genre button:focus {
+          color: #0d0d0d; }
+      html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name {
+        position: relative;
+        padding: 20px;
+        -webkit-transition: 3000ms;
+        -o-transition: 3000ms;
+        transition: 3000ms;
+        text-align: center; }
+        html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image {
+          cursor: pointer;
+          overflow: hidden;
+          height: 220px;
+          width: 100%;
+          -webkit-box-shadow: 4px 0px 4px darkslategrey;
+          box-shadow: 4px 0px 4px darkslategrey;
+          border-radius: 2px; }
+          html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox {
+            width: 40px;
+            height: 40px;
+            background: #73a427;
+            color: #fff;
+            line-height: 36px;
+            position: absolute; }
+            html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox span, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox span, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox span, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox span {
+              float: right;
+              width: 43px;
+              text-align: center; }
+            html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox div, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox div, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox div, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox div {
+              background: #111;
+              width: 40px;
+              height: 36px;
+              position: absolute;
+              top: 0;
+              left: 40px;
+              -moz-transition: left 200ms ease-in;
+              -webkit-transition: left 200ms ease-in;
+              -o-transition: left 200ms ease-in;
+              transition: left 200ms ease-in; }
+          html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image img, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image img, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image img, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image img {
+            width: 100%;
+            height: 100%; }
+          html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .instruments-name, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .instruments-name {
+            cursor: pointer;
+            display: block;
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: -230px;
+            height: 100%;
+            border-radius: 42px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3); }
+          html .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image:hover .instruments-name, html .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image:hover .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image:hover .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image:hover .instruments-name {
+            cursor: pointer;
+            bottom: -145px;
+            display: block;
+            -webkit-transition: 400ms;
+            -o-transition: 400ms;
+            transition: 400ms; }
+      html .choose-modals .singing_choose_genre .choose-your-genre form input, body .choose-modals .singing_choose_genre .choose-your-genre form input {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-top: 2px solid black;
+        text-shadow: 1px 2px 7px black;
+        font-size: 23px;
+        font-weight: 400;
+        color: white;
+        display: block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        margin: 10px auto 10px;
+        padding: 10px 20px; }
+        html .choose-modals .singing_choose_genre .choose-your-genre form input:focus, body .choose-modals .singing_choose_genre .choose-your-genre form input:focus {
+          outline: none; }
+        html .choose-modals .singing_choose_genre .choose-your-genre form input::-webkit-input-placeholder, body .choose-modals .singing_choose_genre .choose-your-genre form input::-webkit-input-placeholder {
+          text-align: center;
+          text-shadow: 1px 1px 4px black;
+          font-size: 25px;
+          font-weight: 400;
+          color: white;
+          margin: 10px 0 0 10px;
+          text-overflow: ellipsis; }
+        html .choose-modals .singing_choose_genre .choose-your-genre form input:focus::-webkit-input-placeholder, body .choose-modals .singing_choose_genre .choose-your-genre form input:focus::-webkit-input-placeholder {
+          opacity: 0;
+          -webkit-transition: opacity 0.3s ease;
+          -o-transition: opacity 0.3s ease;
+          transition: opacity 0.3s ease; }
+
+/* dots style */
+.kontext {
+  width: 100%;
+  height: 100%; }
+
+.kontext .layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  /*box-shadow: 0px 0px 120px rgba( 0, 0, 0, 0.8 );*/ }
+
+.kontext .layer.show {
+  visibility: visible; }
+
+.kontext.capable {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.kontext.capable .layer {
+  -webkit-transform: translateZ(-100px);
+  -moz-transform: translateZ(-100px);
+  transform: translateZ(-100px); }
+
+.kontext.capable .layer.show {
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  transform: translateZ(0px); }
+
+.kontext.capable.animate .layer.show.right {
+  -webkit-animation: show-right 1s forwards ease;
+  -moz-animation: show-right 1s forwards ease;
+  animation: show-right 1s forwards ease; }
+
+.kontext.capable.animate .layer.hide.right {
+  -webkit-animation: hide-right 1s forwards ease;
+  -moz-animation: hide-right 1s forwards ease;
+  animation: hide-right 1s forwards ease; }
+
+.kontext.capable.animate .layer.show.left {
+  -webkit-animation: show-left 1s forwards ease;
+  -moz-animation: show-left 1s forwards ease;
+  animation: show-left 1s forwards ease; }
+
+.kontext.capable.animate .layer.hide.left {
+  -webkit-animation: hide-left 1s forwards ease;
+  -moz-animation: hide-left 1s forwards ease;
+  animation: hide-left 1s forwards ease; }
+
+/* CSS animation keyframes */
+@-webkit-keyframes show-right {
+  0% {
+    -webkit-transform: translateZ(-200px); }
+  40% {
+    -webkit-transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -webkit-transform: translateZ(0px); } }
+
+@-webkit-keyframes hide-right {
+  0% {
+    -webkit-transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -webkit-transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -webkit-transform: translateZ(-200px);
+    visibility: hidden; } }
+
+@-moz-keyframes show-right {
+  0% {
+    -moz-transform: translateZ(-200px); }
+  40% {
+    -moz-transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -moz-transform: translateZ(0px); } }
+
+@-moz-keyframes hide-right {
+  0% {
+    -moz-transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -moz-transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -moz-transform: translateZ(-200px);
+    visibility: hidden; } }
+
+@keyframes show-right {
+  0% {
+    -webkit-transform: translateZ(-200px);
+    transform: translateZ(-200px); }
+  40% {
+    -webkit-transform: translate(40%, 0) scale(0.8) rotateY(-20deg);
+    transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px); } }
+
+@keyframes hide-right {
+  0% {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -webkit-transform: translate(-40%, 0) scale(0.8) rotateY(20deg);
+    transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -webkit-transform: translateZ(-200px);
+    transform: translateZ(-200px);
+    visibility: hidden; } }
+
+@-webkit-keyframes show-left {
+  0% {
+    -webkit-transform: translateZ(-200px); }
+  40% {
+    -webkit-transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -webkit-transform: translateZ(0px); } }
+
+@-webkit-keyframes hide-left {
+  0% {
+    -webkit-transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -webkit-transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -webkit-transform: translateZ(-200px);
+    visibility: hidden; } }
+
+@-moz-keyframes show-left {
+  0% {
+    -moz-transform: translateZ(-200px); }
+  40% {
+    -moz-transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -moz-transform: translateZ(0px); } }
+
+@-moz-keyframes hide-left {
+  0% {
+    -moz-transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -moz-transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -moz-transform: translateZ(-200px);
+    visibility: hidden; } }
+
+@keyframes show-left {
+  0% {
+    -webkit-transform: translateZ(-200px);
+    transform: translateZ(-200px); }
+  40% {
+    -webkit-transform: translate(-40%, 0) scale(0.8) rotateY(20deg);
+    transform: translate(-40%, 0) scale(0.8) rotateY(20deg); }
+  100% {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px); } }
+
+@keyframes hide-left {
+  0% {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    visibility: visible; }
+  40% {
+    -webkit-transform: translate(40%, 0) scale(0.8) rotateY(-20deg);
+    transform: translate(40%, 0) scale(0.8) rotateY(-20deg); }
+  100% {
+    -webkit-transform: translateZ(-200px);
+    transform: translateZ(-200px);
+    visibility: hidden; } }
+
+/* Dimmer */
+.kontext .layer .dimmer {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  background: transparent; }
+
+.kontext.capable.animate .layer .dimmer {
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -o-transition: background 1s ease;
+  transition: background 1s ease; }
+
+.kontext.capable.animate .layer.hide .dimmer {
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.7); }
+
+/* Styles for the demo */
+.bullets {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  top: 120px;
+  padding: 0;
+  margin: 0;
+  text-align: center; }
+
+.bullets li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 3px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; }
+
+.bullets li:hover {
+  background: rgba(255, 255, 255, 0.8); }
+
+.bullets li.active {
+  cursor: default;
+  background: #fff; }

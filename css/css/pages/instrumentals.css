@@ -1,0 +1,36 @@
+body {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  body .instrumentals-general-page .instrumentals_choose_usagetype {
+    background-image: url("../images/instrumentals/accordeon2.jpg"); }
+  body .instrumentals-general-page .instrumentals_choose_instrument {
+    background-image: url("../images/instrumentals/song1.jpeg"); }
+  body .instrumentals-general-page .instrumentals_topic {
+    background-image: url("../images/instrumentals/guitar-bass-instrument-black.jpg"); }
+  body .instrumentals-general-page .instrumentals_genre {
+    background-image: url("../images/instrumentals/photo-1472312656035-eeef4726de6c.jpg"); }
+  body .instrumentals-general-page .instrumentals_genre_ambiente_choosed {
+    background-image: url("../images/instrumentals/pexels-photo-237464.jpeg"); }
+  body .instrumentals-general-page .instrumentals_choose_melody {
+    background-image: url("../images/instrumentals/instrumentals_bg2.jpg"); }
+  body .instrumentals-general-page .instrumentals_deadline {
+    background-image: url("../images/instrumentals/instrumentals_bg3.jpg"); }
+  body .instrumentals-general-page .instrumentals_budget {
+    background-image: url("../images/instrumentals/instrumentss.jpg"); }
+  body .instrumentals-general-page .instrumentals_instruments {
+    background-image: url("../images/instrumentals/pexels-photo-343683.jpeg"); }
+  body .instrumentals-general-page .instrumentals_topic1 {
+    background-image: url("../images/instrumentals/pexels-photo-241687.jpeg"); }
+  body .instrumentals-general-page .instrumentals_genre1 {
+    background-image: url("../images/instrumentals/pexels-photo-237459.jpeg"); }
+  body .instrumentals-general-page .instrumentals_genre_ambiente_choosed1 {
+    background-image: url("../images/instrumentals/abstract-music-instruments-bg.jpg"); }
+  body .instrumentals-general-page .instrumentals_choose_melody1 {
+    background-image: url("../images/instrumentals/pexels-photo-122635.jpeg"); }
+  body .instrumentals-general-page .instrumentals_deadline1 {
+    background-image: url("../images/instrumentals/drums-musical-instrument-music-sound-60636.jpeg"); }
+  body .instrumentals-general-page .instrumentals_budget1 {
+    background-image: url("../images/instrumentals/photo-1472312656035-eeef4726de6c.jpg"); }

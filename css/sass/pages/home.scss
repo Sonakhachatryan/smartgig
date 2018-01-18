@@ -1,0 +1,111 @@
+ @mixin large-text{
+    font: {
+      family: 'Arial Fett', 'Arial Standard', 'Arial';
+      weight: 600;
+      style: normal;
+    };
+    color: white;
+  }
+
+ body{
+     overflow-y: scroll !important;
+      .home {
+          background-image: url("../images/bg/singing.jpeg");
+          background-size: cover;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+
+          .header-top-area{
+              .home-page {
+
+                  span {
+                    @include large-text;
+                    font-size: 28px;
+                    padding: 30px 0 10px 30px;
+                  }
+              }
+          }
+
+          .home-page-question {
+            padding-top: 70px;
+            h1 {
+              @include large-text;
+              text-align: center;
+              font-size: 36px;
+              padding: 80px 0 60px 0;
+            }
+          }
+          .groups {
+              position: relative;
+              padding: 20px;
+              overflow: hidden;
+              transition: 3000ms;
+              text-align: center;
+
+               .group-content {
+                    overflow: hidden;
+                    height: 500px;
+
+                    &:hover .description {
+
+                        bottom: 0;
+                        display: block;
+                        transition: 400ms;
+                    }
+
+                    img {
+
+                    width: 600px;
+                    height: 500px;
+                    border-radius: 5px;
+                    }
+                         .description {
+                              display: block;
+                              position: sticky;
+                              left: 101px;
+                              bottom: -566px;
+                              width: 600px;
+                              height: 100%;
+                              -webkit-box-sizing: border-box;
+                              box-sizing: border-box;
+                              color: white;
+                              background-color: rgba(0, 0, 0, 0.3);
+
+                              a {
+                                    text-decoration: none;
+                                    text-emphasis: none;
+                                    text-align: center;
+
+                                    h3 {
+                                      font-weight: 300;
+                                      color:#fff;
+                                      display: block;
+                                      font-size: 30px;
+                                      text-decoration: none;
+                                      text-align: center;
+                                      text-shadow: 2px 3px 7px black;
+                                      padding: 95px 20px;
+                                    }
+                              }
+                        }
+                    }
+
+            .group-text {
+                    a {
+                      width: 200px;
+                      //margin: 0 auto;
+                      text-align: center;
+                      font-size: 30px;
+                      text-shadow: 2px 3px 7px black;
+                      color: white;
+                      text-decoration: none;
+                      cursor: pointer;
+                      //top: 50%;
+                      padding-top: 50px;
+                    }
+              }
+          }
+      }
+ }
+
+
