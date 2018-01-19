@@ -138,7 +138,7 @@
                                   placeholder="Write down the melody description here" maxlength="2500"
                                   required></textarea>
                         <p data-number="2" class="hidden error-message"></p>
-                        <p>0 / 2500 characters</p>
+                        <p><span data-number="2">0</span> / 2500 characters</p>
                     </div>
                 </div>
             </div>
@@ -346,7 +346,7 @@
                                   placeholder="Write down the melody description here" maxlength="2500"
                                   required></textarea>
                         <p data-number="8" class="hidden error-message"></p>
-                        <p>0 / 2500 characters</p>
+                        <p><span data-number="8">0</span> / 2500 characters</p>
                     </div>
                 </div>
             </div>
@@ -550,8 +550,8 @@
                             <input type="hidden" name="isPrivate" id="private">
                             <textarea name="about" class="preview-story story" cols="100" rows="6" id="elem_2"
                                       placeholder="Write down your idea here." maxlength="2500" required></textarea>
-                            <p data-number="10" class="hidden error-message">Please fill this field.</p>
-                            <p>0 / 2500 characters</p>
+                            <p class="hidden error-message">Please fill this field.</p>
+                            <p> <span data-number="">0</span> / 2500 characters</p>
                         </div>
                     </div>
                     <hr>
@@ -1003,7 +1003,8 @@
                 "index": 2,
                 "number": 2,
                 "validation": {
-                    "required": "Please fill this field."
+                    "required": "Please fill this field.",
+                    "limit" :"Max allowed characters length is 2500.",
                 },
                 "value": null
             },
@@ -1066,7 +1067,8 @@
                 "index": 8,
                 "number": 2,
                 "validation": {
-                    "required": "Please fill this field."
+                    "required": "Please fill this field.",
+                    "limit" :"Max allowed characters length is 2500.",
                 },
                 "value": null
             },
@@ -1592,7 +1594,22 @@
         }
 
         //handle genre filter change
-        $('#genre-filter').on('change', function() {
+        $('#genre-filter').on('keyup', function() {
+            var filteredArray = [];
+            var value = $(this).val().toLowerCase();
+            if(value != '') {
+                filteredArray = genreArray.filter(function(t) {
+                    return t.name.toLowerCase().indexOf(value) == -1 ? false : true;
+                }, value);
+                console.log(filteredArray);
+                drowGenreContent(filteredArray);
+            } else {
+                drowGenreContent(genreArray)
+            }
+        });
+
+        //handle genre filter change
+        $('#genre-filter').on('keydown', function() {
             var filteredArray = [];
             var value = $(this).val().toLowerCase();
             if(value != '') {
@@ -1734,7 +1751,20 @@
         $('.choose-instruments-types-modal').hide(200);
       }
       //handle instrument filter change
-      $('#instrument-filter').on('change',function () {
+      $('#instrument-filter').on('keyup',function () {
+        debugger;
+        var filteredArray = [];
+        var value = $(this).val().toLowerCase();
+        if(value != ''){
+          filteredArray = instrumentsArray.filter(function (t) {
+            return  t.name.toLowerCase().indexOf(value) == -1 ? false : true;
+          },value);
+          drowInstrumentContent(filteredArray);
+        }else{
+          drowInstrumentContent(instrumentsArray)
+        }
+      })
+      $('#instrument-filter').on('keydown',function () {
         debugger;
         var filteredArray = [];
         var value = $(this).val().toLowerCase();
@@ -1753,6 +1783,35 @@
           e.preventDefault();
         }
       }, false);
+
+
+        $('textarea').on('keyup',function(e){
+            var number = $(this).data('number');
+            textareaChanges(number,e);
+        });
+        $('textarea').on('keydown',function(e){
+            var number = $(this).data('number');
+            textareaChanges(number,e);
+        });
+
+        function  textareaChanges(number,e) {
+            var selector = 'textarea[data-number="' + number +'"]';
+            var len = $(selector).val().length;
+            selector = 'span[data-number="' + number +'"]';
+            $(selector).html(len);
+
+            selector = 'p[data-number="' + number +'"]';
+            if(len>=2500){
+                if(e.keyCode !== 8 && e.keyCode !== 46){
+                    e.preventDefault();
+                }
+                $(selector).removeClass('hidden');
+                $(selector).html(selected[2].validation.limit);
+            }else{
+                $(selector).addClass('hidden');
+            }
+        }
+
     });
 
 

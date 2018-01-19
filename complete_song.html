@@ -124,7 +124,7 @@
                     <div class="col-md-8 col-md-offset-2 letters ">
                         <textarea name="songtext-story"  class="story" cols="70" rows="5" data-number="2" placeholder="Write down your songtext or idea here" maxlength="2500" required></textarea>
                         <p data-number="2" class="hidden error-message"></p>
-                        <p>0 / 2500 characters</p>
+                        <p><span data-number="2">0</span> / 2500 characters</p>
                     </div>
                 </div>
             </div>
@@ -361,7 +361,7 @@
                     <div class="col-md-8 col-md-offset-2 letters">
                         <textarea name="songtext-story" class="story" cols="70" rows="5" data-number="10" placeholder="Write down your songtext or idea here" maxlength="2500" required></textarea>
                         <p data-number="10" class="hidden error-message"></p>
-                        <p>0 / 2500 characters</p>
+                        <p><span data-number="10">0</span> / 2500 characters</p>
                     </div>
                 </div>
             </div>
@@ -1066,6 +1066,7 @@
 
                 "validation" : {
                     "required" :"Please choose the genre.",
+                    "limit" :"Max allowed characters length is 2500.",
                 },
                 "value" : null,
             },
@@ -1154,6 +1155,7 @@
                 "number" : 2,
                 "validation" : {
                     "required" :"Please fill this field.",
+                    "limit" :"Max allowed characters length is 2500.",
                 },
                 "value" : null,
             },
@@ -1742,7 +1744,20 @@
         }
 
         //handle genre filter change
-        $('#genre-filter').on('change',function () {
+        $('#genre-filter').on('keyup',function () {
+            var filteredArray = [];
+            var value = $(this).val().toLowerCase();
+            if(value != ''){
+                filteredArray = genreArray.filter(function (t) {
+                    return  t.name.toLowerCase().indexOf(value) == -1 ? false : true;
+                },value);
+                console.log(filteredArray);
+                drowGenreContent(filteredArray);
+            }else{
+                drowGenreContent(genreArray)
+            }
+        });
+        $('#genre-filter').on('keydown',function () {
             var filteredArray = [];
             var value = $(this).val().toLowerCase();
             if(value != ''){
@@ -1919,7 +1934,20 @@
       }
 
         //handle instrument filter change
-        $('#instrument-filter').on('change',function () {
+        $('#instrument-filter').on('keyup',function () {
+            debugger;
+            var filteredArray = [];
+            var value = $(this).val().toLowerCase();
+            if(value != ''){
+                filteredArray = instrumentsArray.filter(function (t) {
+                    return  t.name.toLowerCase().indexOf(value) == -1 ? false : true;
+                },value);
+                drowInstrumentContent(filteredArray);
+            }else{
+                drowInstrumentContent(instrumentsArray)
+            }
+        });
+        $('#instrument-filter').on('keydown',function () {
             debugger;
             var filteredArray = [];
             var value = $(this).val().toLowerCase();
@@ -1939,6 +1967,34 @@
           e.preventDefault();
         }
       }, false);
+
+
+        $('textarea').on('keyup',function(e){
+            var number = $(this).data('number');
+            textareaChanges(number,e);
+        });
+        $('textarea').on('keydown',function(e){
+            var number = $(this).data('number');
+            textareaChanges(number,e);
+        });
+
+        function  textareaChanges(number,e) {
+            var selector = 'textarea[data-number="' + number +'"]';
+            var len = $(selector).val().length;
+            selector = 'span[data-number="' + number +'"]';
+            $(selector).html(len);
+
+            selector = 'p[data-number="' + number +'"]';
+            if(len>=2500){
+                if(e.keyCode !== 8 && e.keyCode !== 46){
+                    e.preventDefault();
+                }
+                $(selector).removeClass('hidden');
+                $(selector).html(selected[2].validation.limit);
+            }else{
+                $(selector).addClass('hidden');
+            }
+        }
     });
 
 

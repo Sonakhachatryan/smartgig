@@ -280,7 +280,7 @@
     //others
       .main-general {
         height: 100%;
-       @include bg-propertis;
+       //@include bg-propertis;
 
         .button {
           text-align: center;
@@ -518,8 +518,7 @@
     //others
 
     .main-general {
-         background-size:cover;
-		 
+
       .main-content{
         margin: 100px auto;
         text-align: center;

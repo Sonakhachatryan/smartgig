@@ -99,7 +99,7 @@
                         <textarea name="songtext-story" class="story" id="story" cols="70" rows="5" data-number="1"
                                   placeholder="Write down your songtext here" maxlength="2500" required></textarea>
                         <p data-number="1" class="hidden error-message">Please fill this field</p>
-                        <p>0 / 2500 characters</p>
+                        <p><span data-number="1">0</span> / 2500 characters</p>
                     </div>
                 </div>
             </div>
@@ -327,7 +327,7 @@
                         <textarea name="songtext-story" class="story" cols="70" rows="5" data-number="8"
                                   placeholder="Write down your idea here." maxlength="2500" required></textarea>
                         <p data-number="8" class="hidden error-message"></p>
-                        <p>0 / 2500 characters</p>
+                        <p><span data-number="8">0</span> / 2500 characters</p>
                     </div>
                 </div>
             </div>
@@ -846,7 +846,8 @@
         "number": 1,
 
         "validation": {
-          "required": "Please fill this field."
+          "required": "Please fill this field.",
+            "limit" :"Max allowed characters lehgth is 2500.",
         },
         "value": null
       },
@@ -914,7 +915,8 @@
         "index": 8,
         "number": 1,
         "validation": {
-          "required": "Please fill this field."
+          "required": "Please fill this field.",
+            "limit" :"Max allowed characters lehgth is 2500.",
         },
         "value": null
       },
@@ -1369,7 +1371,22 @@
     }
 
     //handle genre filter change
-    $('#genre-filter').on('change', function() {
+    $('#genre-filter').on('keydown', function() {
+      var filteredArray = [];
+      var value = $(this).val().toLowerCase();
+      if(value != '') {
+        filteredArray = genreArray.filter(function(t) {
+          return t.name.toLowerCase().indexOf(value) == -1 ? false : true;
+        }, value);
+        console.log(filteredArray);
+        drowGenreContent(filteredArray);
+      } else {
+        drowGenreContent(genreArray)
+      }
+    });
+
+    //handle genre filter change
+    $('#genre-filter').on('keyup', function() {
       var filteredArray = [];
       var value = $(this).val().toLowerCase();
       if(value != '') {
@@ -1410,6 +1427,42 @@
         e.preventDefault();
       }
     }, false);
+
+      $('textarea').on('keyup',function(e){
+          var number = $(this).data('number');
+          textareaChanges(number,e);
+      });
+      $('textarea').on('keydown',function(e){
+          var number = $(this).data('number');
+          textareaChanges(number,e);
+      });
+
+      function  textareaChanges(number,e) {
+          var selector = 'textarea[data-number="' + number +'"]';
+          var len = $(selector).val().length;
+          selector = 'span[data-number="' + number +'"]';
+          $(selector).html(len);
+
+          selector = 'p[data-number="' + number +'"]';
+          if(len>=2500){
+              if(e.keyCode !== 8 && e.keyCode !== 46){
+                  e.preventDefault();
+              }
+              $(selector).removeClass('hidden');
+              $(selector).html(selected[1].validation.limit);
+          }else{
+              $(selector).addClass('hidden');
+          }
+      }
+
+      $('textarea').on('keyup',function(e){
+          var number = $(this).data('number');
+          textareaChanges(number,e);
+      });
+      $('textarea').on('keydown',function(e){
+          var number = $(this).data('number');
+          textareaChanges(number,e);
+      });
 
   });
 

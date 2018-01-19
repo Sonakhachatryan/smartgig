@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Songwriting_choose_usagetype</title>
+    <title>Songwriting</title>
     <meta charset="utf-8">
     <meta name="Song project">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
@@ -18,8 +18,11 @@
         <p>Smartgig.ch</p>
         <p>We bring your song idea to life</p>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto main-menu">
@@ -36,11 +39,13 @@
                 <a class="nav-link item-link" href="complete_song.html" title="complete_song">Complete song</a>
             </li>
         </ul>
-        <span class="navbar-text">
-            <span class="page-indicator" id="countSlider">
-                <span data-index="1">1</span>
-                <span data-index="2"></span>
-                <span>/4</span>
+        <span class="navbar-text nav-counter">
+            <span class="counter">
+                <span class="page-indicator" id="countSlider">
+                        <span data-index="1">1</span>
+                        <span data-index="2"></span>
+                </span>
+                <span class="total-counter">/ 4</span>
             </span>
         </span>
     </div>
@@ -86,7 +91,7 @@
                     <div class="letters col-md-8 col-md-offset-2">
                             <textarea name="songtext-story" class="story" cols="100" rows="6" data-number="1" placeholder="Write down your idea here." maxlength="2500" required></textarea>
                         <p data-number="1" class="hidden error-message">Please fill this field</p>
-                        <p>0 / 2500 characters</p>
+                        <p><span data-number="1">0</span> / 2500 characters</p>
                     </div>
                 </div>
             </div>
@@ -111,7 +116,7 @@
                         <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
                         <p>Let the musician know until when you need the service to be done.</p>
                     </div>
-                    <div class="col-md-4 offset-md-4 calendar">
+                    <div class="col-md-4 offset-md-4 calendar deadline">
                         <h3>Deadline</h3>
                         <input type="date" placeholder="Select Date" data-number="2">
                         <p data-number="2" class="hidden error-message">Please fild this field</p>
@@ -173,7 +178,7 @@
                     <div class="col-md-8 col-md-offset-2 letters ">
                         <textarea name="songtext-story" id="story" class="story" cols="100" rows="6" data-number="4" placeholder="Write down your idea here." maxlength="2500" required ></textarea>
                         <p data-number="4" class="hidden error-message">Please fill this field.</p>
-                        <p>0 / 2500 characters</p>
+                        <p><span data-number="4">0</span> / 2500 characters</p>
                     </div>
                 </div>
             </div>
@@ -198,7 +203,7 @@
                         <span class="hint hint--right" data-hint="Description for the field and example "> ?</span>
                         <p>Let the musician know until when you need the service to be done.</p>
                     </div>
-                    <div class="col-md-4 offset-md-4 calendar">
+                    <div class="col-md-4 offset-md-4 calendar deadline">
                         <h3>Deadline</h3>
                         <input type="date" placeholder="Select Date" data-number="5">
                         <p data-number="5" class="hidden error-message">Please fild this field</p>
@@ -273,19 +278,24 @@
                         </div>
                         <hr>
                         <div class="col-md-8 letters">
-                                <input type="hidden" name="isPrivate" id="private">
-                                <textarea name="about" id="elem_1" class="preview-story story"  cols="100" rows="6" data-number="10" placeholder="Write down your idea here." maxlength="2500" required ></textarea>
+                                <textarea data-number="10" name="about" id="elem_1" class="preview-story story"  cols="100" rows="6" placeholder="Write down your idea here." maxlength="2500" required ></textarea>
                                 <p data-number="10" class="hidden error-message"></p>
-                                <p>0 / 2500 characters</p>
+                                <p><span data-number="10">0</span> / 2500 characters</p>
                             </div>
-                        <div class="col-md-6 calendar">
-                            <h3>Deadline</h3>
-                            <input name="doneDate" id="elem_2" placeholder="Select Date "type="date"  data-number="10"><br>
-                            <p data-number="10" class="hidden error-message"></p>
-                            <h3>Budget</h3>
-                            <input  name="cost"  id="elem_3" type="number" placeholder="CHF 50" data-number="10">
-                            <p data-number="10" class="hidden error-message"></p>
-                            <hr>
+                        <div class="row">
+                            <div class="col-md-6 calendar deadline">
+                                <h3>Deadline</h3>
+                                <input name="doneDate" id="elem_2" placeholder="Select Date "type="date" ><br>
+                                <p class="hidden error-message"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-6 calendar">
+                                <h3>Budget</h3>
+                                <input  name="cost"  id="elem_3" type="number" placeholder="CHF 50">
+                                <p class="hidden error-message"></p>
+                                <hr>
+                            </div>
                         </div>
                         <div class="button-back-home">
                             <button type="button" class="btn back-to-home" id="modal-open">Send Request</button>
@@ -299,7 +309,7 @@
 </div>
 
 <div class="dialog-modal main-modal modal-1 hidden">
-    <div class="wrapper"  id="contact-details-modal1">
+    <div class="wrapper  leaves-page"  id="contact-details-modal1">
         <h3>If you leave this page you will lose all the data.Do you want to continue?</h3>
         <div class="row">
             <div class="col-md-6"><button type="button" class="submit close-modal">Cancel</button></div>
@@ -352,6 +362,7 @@
 
                 "validation" : {
                     "required" :"Please fill this field.",
+                    "limit" :"Max allowed characters lehgth is 2500.",
                 },
                 "value" : null,
             },
@@ -372,11 +383,6 @@
                 },
                 "value" : null,
             },
-            {
-                "index" : 7,
-                "number" : 4,
-                "value" : null,
-            },
 
         ];
         var commercialUse = [
@@ -393,6 +399,7 @@
                 "number" : 1,
                 "validation" : {
                     "required" :"Please fill this field.",
+                    "limit" :"Max allowed characters lehgth is 2500.",
                 },
                 "value" : null,
             },
@@ -413,20 +420,17 @@
                 },
                 "value" : null,
             },
-            {
-                "index" : 7,
-                "number" : 5,
-                "value" : null,
-            }
         ];
         var selected = privateUse;
+        var inReview = false;
+        var slideNumber = 0;
 
-        for( var i = 0, len = selected.length -1; i < len; i++ ) {
+        for( var i = 0, len = selected.length; i < len; i++ ) {
             var bullet = document.createElement( 'li' );
             bullet.className = i === 0 ? 'active' : '';
             bullet.setAttribute( 'index', selected[i].index);
             bullet.onclick = function( event ) {
-                if(canNavigate(event.target.getAttribute( 'index' ))) {
+                if(canNavigate(event.target.getAttribute( 'index' )),selected) {
                     var navigateTo = selected[event.target.getAttribute('index')];
                     k.show(navigateTo.index);
                     changeCounter(navigateTo.number + 1);
@@ -448,182 +452,142 @@
             if( event.keyCode === 39 ) k.next();
         }, false );
 
-        function canNavigate(index) {
-            var slide = selected[+index].value;
-            var slidePrev= '';
-            if(selected[+index - 1 ]) {
-                 slidePrev = selected[+index - 1].value;
-            }
-            if( slide || slidePrev)
-                return true;
-            return false;
-        }
-
-
-        //current step indicator
-        var filedStep = 0;
-        var data = {};
-        var countSlider = simpleslider.getSlider({
-            container: document.getElementById('countSlider'),
-            prop: 'top',
-            init: -612,
-            show: 0,
-            end: 1,
-            unit: 'px',
-            delay: 0.5,
-            paused:true
-        });
-//        countSlider.pause();
         $('button').on('click', function (event) {
+          if($(this).data('slide-to') || $(this).data('slide-to') == 0) {
             debugger;
             var isValid = true;
             var element = '';
             var number = 0;
             var error = "";
             //validate input before going next page
-            switch ($(this).data('slide-to')) {
-                case 0:
-                    number = 0;
-                    break;
-                case 1:
-                    selected[0].value = 'private';
-                    number = 1;
-                    break;
-                case 2:
-                    element = $('textarea[data-number="1"]');
-                    if (element.val() != '') {
-                        selected[1].value = element.val();
-                        number = 2;
-                    } else {
-                        isValid = false;
-                        error = selected[1].validation.required;
-                    }
-                    break;
-                case 3:
-                    element = $('input[data-number="2"]');
-                    if (element.val() != '') {
-                        selected[2].value = element.val();
-                        number = 3;
-                    } else {
-                        isValid = false;
-                        error = selected[2].validation.required;
-                    }
-                    break;
-                case 4:
-                    selected = commercialUse;
-                    selected[0].value = 'commercial';
-                    number = 1;
-                    break;
-                case 5:
-                    element = $('textarea[data-number="4"]');
-                    if (element.val() != '') {
-                        selected[1].value = element.val();
-                        number = 2;
-                    } else {
-                        isValid = false;
-                        error = selected[1].validation.required;
-                    }
-                    break;
-                case 6:
-                    element = $('input[data-number="5"]');
-                    if (element.val() != '') {
-                        selected[2].value = element.val();
-                        number = 3;
-                    } else {
-                        isValid = false;
-                        error = selected[2].validation.required;
-                    }
-                    break;
-                case 7:
-                    if ($(this).data('slide-number') == 3) {
-                        element = $('input[data-number="3"]');
-                    } else {
-                        element = $('input[data-number="6"]');
-                    }
-                    if (element.val() != '') {
-                        if(element.val() < 0 || element.val() >999999){
-                            isValid = false;
-                            error = selected[3].validation.range;
-                        }
-                        selected[3].value = element.val();
-                    } else {
-                        isValid = false;
-                        error = selected[3].validation.required;
-                    }
-                    break;
+            switch($(this).data('slide-to')) {
+              case 0:
+                number = 0;
+                break;
+              case 1:
+                selected[0].value = 'private';
+                number = 1;
+                break;
+              case 2:
+                element = $('textarea[data-number="1"]');
+                if(element.val() != '') {
+                  selected[1].value = element.val();
+                  number = 2;
+                } else {
+                  isValid = false;
+                  error = selected[1].validation.required;
+                }
+                break;
+              case 3:
+                element = $('input[data-number="2"]');
+                if(element.val() != '') {
+                  selected[2].value = element.val();
+                  number = 3;
+                } else {
+                  isValid = false;
+                  error = selected[2].validation.required;
+                }
+                break;
+              case 4:
+                selected = commercialUse;
+                selected[0].value = 'commercial';
+                number = 1;
+                break;
+              case 5:
+                element = $('textarea[data-number="4"]');
+                if(element.val() != '') {
+                  selected[1].value = element.val();
+                  number = 2;
+                } else {
+                  isValid = false;
+                  error = selected[1].validation.required;
+                }
+                break;
+              case 6:
+                element = $('input[data-number="5"]');
+                if(element.val() != '') {
+                  selected[2].value = element.val();
+                  number = 3;
+                } else {
+                  isValid = false;
+                  error = selected[2].validation.required;
+                }
+                break;
+              case 7:
+                if($(this).data('slide-number') == 3) {
+                  element = $('input[data-number="3"]');
+                } else {
+                  element = $('input[data-number="6"]');
+                }
+                if(element.val() != '') {
+                  if(element.val() < 0 || element.val() > 999999) {
+                    isValid = false;
+                    error = selected[3].validation.range;
+                  }
+                  selected[3].value = element.val();
+                } else {
+                  isValid = false;
+                  error = selected[3].validation.required;
+                }
+                break;
             }
             if(isValid) {
-                if(element) {
-                    element.removeClass('error');
-                    var selector = 'p[data-number="' + $(this).data('slide-number') + '"]'
-                    $(selector).addClass('hidden');
-                }
+              slideNumber = number;
+              if(element) {
+                element.removeClass('error');
+                var selector = 'p[data-number="' + $(this).data('slide-number') + '"]'
+                $(selector).addClass('hidden');
+              }
 
-                if($(this).data('slide-to') == 7){
-                    setData(selected);
-                    $('.bullets').hide();
-                }
-//                slide($(this));
-                k.show(event.target.getAttribute('index'));
-                var bullets = document.body.querySelectorAll( '.bullets li' );
-                for( var i = 0, len = bullets.length; i < len; i++ ) {
-                    bullets[i].className = (i == number ? 'active' : '');
-                }
-                changeCounter(number+1);
-            }else{
-                element.addClass('error');
-                var selector = 'p[data-number="' + $(this).data('slide-number')+'"]';
-                $(selector).html(error);
-                $(selector).removeClass('hidden');
+              if($(this).data('slide-to') == 7) {
+                setData(selected);
+                $('.bullets').hide();
+                $('.nav-counter').hide();
+                inReview = true;
+              }
+              k.show(event.target.getAttribute('index'));
+              var bullets = document.body.querySelectorAll('.bullets li');
+              for(var i = 0, len = bullets.length; i < len; i++) {
+                bullets[i].className = (i == number ? 'active' : '');
+              }
+              changeCounter(number + 1);
+            } else {
+              element.addClass('error');
+              var selector = 'p[data-number="' + $(this).data('slide-number') + '"]';
+              $(selector).html(error);
+              $(selector).removeClass('hidden');
             }
+          }
         });
 
         function setData(data) {
             var selector = '';
-            if(data[0].value == 'private'){
-                selector = "#private-selected"
+            if(selected[0].value == 'private'){
+                 $('#elem_0_p').prop('checked',true);
             }else{
-                selector = "#commercial-selected"
+                 $('#elem_0_c').prop('checked',true);
             }
             $(selector).addClass('active');
-            for(var i=1;i<data.leading-1;i++){
-                selector = '#elem_' + data[i].number;
-                $(selector).val(data[i].value);
-                console.log(selector);
-                console.log(data[i].value);
-                console.log( $(selector));
-            }
-//            $('.preview-story').val(data.story);
-//            $('#preview-cost').val(data.cost);
-//            $('#preview-done-date').val(data.doneDate);
-        }
-
-        function slideCounter(number) {
-            var currentIndex = countSlider.currentIndex();
-            var selector;
-            var index = 0;
-            if(currentIndex == 0){
-                index=1;
-                selector = 'span[data-index="2"]';
-                $('span[data-index="2"]').css({"color" : "#fff"});
-                $(selector).html(number);
-                countSlider.change(index);
-                $('span[data-index="1"]').css({"color" :"black"});
-            }else{
-                selector = 'span[data-index="1"]';
-                $('span[data-index="1"]').css({"color" : "#fff"});
-                $(selector).html(number);
-                countSlider.change(index);
-                $('span[data-index="2"]').css({"color" : "black"});
+            for(var i=1;i<selected.length;i++){
+              selector = '#elem_' + selected[i].number;
+              var element = $(selector);
+              element.val(data[i].value);
             }
 
+            selector = 'span[data-number="10"]';
+            $(selector).html(selected[1].value.length);
         }
 
-        function changeCounter(number) {
-            slideCounter(number);
-//            countSlider.resume();
-//            setTimeout(function(){ countSlider.pause(); }, 500);
-        }
+          function canNavigate(index) {
+            var slide = selected[+index].value;
+            var slidePrev= '';
+            if(selected[+index - 1 ]) {
+              slidePrev = selected[+index - 1].value;
+            }
+            if( slide || slidePrev)
+              return true;
+            return false;
+          }
 
         $("#modal-open").click(function () {
           $(".contact-modal").show(200);
@@ -638,6 +602,40 @@
         $(".cancel").click(function(){
             $(".main-modal").hide();
         });
+
+      window.addEventListener("keydown", function(e) {
+        if(e.keyCode == 37 || e.keyCode == 39){
+          e.preventDefault();
+        }
+      }, false);
+
+        $('textarea').on('keyup',function(e){
+            var number = $(this).data('number');
+            textareaChanges(number,e);
+        });
+        $('textarea').on('keydown',function(e){
+            var number = $(this).data('number');
+            textareaChanges(number,e);
+        });
+        function  textareaChanges(number,e) {
+            console.log(e.keyCode);
+            var selector = 'textarea[data-number="' + number +'"]';
+            var len = $(selector).val().length;
+            selector = 'span[data-number="' + number +'"]';
+            $(selector).html(len);
+
+            selector = 'p[data-number="' + number +'"]';
+            if(len>=2500){
+                if(e.keyCode !== 8 && e.keyCode !== 46){
+                     e.preventDefault();
+                }
+                $(selector).removeClass('hidden');
+                $(selector).html(selected[1].validation.limit);
+            }else{
+                $(selector).addClass('hidden');
+            }
+        }
+
 
     });
 
