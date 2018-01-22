@@ -38,6 +38,10 @@
             <li class="nav-item ">
                 <a class="nav-link item-link" href="complete_song.html" title="complete_song">Complete song</a>
             </li>
+            <li class="nav-item contact_us">
+                <a class="nav-link item-link" href="complete_song.html" title="complete_song">Contact us</a>
+                <p><a href="mailto:smartgig.ch@gmail.com">smartgig.ch@gmail.com</a></p>
+            </li>
         </ul>
         <span class="navbar-text nav-counter">
             <span class="counter">
@@ -98,7 +102,7 @@
             <div class="button">
                 <div class="row">
                     <div class="col-md-6">
-                        <button type="button" class="btn" data-slide-number="1" data-slide-to="0" index="0">Back to Usage Type</button>
+                        <button type="button" class="btn" data-slide-number="1" data-slide-to="0" index="0">Back to Usagetype</button>
                     </div>
                     <div class="col-md-6">
                         <button type="button" class=" btn" data-slide-number="1" data-slide-to="2" index="2">Next Step</button>
@@ -278,9 +282,9 @@
                         </div>
                         <hr>
                         <div class="col-md-8 letters">
-                                <textarea data-number="10" name="about" id="elem_1" class="preview-story story"  cols="100" rows="6" placeholder="Write down your idea here." maxlength="2500" required ></textarea>
-                                <p data-number="10" class="hidden error-message"></p>
-                                <p><span data-number="10">0</span> / 2500 characters</p>
+                                <textarea data-number="11" name="about" id="elem_1" class="preview-story story"  cols="100" rows="6" placeholder="Write down your idea here." maxlength="2500" required ></textarea>
+                                <p data-number="11" class="hidden error-message"></p>
+                                <p><span data-number="11">0</span> / 2500 characters</p>
                             </div>
                         <div class="row">
                             <div class="col-md-6 calendar deadline">
@@ -292,8 +296,8 @@
                         <div class="row">
                             <div class="col-md-6 col-md-6 calendar">
                                 <h3>Budget</h3>
-                                <input  name="cost"  id="elem_3" type="number" placeholder="CHF 50">
-                                <p class="hidden error-message"></p>
+                                <input  name="cost"  id="elem_3" type="number" placeholder="CHF 50" data-number="13">
+                                <p data-number="13" class="hidden error-message"></p>
                                 <hr>
                             </div>
                         </div>
@@ -309,7 +313,7 @@
 </div>
 
 <div class="dialog-modal main-modal modal-1 hidden">
-    <div class="wrapper  leaves-page"  id="contact-details-modal1">
+    <div class="wrapper  leaves-page">
         <h3>If you leave this page you will lose all the data.Do you want to continue?</h3>
         <div class="row">
             <div class="col-md-6"><button type="button" class="submit close-modal">Cancel</button></div>
@@ -317,28 +321,30 @@
         </div>
     </div>
 </div>
-<div class="dialog-modal contact-modal modal-1 hidden">
-    <div class="wrapper"  id="contact-details-modal">
-            <h3>Please provide your details to be in touch</h3>
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <input type="text" placeholder="please write your name" class="input-name">
-            </div>
-            <div class="col-md-12 col-sm-12">
-                <input type="text" placeholder="please write your email" class="input-email">
-            </div>
+<div class="dialog-modal contact-modal modal-1  hidden">
+    <div class="wrapper" id="contact-details-modal">
+        <h3>Please provide your details to be in touch</h3>
+        <div>
+            <input type="text" placeholder="Please write your name" class="input-name" required>
+            <p class="hidden error-message">Please enter your name</p>
+        </div>
+        <div>
+            <input type="email" placeholder="Please write your email" class="input-email" required>
+            <p class="hidden error-message">Please enter your email</p>
         </div>
         <div class="row">
-            <div class="col-md-6"><button type="button" class="submit">CANCEL</button></div>
-            <div class="col-md-6"><button type="button" class="submit">SUBMIT</button></div>
+            <div class="col-md-6">
+                <button type="button" class="submit close-modal">CANCEL</button>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="submit contact-submit">SUBMIT</button>
+            </div>
         </div>
-
     </div>
 </div>
 
-<script src="js/aos.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<script src="js/bootstrap.min.js"></script>
 <script src="js/simpleSlider.js"></script>
 <script src="js/main.js"></script>
 <script>
@@ -379,7 +385,7 @@
                 "number" : 3,
                 "validation" : {
                     "required" :"Please fill this field.",
-                    "range" : "Number must be less then 99999 and greater then 0",
+                    "limit" : "Number must be less then 9999 and greater then 0",
                 },
                 "value" : null,
             },
@@ -416,7 +422,7 @@
                 "number" : 3,
                 "validation" : {
                     "required" :"Please fill this field.",
-                    "range" : "Number must be less then 99999 and greater then 0",
+                    "limit" : "Number must be less then 9999 and greater then 0",
                 },
                 "value" : null,
             },
@@ -446,11 +452,6 @@
                 bullets[i].className = i === index ? 'active' : '';
             }
         } );
-
-        document.addEventListener( 'keyup', function( event ) {
-            if( event.keyCode === 37 ) k.prev();
-            if( event.keyCode === 39 ) k.next();
-        }, false );
 
         $('button').on('click', function (event) {
           if($(this).data('slide-to') || $(this).data('slide-to') == 0) {
@@ -520,9 +521,9 @@
                   element = $('input[data-number="6"]');
                 }
                 if(element.val() != '') {
-                  if(element.val() < 0 || element.val() > 999999) {
+                  if(element.val() < 0 || element.val() > 9999) {
                     isValid = false;
-                    error = selected[3].validation.range;
+                    error = selected[3].validation.limit;
                   }
                   selected[3].value = element.val();
                 } else {
@@ -578,7 +579,7 @@
             $(selector).html(selected[1].value.length);
         }
 
-          function canNavigate(index) {
+        function canNavigate(index) {
             var slide = selected[+index].value;
             var slidePrev= '';
             if(selected[+index - 1 ]) {
@@ -589,54 +590,39 @@
             return false;
           }
 
-        $("#modal-open").click(function () {
-          $(".contact-modal").show(200);
-        });
-
-        $(".submit").click(function(){
-            $(".contact-modal").hide();
-            $('input').attr('disabled','disabled');
-            $('textarea').attr('disabled','disabled');
-        });
-
-        $(".cancel").click(function(){
-            $(".main-modal").hide();
-        });
-
-      window.addEventListener("keydown", function(e) {
-        if(e.keyCode == 37 || e.keyCode == 39){
-          e.preventDefault();
-        }
-      }, false);
-
         $('textarea').on('keyup',function(e){
             var number = $(this).data('number');
-            textareaChanges(number,e);
+          textareaChanges(number,e,selected,1);
         });
+
         $('textarea').on('keydown',function(e){
             var number = $(this).data('number');
-            textareaChanges(number,e);
+          textareaChanges(number,e,selected,1);
         });
-        function  textareaChanges(number,e) {
-            console.log(e.keyCode);
-            var selector = 'textarea[data-number="' + number +'"]';
-            var len = $(selector).val().length;
-            selector = 'span[data-number="' + number +'"]';
-            $(selector).html(len);
 
-            selector = 'p[data-number="' + number +'"]';
-            if(len>=2500){
-                if(e.keyCode !== 8 && e.keyCode !== 46){
-                     e.preventDefault();
-                }
-                $(selector).removeClass('hidden');
-                $(selector).html(selected[1].validation.limit);
-            }else{
-                $(selector).addClass('hidden');
-            }
+      //prevent budget filed input
+      $('input').on('keyup',function(e){
+        var number = $(this).data('number');
+        var budgetNumbers = [3,6,13];
+        if(budgetNumbers.indexOf(number) > -1){
+          budgetChanges(number,e,selected,3);
         }
 
+      });
 
+      $('input').on('keydown',function(e){
+        var number = $(this).data('number');
+        var budgetNumbers = [3,6,13];
+        if(budgetNumbers.indexOf(number) > -1){
+          budgetChanges(number,e,selected,3);
+        }
+      });
+
+      $("#modal-open").on('click',function() {
+        $('.input-name').closest('div').find('p').addClass('hidden');
+        $('.input-email').closest('div').find('p').addClass('hidden');
+        $(".contact-modal").show(200);
+      });
     });
 
 </script>

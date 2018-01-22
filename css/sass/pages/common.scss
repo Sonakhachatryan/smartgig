@@ -36,6 +36,7 @@ $small: 40em;
     display: none;
   }
 
+
   .main-general {
     height: 100%;
     @include bg-properties;
@@ -77,7 +78,7 @@ $small: 40em;
     .error {
       background-color: rgba(255, 255, 255, 0.2) !important;
       border: 2px solid #e74c3c !important;
-      border-top-color: transparent;
+      border-top-color: transparent !important;
     }
     .error-message {
       color: #e74c3c !important;
@@ -87,12 +88,7 @@ $small: 40em;
       margin:0 auto;
       text-shadow: 1px 2px 7px black;
     }
-    .deadline{
 
-      input{
-        text-align: left !important;
-      }
-    }
     .calendar {
       margin: 30px auto;
       margin-bottom: 20px;
@@ -107,7 +103,7 @@ $small: 40em;
         padding: 0 1rem;
         background-color: rgba(255, 255, 255, 0.2);
         color: white;
-        border-top: 2px solid black;
+        border-top: 2px solid black !important;
         text-shadow: 1px 2px 7px black;
         font-size: 23px;
         font-weight: 400;
@@ -170,7 +166,7 @@ $small: 40em;
       .story {
         font-size: 25px;
         background-color: rgba(255, 255, 255, 0.2);
-        border-top: 2px solid black;
+        border-top: 2px solid black !important;
         height: auto;
         width: 100%;
         color: white;
@@ -333,29 +329,29 @@ $small: 40em;
       }
     }
     .button-back-home {
+
       text-align: center;
       cursor: pointer;
-      a {
-        .back-to-home {
-          cursor: pointer;
-          position: relative;
-          line-height: 50px;
-          height: 56px;
-          font-size: 25px;
-          font-weight: 700;
-          padding: 0 1rem;
-          text-align: center;
-          background-color: rgba(156, 156, 156, 0.5);
-          color: white;
-          margin: 20px;
-          text-shadow: 1px 2px 7px black;
-          border: 1px solid black;
 
-          &:hover {
-            color: black;
-            background-color: gray;
-            transition: 2000ms;
-          }
+      .back-to-home {
+        cursor: pointer;
+        position: relative;
+        line-height: 50px;
+        height: 56px;
+        font-size: 25px;
+        font-weight: 700;
+        padding: 0 1rem;
+        text-align: center;
+        background-color: rgba(156, 156, 156, 0.5);
+        color: white;
+        margin: 20px;
+        text-shadow: 1px 2px 7px black;
+        border: 1px solid black;
+
+        &:hover {
+          color: black;
+          background-color: gray;
+          transition: 2000ms;
         }
       }
     }
@@ -559,7 +555,7 @@ $small: 40em;
           position: relative;
           padding: 0 1rem;
           width: 100%;
-          overflow-y: scroll;
+          overflow-y: auto;
         }
       }
       .characters-input {
@@ -617,7 +613,7 @@ $small: 40em;
       margin: 0 auto;
       text-align: center;
       background-attachment: fixed;
-      overflow-y: scroll;
+      overflow-y: auto;
 
       .for-submit {
         text-align: center;
@@ -849,16 +845,54 @@ $small: 40em;
     }
     .main-menu {
 
+      .contact_us {
+        padding-top: 10px;
+
+        p {
+          a {
+            text-decoration: none;
+            color: white;
+            display: inline;
+            font-size: 17px;
+            text-align: center;
+            margin-left: 8px;
+
+            &:hover{
+              color: white !important;
+            }
+
+            &:before {
+              content: " ";
+              position: absolute;
+              background-color: #fff;
+              transition: width 0.5s ease-in-out;
+            }
+            &:after {
+              content: " ";
+              position: absolute;
+              background-color: #fff;
+              transition: width 0.5s ease-in-out;
+            }
+            &:hover, &:focus {
+              &:before {
+                width: 0%;
+              }
+            }
+          }
+        }
+      }
+
       li {
-        padding: 0 0 0 25px;
-        font-size: 25px;
+        padding:20px 0 0 25px;
+        font-size: 20px;
         text-shadow: 1px 2px 7px black;
+
+
         .item-link {
           @include large-text;
-          margin: 0px auto;
+          margin: -8px auto;
           &:focus{
             color: white  !important;
-
           }
         }
 
@@ -921,7 +955,7 @@ $small: 40em;
 
   .modal-1 {
     position: fixed;
-    z-index: 9999;
+    z-index: 1037;
     top: 0;
     left: 0;
     right: 0;
@@ -930,10 +964,13 @@ $small: 40em;
     max-height: 100vh;
     //display: none;
 
-
-    .leaves-page{
+   .add-instruments-modal{
+         z-index: 1037 !important;
+     }
+    .leaves-page, .add-instruments{
       width: 500px !important;
       height: 300px !important;
+
     }
     .wrapper {
       width: 500px;
@@ -946,6 +983,22 @@ $small: 40em;
       top: 120px;
       margin: 0 auto;
 
+      div {
+        margin-bottom: 15px;
+      }
+      .add-instruments-name{
+        margin: 30px 0 20px 0;
+      }
+
+      .error-message{
+        color: #e74c3c !important;
+        text-align: left;
+        font-size: 17px;
+        font-weight: 600;
+        margin:3px auto;
+        text-shadow: 1px 2px 7px black;
+      }
+
       h3 {
         color: wheat;
         font-size: 25px;
@@ -955,12 +1008,11 @@ $small: 40em;
       div {
         text-align: center;
       }
-      .input-name, .input-email {
-        //width: 360px;
+      .input-name, .input-email, .input-instrument {
         height: 50px;
+        width: 100%;
         border: 2px solid black;
         padding: 0 20px;
-        margin: 20px 0;
         text-align: center;
         color: #2d3945;
         font-size: 18px;
@@ -987,20 +1039,20 @@ $small: 40em;
   }
   .choose-modals {
     position: fixed;
-    z-index: 9999;
+    z-index: 1036;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(23, 26, 29, 0.2);
-    overflow-y: scroll;
+    overflow-y: auto;
 
     .singing_choose_genre {
       height: 100%;
       .choose-your-genre {
         padding-top: 30px;
-        background-color: black;
-        position: relative;
+        background-image: url("../images/bg/Free-Simple-Black-Seamless-Pattern-for-Website-Background.jpg");
+        position: absolute;
         min-height: 100%;
         width: 100%;
 
@@ -1013,37 +1065,74 @@ $small: 40em;
           margin:0 auto;
           text-shadow: 1px 2px 7px black;
         }
-
         .first-paragrafh{
           display: inline-block;
         }
-        button {
-          display: inline-block;
-          text-transform: uppercase;
-          position: relative;
-          width: 13%;
-          top:-62px;
-          cursor: pointer;
-          color: hsla(0, 0%, 55%, 1);
-          background: transparent;
-          border: 3px solid hsla(0, 0%, 25%, .5);
-          text-align: center;
-          font-size: 1.5vw;
-          font-weight: bold;
-          padding: 0.5vw 0;
-          text-shadow: 1px 1px hsla(0, 5%, 5%, .3), 2px 2px hsla(0, 5%, 5%, .3);
-          overflow: hidden;
-          transition: all 0.3s ease-in;
+        .close-modal {
+            display: inline-block;
+            position: relative;
+            width: 45px;
+            height: 45px;
+            margin-top: -68px;
+            float: right;
+            cursor: pointer;
+            color: #8c8c8c;
+            background: transparent;
+            border: 3px solid rgba(64, 64, 64, 0.5);
+            text-align: center;
+            font-size: 1.5vw;
+            font-weight: bold;
+            padding: 0px 0;
+            text-shadow: 1px 1px rgba(13, 12, 12, 0.3), 2px 2px rgba(13, 12, 12, 0.3);
+            overflow: hidden;
+            -webkit-transition: all 0.3s ease-in;
+            -o-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in;
 
-          &:hover {
-            color: hsla(0, 0%, 15%, .5);
-            background:white;
+            &:hover {
+              color: hsla(0, 0%, 15%, .5);
+              background: white;
+            }
+
+            &:focus {
+              color: #8c8c8c;
+              outline: none;
+            }
+          }
+        .done {
+            display: inline-block;
+            position: relative;
+            width: 200px;
+            height: 52px;
+            margin: 20px 0;
+            float: right;
+            cursor: pointer;
+            color: #8c8c8c;
+            background: transparent;
+            border: 3px solid rgba(64, 64, 64, 0.5);
+            text-align: center;
+            font-size: 1.5vw;
+            font-weight: bold;
+            padding: 7px 0 33px;
+            text-shadow: 1px 1px rgba(13, 12, 12, 0.3), 2px 2px rgba(13, 12, 12, 0.3);
+            overflow: hidden;
+            -webkit-transition: all 0.3s ease-in;
+            -o-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in;
+
+            &:hover {
+              color: hsla(0, 0%, 15%, .5);
+              background: white;
+            }
+
+            &:focus {
+              color: #8c8c8c;
+              outline: none;
+            }
           }
 
-          &:focus {
-          color: hsla(0, 0%, 5%, 1);
-        }
-      }
+
+
         .groups-of-genre, .instrument-image-and-name {
           position: relative;
           padding: 20px;
@@ -1057,7 +1146,6 @@ $small: 40em;
             overflow: hidden;
             height: 220px;
             width: 100%;
-            box-shadow: 4px 0px 4px darkslategrey;
             border-radius: 2px;
 
             .csscheckbox {
@@ -1103,15 +1191,38 @@ $small: 40em;
               box-sizing: border-box;
               color: white;
               background-color: rgba(0, 0, 0, 0.3);
+
+              &:hover{
+                cursor: pointer;
+                bottom: -90px;
+                display: block;
+                transition: 400ms;
+              }
             }
-            &:hover .instruments-name {
+
+            .hover-style{
               cursor: pointer;
               bottom: -90px;
               display: block;
-              transition: 400ms;
+
+              &:hover{
+                cursor: pointer;
+                bottom: -90px;
+                display: block;
+              }
             }
           }
+
+          .instrument-check-in{
+
+            box-shadow: 1px 1px rgba(13, 12, 12, 0.3);
+            border: 2px solid darkgreen ;
+            width: 105%;
+            border-radius: 2px;
+            padding: 11px ;
+          }
         }
+
         form {
           input {
             background-color: rgba(255, 255, 255, 0.2);

@@ -38,6 +38,10 @@
             <li class="nav-item ">
                 <a class="nav-link item-link" href="complete_song.html" title="complete_song">Complete song</a>
             </li>
+            <li class="nav-item contact_us">
+                <a class="nav-link item-link" href="complete_song.html" title="complete_song">Contact us</a>
+                <p><a href="mailto:smartgig.ch@gmail.com">smartgig.ch@gmail.com</a></p>
+            </li>
         </ul>
         <span class="navbar-text nav-counter">
             <span class="counter">
@@ -180,6 +184,9 @@
                     </div>
                 </div>
             </div>
+            <div class="button-back-home">
+                <button type="button" class=" btn btn-secondary btn back-to-home" data-slide-number="3" data-slide-to="2" index="2">Back to genre</button>
+            </div>
         </div>
     </div>
     <div class="main-general step-3 singing_choose_melody              layer" data-number="4">
@@ -195,7 +202,7 @@
                     <div class="col-md-4 offset-md-4 upload-file-button">
                         <label for="file-upload-private" class="custom-file-upload">UPLOAD A MELODY FILE</label>
                         <img src="images/singing/if_icon-upload_211937.png" alt="">
-                        <input id="file-upload-private" class="file-upload upload" type="file" name="melody"/>
+                        <input data-number="4" id="file-upload-private" class="file-upload upload" type="file" name="melody"/>
                         <p data-number="4" class="hidden error-message"></p>
                     </div>
                 </div>
@@ -217,7 +224,7 @@
     </div>
     <div class="main-general step-3 singing_song_mood                  layer" data-number="5">
         <div class="container main-content">
-            <div class="page-question">
+        </div>   <div class="page-question">
                 <div class="row">
                     <div class="col-md-12 center ">
                         <h1>Which mood should the song create? </h1>
@@ -229,9 +236,9 @@
                     <div class="col-md-8 characters-input">
                         <input type="text" name="mood" data-number="5"/>
                         <p data-number="5" class="hidden error-message"></p>
-                        <p>1/50 characters</p>
+                        <p><span data-number="5">0</span>/50 characters</p>
                     </div>
-                </div>
+
             </div>
             <div class="button">
                 <div class="row">
@@ -408,6 +415,9 @@
                     </div>
                 </div>
             </div>
+            <div class="button-back-home">
+                <button type="button" class=" btn btn-secondary btn back-to-home" data-slide-number="10" data-slide-to="9" index="9">Back to genre</button>
+            </div>
         </div>
     </div>
     <div class="main-general step-3 singing_use_choose_melody          layer" data-number="11">
@@ -425,7 +435,8 @@
                             Upload a melody file
                         </label>
                         <img src="images/singing/if_icon-upload_211937.png" alt="">
-                        <input id="file-upload-commercial" type="file" class="upload" name="myfiles[]" multiple/>
+                        <input data-number="11" id="file-upload-commercial" type="file" class="upload" name="myfiles[]" multiple/>
+                        <p data-number="11" class="hidden error-message"></p>
                     </div>
                 </div>
             </div>
@@ -458,7 +469,7 @@
                     <div class="col-md-8 characters-input">
                         <input type="text" name="" data-number="12">
                         <p data-number="12" class="hidden error-message"></p>
-                        <p>1/50 characters</p>
+                        <p><span data-number="12">0</span>/50 characters</p>
                     </div>
                 </div>
             </div>
@@ -577,10 +588,10 @@
                         <div class="col-md-8 letters">
                             <input type="hidden" name="isPrivate" id="private">
                             <textarea name="about" id="elem_1" class="preview-story story" cols="100" rows="6"
-                                      data-number="10" placeholder="Write down your idea here." maxlength="2500"
+                                      data-number="21" placeholder="Write down your idea here." maxlength="2500"
                                       required></textarea>
-                            <p data-number="10" class="hidden error-message">Please fill this field.</p>
-                            <p>0 / 2500 characters</p>
+                            <p data-number="21" class="hidden error-message">Please fill this field.</p>
+                            <p><span data-number="21">0</span> / 2500 characters</p>
                         </div>
                     </div>
                     <hr>
@@ -618,15 +629,16 @@
                         <div class="col-md-6 offset-md-3 characters-input upload-file-button" id="elem_4">
                             <label for="file-upload-review" class="custom-file-upload">UPLOAD A MELODY FILE</label>
                             <img src="images/singing/if_icon-upload_211937.png" alt="">
-                            <input id="file-upload-review" type="file" class="upload" name="myfiles[]" multiple/>
+                            <input data-number="24" id="file-upload-review" type="file" class="upload" name="myfiles[]" multiple/>
+                            <p data-number="24" class="hidden error-message"></p>
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-md-6 calendar">
                             <h3>Song Mood</h3>
-                            <input type="text" name="" id="elem_5">
-                            <p>1/50 characters</p>
+                            <input type="text" name="" id="elem_5" data-number="25">
+                            <p><span data-number="25">0</span>/50 characters</p>
                         </div>
                     </div>
                     <hr>
@@ -641,8 +653,8 @@
                     <div class="row">
                         <div class="col-md-6 calendar">
                             <h3>Budget</h3>
-                            <input name="cost" id="elem_7" type="number" placeholder="CHF 50">
-                            <p data-number="10" class="hidden error-message">Please fill this field.</p>
+                            <input name="cost" id="elem_7" type="number" placeholder="CHF 50" data-number="27">
+                            <p data-number="27" class="hidden error-message">Please fill this field.</p>
                         </div>
                     </div>
                     <hr>
@@ -673,17 +685,19 @@
     <div class="wrapper" id="contact-details-modal">
         <h3>Please provide your details to be in touch</h3>
         <div>
-            <input type="text" placeholder="please write your name" class="input-name">
+            <input type="text" placeholder="Please write your name" class="input-name" required>
+            <p class="hidden error-message">Please enter your name</p>
         </div>
         <div>
-            <input type="text" placeholder="please write your email" class="input-email">
+            <input type="email" placeholder="Please write your email" class="input-email" required>
+            <p class="hidden error-message">Please enter your email</p>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <button type="button" class="submit">CANCEL</button>
+                <button type="button" class="submit close-modal">CANCEL</button>
             </div>
             <div class="col-md-6">
-                <button type="button" class="submit">SUBMIT</button>
+                <button type="button" class="submit contact-submit">SUBMIT</button>
             </div>
         </div>
     </div>
@@ -694,7 +708,7 @@
             <form>
                 <input type="text" id="genre-filter" placeholder="Enter Genre here ... (Filter)">
             </form>
-            <button class="close-modal"> CANCEL</button>
+            <button class="close-modal"> x </button>
             <div id="genre-content">
                 <div class="row">
                     <div class="col-md-3 col-sm-6  col-xs-6 groups-of-genre">
@@ -871,7 +885,8 @@
         "index": 4,
         "number": 4,
         "validation": {
-          "required": "Please upload the file."
+          "required": "Please upload the file.",
+          "fileFormat" :"Please upload correct file.Supported formats are mp3."
         },
         "value": null
       },
@@ -896,7 +911,7 @@
         "number": 7,
         "validation": {
           "required": "Please fill this field.",
-          "range": "Number must be less then 99999 and greater then 0"
+          "limit": "Number must be less then 9999 and greater then 0"
         },
         "value": null
       }
@@ -940,7 +955,8 @@
         "index": 11,
         "number": 4,
         "validation": {
-          "required": "Please upload the file."
+          "required": "Please upload the file.",
+          "fileFormat" :"Please upload correct file.Supported formats are mp3."
         },
         "value": null
       },
@@ -965,7 +981,7 @@
         "number": 7,
         "validation": {
           "required": "Please fill this field.",
-          "range": "Number must be less then 99999 and greater then 0"
+          "limit": "Number must be less then 9999 and greater then 0"
         },
         "value": null
       }
@@ -1043,6 +1059,7 @@
         "name": "Soul"
       }
     ];
+    var fileExtension = ['mp3'];
     var inReview = false;
 
     for(var i = 0, len = selected.length; i < len; i++) {
@@ -1067,11 +1084,6 @@
         bullets[i].className = i === index ? 'active' : '';
       }
     });
-
-    document.addEventListener('keyup', function(event) {
-      if(event.keyCode === 37) k.prev();
-      if(event.keyCode === 39) k.next();
-    }, false);
 
     $('button').on('click', function(event) {
       if($(this).data('slide-to') || $(this).data('slide-to') == 0) {
@@ -1118,10 +1130,16 @@
             number = 4;
             break;
           case 5:
-            element = $('input[data-number="4"]');
-            if(!selected[4].value) {
-              isValid = false;
-              error = selected[4].validation.required;
+            element = $('input[data-number="4"]').closest('.upload-file-button').find('label');
+            if(selected[4].value) {
+              var extension = selected[4].value.split('.');
+              extension = extension[extension.length-1];
+              if(fileExtension.indexOf(extension) == -1) {
+                isValid = false;
+                error = selected[4].validation.fileFormat;
+              }else{
+                number = 5;
+              }
             } else {
               number = 5;
             }
@@ -1181,10 +1199,16 @@
             number = 4;
             break;
           case 12:
-            element = $('input[data-number="11"]');
-            if(!selected[4]) {
-              isValid = false;
-              error = selected[4].validation.required;
+            element = $('input[data-number="11"]').closest('.upload-file-button').find('label');
+            if(selected[4].value) {
+              var extension = selected[4].value.split('.');
+              extension = extension[extension.length-1];
+              if(fileExtension.indexOf(extension) == -1) {
+                isValid = false;
+                error = selected[4].validation.fileFormat;
+              }else{
+                number = 5;
+              }
             } else {
               number = 5;
             }
@@ -1218,9 +1242,9 @@
               element = $('input[data-number="14"]');
             }
             if(element.val() != '') {
-              if(element.val() < 0 || element.val() > 999999) {
+              if(element.val() < 0 || element.val() > 9999) {
                 isValid = false;
-                error = selected[7].validation.range;
+                error = selected[7].validation.limit;
               }
               selected[7].value = element.val();
             } else {
@@ -1308,27 +1332,25 @@
         return true;
       return false;
     }
-    $("#modal-open").click(function() {
-      $(".contact-modal").show(200);
-    });
-
-    $(".submit").click(function() {
-      $(".contact-modal").hide();
-      $('input').attr('disabled', 'disabled');
-      $('textarea').attr('disabled', 'disabled');
-    });
-
-    $(".cancel").click(function() {
-      $(".main-modal").hide();
-    });
 
     $('input[type="file"]').on('change', function() {
       var value = $(this).val().split('\\').pop();
+      var extension = value.split('.');
+      extension = extension[extension.length-1];
       var label = $(this).closest('.upload-file-button').find('label');
-      console.log(label);
       label.text(value);
-      console.log(label.text());
       selected[4].value = value;
+      if(fileExtension.indexOf(extension) == -1){
+        label.addClass('error');
+        var selector = 'p[data-number="' + $(this).data('number') + '"]';
+        $(selector).html(selected[4].validation.fileFormat);
+        $(selector).removeClass('hidden');
+      }else{
+        $(this).removeClass('error');
+        var selector = 'p[data-number="' + $(this).data('number') + '"]';
+        $(selector).html('');
+        $(selector).addClass('hidden');
+      }
     });
 
     //open genre modal
@@ -1422,47 +1444,53 @@
     });
 
 
-    window.addEventListener("keydown", function(e) {
-      if(e.keyCode == 37 || e.keyCode == 39){
-        e.preventDefault();
-      }
-    }, false);
-
       $('textarea').on('keyup',function(e){
           var number = $(this).data('number');
-          textareaChanges(number,e);
+        textareaChanges(number,e,selected,1);
       });
+
       $('textarea').on('keydown',function(e){
           var number = $(this).data('number');
-          textareaChanges(number,e);
+        textareaChanges(number,e,selected,1);
       });
 
-      function  textareaChanges(number,e) {
-          var selector = 'textarea[data-number="' + number +'"]';
-          var len = $(selector).val().length;
-          selector = 'span[data-number="' + number +'"]';
-          $(selector).html(len);
 
-          selector = 'p[data-number="' + number +'"]';
-          if(len>=2500){
-              if(e.keyCode !== 8 && e.keyCode !== 46){
-                  e.preventDefault();
-              }
-              $(selector).removeClass('hidden');
-              $(selector).html(selected[1].validation.limit);
-          }else{
-              $(selector).addClass('hidden');
-          }
+    //prevent budget filed input
+    $('input').on('keyup',function(e){
+      var number = $(this).data('number');
+      var budgetNumbers = [7,14,27];
+      var moodNumbers = [5,12,25];
+
+      if(budgetNumbers.indexOf(number) > -1){
+        budgetChanges(number,e,selected,7);
       }
 
-      $('textarea').on('keyup',function(e){
-          var number = $(this).data('number');
-          textareaChanges(number,e);
-      });
-      $('textarea').on('keydown',function(e){
-          var number = $(this).data('number');
-          textareaChanges(number,e);
-      });
+      if(moodNumbers.indexOf(number) > -1){
+        moodChanges(number,e,selected,5);
+      }
+
+    });
+
+    $('input').on('keydown',function(e){
+      var number = $(this).data('number');
+      var budgetNumbers = [7,14,27];
+      var moodNumbers = [5,12,25];
+
+      if(budgetNumbers.indexOf(number) > -1){
+        budgetChanges(number,e,selected,7);
+      }
+
+      if(moodNumbers.indexOf(number) > -1){
+        moodChanges(number,e,selected,5);
+      }
+    });
+
+
+    $("#modal-open").on('click',function() {
+      $('.input-name').closest('div').find('p').addClass('hidden');
+      $('.input-email').closest('div').find('p').addClass('hidden');
+      $(".contact-modal").show(200);
+    });
 
   });
 

@@ -40,6 +40,10 @@
             <li class="nav-item ">
                 <a class="nav-link  item-link" href="complete_song.html" title="complete_song">Complete song</a>
             </li>
+            <li class="nav-item contact_us">
+                <a class="nav-link item-link" href="complete_song.html" title="complete_song">Contact us</a>
+                <p><a href="mailto:smartgig.ch@gmail.com">smartgig.ch@gmail.com</a></p>
+            </li>
         </ul>
         <span class="navbar-text nav-counter">
             <span class="counter">
@@ -87,6 +91,7 @@
             </div>
         </div>
     </div>
+
     <div class="main-general step-3  instrumentals_choose_instrument        layer" data-number="1">
         <div class="container main-content">
             <div class="page-question">
@@ -205,10 +210,10 @@
                     </div>
                     <div class="col-md-4 offset-md-4 upload-file-button">
                         <label for="file-upload" class="custom-file-upload">
-                            Upload a melody file 1
+                            Upload a melody file
                         </label>
                         <img src="images/singing/if_icon-upload_211937.png" alt="">
-                        <input id="file-upload" type="file" class="upload" name="myfiles[]" data-number="4" multiple/>
+                        <input data-number="4" id="file-upload" type="file" class="upload" name="myfiles[]" multiple/>
                         <p data-number="4" class="hidden error-message"></p>
                     </div>
                 </div>
@@ -414,10 +419,10 @@
                     </div>
                     <div class="col-md-4 offset-md-4 upload-file-button">
                         <label for="file-upload-commercial" class="custom-file-upload">
-                            Upload a melody file 2
+                            Upload a melody file
                         </label>
                         <img src="images/singing/if_icon-upload_211937.png" alt="">
-                        <input id="file-upload-commercial" type="file" class="upload" name="myfiles[]" multiple/>
+                        <input data-number="10" id="file-upload-commercial" type="file" class="upload" name="myfiles[]" multiple/>
                         <p data-number="10" class="hidden error-message"></p>
                     </div>
                 </div>
@@ -549,9 +554,9 @@
                         <div class="col-md-8 letters">
                             <input type="hidden" name="isPrivate" id="private">
                             <textarea name="about" class="preview-story story" cols="100" rows="6" id="elem_2"
-                                      placeholder="Write down your idea here." maxlength="2500" required></textarea>
-                            <p class="hidden error-message">Please fill this field.</p>
-                            <p> <span data-number="">0</span> / 2500 characters</p>
+                                      placeholder="Write down your idea here." maxlength="2500" data-number="22" required></textarea>
+                            <p data-number="22" class="hidden error-message">Please fill this field.</p>
+                            <p> <span data-number="22">0</span> / 2500 characters</p>
                         </div>
                     </div>
                     <hr>
@@ -569,10 +574,11 @@
                     <div class="row">
                         <div class="col-md-6 offset-md-3 characters-input upload-file-button" id="elem_4">
                             <label for="file-upload-review" class="custom-file-upload">
-                                Upload a melody file 3
+                                Upload a melody file
                             </label>
                             <img src="images/singing/if_icon-upload_211937.png" alt="">
-                            <input id="file-upload-review" type="file" class="upload" name="myfiles[]" multiple/>
+                            <input data-number="14" id="file-upload-review" type="file" class="upload" name="myfiles[]" multiple/>
+                            <p data-number="14" class="hidden error-message"></p>
                         </div>
                     </div>
                     <hr>
@@ -587,8 +593,8 @@
                     <div class="row">
                         <div class="col-md-6 calendar">
                             <h3>Budget</h3>
-                            <input name="cost" id="elem_6" type="number" placeholder="CHF 50" data-number="10">
-                            <p data-number="10" class="hidden error-message">Please fill this field.</p>
+                            <input name="cost" id="elem_6" type="number" placeholder="CHF 50" data-number="26">
+                            <p data-number="26" class="hidden error-message">Please fill this field.</p>
                         </div>
                     </div>
                     <hr>
@@ -604,7 +610,7 @@
 
 
 <div class="dialog-modal modal-1 main-modal  hidden">
-    <div class="wrapper leaves-page" id="contact-details-modal1">
+    <div class="wrapper leaves-page">
         <h3>If you leave this page you will lose all the data.Do you want to continue?</h3>
         <div class="row">
             <div class="col-md-6">
@@ -616,23 +622,39 @@
         </div>
     </div>
 </div>
-<div class="dialog-modal modal-1 contact-modal  hidden">
+<div class="dialog-modal modal-1 contact-modal   hidden">
     <div class="wrapper" id="contact-details-modal">
         <h3>Please provide your details to be in touch</h3>
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <input type="text" placeholder="please write your name" class="input-name">
-            </div>
-            <div class="col-md-12 col-sm-12">
-                <input type="text" placeholder="please write your email" class="input-email">
-            </div>
+        <div>
+            <input type="text" placeholder="Please write your name" class="input-name" required>
+            <p class="hidden error-message">Please enter your name</p>
+        </div>
+        <div>
+            <input type="email" placeholder="Please write your email" class="input-email" required>
+            <p class="hidden error-message">Please enter your email</p>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <button type="button" class="submit">CANCEL</button>
+                <button type="button" class="submit close-modal">CANCEL</button>
             </div>
             <div class="col-md-6">
-                <button type="button" class="submit">SUBMIT</button>
+                <button type="button" class="submit contact-submit">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dialog-modal modal-1  add-instruments-modal hidden" id="instrumnet-modal-id">
+    <div class="wrapper add-instruments">
+        <div class="add-instruments-name">
+            <input type="text" placeholder="Please enter your instrument name" class="input-instrument" required>
+            <p class="hidden error-message">Please enter your instrument name</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button type="button" class="submit close-modal">CANCEL</button>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="submit instrument-submit">SUBMIT</button>
             </div>
         </div>
     </div>
@@ -644,28 +666,29 @@
                 <input type="text" id="instrument-filter" placeholder="Enter Instrument here ... (Filter)">
                 <p data-number="1" class="hidden error-message"></p>
             </form>
-            <button class="done"> DONE</button>
-            <button class="close-modal">CANCEL</button>
+            <button class="close-modal"><span>x</span></button>
             <div id="instrument-content">
                 <div class="row">
-                    <div class="col-md-3 col-sm-4  col-xs-6 instrument-image-and-name">
-                        <div class="instrument-image instrument-item">
+                    <div class="col-md-3 col-sm-4  col-xs-6 instrument-image-and-name  ">
+                        <div class="instrument-image  instrument-item instrument-check-in">
                             <div class="csscheckbox">
                                 <span>&#10004;</span>
                             </div>
                             <img src="images/instrumentals/genre/accordeon/accordion-musical-instrument.jpeg" alt="">
                             <div class="instruments-name">
-                                <h3>Accordion</h3>
+                                <div>
+                                    <h3>Accordion</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4  col-xs-6 instrument-image-and-name">
-                        <div class="instrument-image instrument-item">
+                        <div class="instrument-image check-in instrument-item">
                             <div class="csscheckbox">
                                 <span>&#10004;</span>
                             </div>
                             <img src="images/instrumentals/genre/bugle/bugle.jpg" alt="">
-                            <div class="instruments-name">
+                            <div class="instruments-name  check-in-counter">
                                 <h3>Bugle</h3>
                             </div>
                         </div>
@@ -832,6 +855,7 @@
                     </div>
                 </div>
             </div>
+            <button class="done"><span>Confirm Choice</span></button>
         </div>
     </div>
 </div>
@@ -842,12 +866,12 @@
             <form class="filter">
                 <input type="text" id="genre-filter" placeholder="Enter Genre here ... (Filter)">
             </form>
-            <button class="col-md-2 close-modal"> CANCEL</button>
+            <button class="col-md-2 close-modal"> x</button>
             <div class="row">
-                <div class="col-md-3  col-sm-4  col-xs-6 groups-of-genre">
+                <div class="col-md-3  col-sm-4  col-xs-6 groups-of-genre ">
                     <div class="instrument-image genre-item">
                         <img src="images/singing/genre/soul/soul.jpg" alt="">
-                        <div class="instruments-name">
+                        <div class="instruments-name ">
                             <h3>Soul</h3>
                         </div>
                     </div>
@@ -968,9 +992,8 @@
 </div>
 
 
-<script src="js/aos.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<script src="js/bootstrap.min.js"></script>
 <script src="js/simpleSlider.js"></script>
 <script src="js/main.js"></script>
 <script>
@@ -1020,7 +1043,8 @@
                 "index": 4,
                 "number": 4,
                 "validation": {
-                    "required": "Please upload the file."
+                    "required": "Please upload the file.",
+                    "fileFormat" :"Please upload correct file.Supported formats are mp3."
                 },
                 "value": null
             },
@@ -1037,7 +1061,7 @@
                 "number": 6,
                 "validation": {
                     "required": "Please fill this field.",
-                    "range": "Number must be less then 99999 and greater then 0"
+                    "limit": "Number must be less then 9999 and greater then 0"
                 },
                 "value": null
             }
@@ -1084,7 +1108,8 @@
                 "index": 10,
                 "number": 4,
                 "validation": {
-                    "required": "Please upload the file."
+                    "required": "Please upload the file.",
+                    "fileFormat" :"Please upload correct file.Supported formats are mp3."
                 },
                 "value": null
             },
@@ -1101,7 +1126,7 @@
                 "number": 6,
                 "validation": {
                     "required": "Please fill this field.",
-                    "range": "Number must be less then 99999 and greater then 0"
+                    "limit": "Number must be less then 9999 and greater then 0"
                 },
                 "value": null
             }
@@ -1259,8 +1284,14 @@
                 "id": 16,
                 "src": "images/instrumentals/genre/saxophone/Saxophone.jpeg",
                 "name": "Saxophone"
+            },
+            {
+              "id": 0,
+              "src": "images/instrumentals/add-icon.png",
+              "name": "Add custom instrument"
             }
         ];
+        var fileExtension = ['mp3'];
         var inReview = false;
 
         for(var i = 0, len = selected.length; i < len; i++) {
@@ -1284,11 +1315,6 @@
                 bullets[i].className = i === index ? 'active' : '';
             }
         });
-
-        document.addEventListener('keyup', function(event) {
-            if(event.keyCode === 37) k.prev();
-            if(event.keyCode === 39) k.next();
-        }, false);
 
         function canNavigate(index) {
             var slide = selected[+index].value;
@@ -1348,13 +1374,18 @@
                   } else {
                     number = 4;
                   }
-                  console.log(selected);
                   break;
                 case 5:
-                  element = $('input[data-number="4"]');
-                  if(!selected[4].value) {
-                    isValid = false;
-                    error = selected[4].validation.required;
+                  element = $('input[data-number="4"]').closest('.upload-file-button').find('label');
+                  if(selected[4].value) {
+                    var extension = selected[4].value.split('.');
+                    extension = extension[extension.length-1];
+                    if(fileExtension.indexOf(extension) == -1) {
+                      isValid = false;
+                      error = selected[4].validation.fileFormat;
+                    }else{
+                      number = 5;
+                    }
                   } else {
                     number = 5;
                   }
@@ -1404,10 +1435,16 @@
                   }
                   break;
                 case 11:
-                  element = $('input[data-number="10"]');
-                  if(!selected[4].value) {
-                    isValid = false;
-                    error = selected[4].validation.required;
+                  element = $('input[data-number="10"]').closest('.upload-file-button').find('label');
+                  if(selected[4].value) {
+                    var extension = selected[4].value.split('.');
+                    extension = extension[extension.length-1];
+                    if(fileExtension.indexOf(extension) == -1) {
+                      isValid = false;
+                      error = selected[4].validation.fileFormat;
+                    }else{
+                      number = 5;
+                    }
                   } else {
                     number = 5;
                   }
@@ -1429,9 +1466,9 @@
                     element = $('input[data-number="12"]');
                   }
                   if(element.val() != '') {
-                    if(element.val() < 0 || element.val() > 999999) {
+                    if(element.val() < 0 || element.val() > 9999) {
                       isValid = false;
-                      error = selected[6].validation.range;
+                      error = selected[6].validation.limit;
                     }
                     selected[6].value = element.val();
                   } else {
@@ -1504,56 +1541,73 @@
             }
         }
 
-        $("#modal-open").click(function() {
-            $(".contact-modal").show(200);
-        });
-
-        $(".submit").click(function() {
-            $(".contact-modal").hide();
-            $('input').attr('disabled', 'disabled');
-            $('textarea').attr('disabled', 'disabled');
-        });
-
-
         //choose instrument
         $(document).on('click', '.instrument-item', function() {
-            debugger;
             var dataId = $(this).data('id');
-            if(!selected[1].value) {
+            if(dataId) {
+              if(!selected[1].value) {
                 selected[1].value = [];
-            }
+              }
 
-            if(selected[1].value.length >= 0) {
+              if(selected[1].value.length >= 0) {
                 var filtered = selected[1].value.filter(function(t) {
-                    return t.id == dataId;
+                  return t.id == dataId;
                 }, dataId);
                 if(filtered.length) {
-                    $(this).find('.csscheckbox').addClass('hidden');
-                    selected[1].value.splice(selected[1].value.indexOf(filtered[0]),1);
-                    $('.choose-instruments-types-modal').find('p[data-number="1"]').addClass('hidden');
+                  $(this).find('.csscheckbox').addClass('hidden');
+                  $(this).find('.instruments-name').removeClass('hover-style');
+                  $(this).removeClass('instrument-check-in');
+                  selected[1].value.splice(selected[1].value.indexOf(filtered[0]), 1);
+                  $('.choose-instruments-types-modal').find('p[data-number="1"]').addClass('hidden');
                 } else {
-                    if(selected[1].value.length < 5) {
-                        $(this).find('.csscheckbox').removeClass('hidden');
-                        selected[1].value.push({
-                            "id": dataId,
-                            "name": $(this).find('h3').html(),
-                            "image": $(this).find('img').attr('src')
-                        });
-                    }else{
-                        $('.choose-instruments-types-modal').find('p[data-number="1"]').removeClass('hidden');
-                        $('.choose-instruments-types-modal').find('p[data-number="1"]').html(selected[1].validation.limit);
-                    }
+                  if(selected[1].value.length < 5) {
+                    $(this).find('.csscheckbox').removeClass('hidden');
+                    $(this).find('.instruments-name').addClass('hover-style');
+                    $(this).addClass('instrument-check-in');
+                    selected[1].value.push({
+                      "id": dataId,
+                      "name": $(this).find('h3').html(),
+                      "src": $(this).find('img').attr('src')
+                    });
+                  } else {
+                    $('.choose-instruments-types-modal').find('p[data-number="1"]').removeClass('hidden');
+                    $('.choose-instruments-types-modal').find('p[data-number="1"]').html(selected[1].validation.limit);
+                  }
                 }
+              }
+            }else{
+              $('.input-instrument').val('');
+              $('.add-instruments-name').find('p').addClass('hidden');
+              if(!selected[4].value || selected[1].value.length < 5) {
+                $('.choose-instruments-types-modal').find('p[data-number="1"]').addClass('hidden');
+                $('.add-instruments-modal').show(200);
+              }else{
+                $('.choose-instruments-types-modal').find('p[data-number="1"]').removeClass('hidden');
+                $('.choose-instruments-types-modal').find('p[data-number="1"]').html(selected[1].validation.limit);
+              }
             }
 
         });
 
         $('input[type="file"]').on('change', function() {
-            var value = $(this).val().split('\\').pop();
-            var label = $(this).closest('.upload-file-button').find('label');
-            label.text(value);
-            selected[4].value = value;
-        });
+        var value = $(this).val().split('\\').pop();
+        var extension = value.split('.');
+        extension = extension[extension.length-1];
+        var label = $(this).closest('.upload-file-button').find('label');
+        label.text(value);
+        selected[4].value = value;
+        if(fileExtension.indexOf(extension) == -1){
+          label.addClass('error');
+          var selector = 'p[data-number="' + $(this).data('number') + '"]';
+          $(selector).html(selected[4].validation.fileFormat);
+          $(selector).removeClass('hidden');
+        }else{
+          $(this).removeClass('error');
+          var selector = 'p[data-number="' + $(this).data('number') + '"]';
+          $(selector).html('');
+          $(selector).addClass('hidden');
+        }
+      });
 
 
         //open genre modal
@@ -1655,22 +1709,22 @@
             var content = '<div class="row">';
             var needClose = true;
             for(var i = 0; i < instruments.length; i++) {
-              var hidden = true;
+              var checked = false;
               var dataId = instruments[i].id;
               if(selected[1].value && selected[1].value.length){
                 var filtered = selected[1].value.filter(function(t) {
                   return t.id == dataId;
                 }, dataId);
                 if(filtered.length){
-                  hidden = false;
+                  checked = true;
                 }
               }
 
                 content += ' <div class="col-md-3 col-sm-4  col-xs-6 instrument-image-and-name">' +
-                    '<div class="instrument-image instrument-item" data-id="' + instruments[i].id + '">' +
-                    '<div class="csscheckbox ' + (hidden ? 'hidden' : '') + '"><span>&#10004;</span></div>' +
+                    '<div class="instrument-image instrument-item ' + (checked ? 'instrument-check-in' : '') + '" data-id="' + instruments[i].id + '">' +
+                    '<div class="csscheckbox ' + (checked ? '' : 'hidden') + '"><span>&#10004;</span></div>' +
                     '<img src="' + instruments[i].src + '" alt="">' +
-                    '<div class="instruments-name">' +
+                    '<div class="instruments-name ' + (checked ? 'hover-style' : '') + '">' +
                     '<h3>' + instruments[i].name + '</h3></div></div></div>';
 
                 if(i % 4 == 3) {
@@ -1727,7 +1781,7 @@
           for(var i = 0; i < selected[1].value.length; i++) {
             html += ' <div class="' + col + '  col-sm-4 groups-of-genre instrument-choose">' +
               '                        <div class="instrument-image">' +
-              '                            <img src="' + selected[1].value[i].image + '" alt="">' +
+              '                            <img src="' + selected[1].value[i].src + '" alt="">' +
               '                        </div>\n' +
               '                        <p data-number="1" class="hidden error-message"></p>' +
               '                        <div class="instrument-name">' +
@@ -1778,39 +1832,64 @@
         }
       })
 
-      window.addEventListener("keydown", function(e) {
-        if(e.keyCode == 37 || e.keyCode == 39){
-          e.preventDefault();
-        }
-      }, false);
-
 
         $('textarea').on('keyup',function(e){
             var number = $(this).data('number');
-            textareaChanges(number,e);
+            textareaChanges(number,e,selected,2);
         });
         $('textarea').on('keydown',function(e){
             var number = $(this).data('number');
-            textareaChanges(number,e);
+            textareaChanges(number,e,selected,2);
         });
 
-        function  textareaChanges(number,e) {
-            var selector = 'textarea[data-number="' + number +'"]';
-            var len = $(selector).val().length;
-            selector = 'span[data-number="' + number +'"]';
-            $(selector).html(len);
 
-            selector = 'p[data-number="' + number +'"]';
-            if(len>=2500){
-                if(e.keyCode !== 8 && e.keyCode !== 46){
-                    e.preventDefault();
-                }
-                $(selector).removeClass('hidden');
-                $(selector).html(selected[2].validation.limit);
-            }else{
-                $(selector).addClass('hidden');
-            }
+
+
+      //prevent budget filed input
+      $('input').on('keyup',function(e){
+        var number = $(this).data('number');
+        var budgetNumbers = [6,12,26];
+        if(budgetNumbers.indexOf(number) > -1){
+          budgetChanges(number,e,selected,6);
         }
+
+      });
+
+      $('input').on('keydown',function(e){
+        var number = $(this).data('number');
+        var budgetNumbers = [6,12,26];
+        if(budgetNumbers.indexOf(number) > -1){
+          budgetChanges(number,e,selected,6);
+        }
+      });
+
+      $("#modal-open").on('click',function() {
+        $('.input-name').closest('div').find('p').addClass('hidden');
+        $('.input-email').closest('div').find('p').addClass('hidden');
+        $(".contact-modal").show(200);
+      });
+
+      $('.instrument-submit').on('click',function() {
+        var name = $('.input-instrument').val();
+        if(!name){
+          $('.input-instrument').closest('div').find('p').removeClass('hidden');
+        }
+
+        if(name){
+          var obj =  {
+              "id": instrumentsArray.length +1,
+              "src": "images/instrumentals/abstract-music-instruments-bg.jpg",
+              "name": name
+            };
+          if(!selected[1].value) {
+            selected[1].value = [];
+          }
+          selected[1].value.push(obj);
+          instrumentsArray.splice(instrumentsArray.length - 1, 0, obj);
+          drowInstrumentContent(instrumentsArray);
+          $('.add-instruments-modal').hide(200);
+        }
+      });
 
     });
 

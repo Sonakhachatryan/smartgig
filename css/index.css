@@ -45,7 +45,7 @@ body {
     body .main-general .error {
       background-color: rgba(255, 255, 255, 0.2) !important;
       border: 2px solid #e74c3c !important;
-      border-top-color: transparent; }
+      border-top-color: transparent !important; }
     body .main-general .error-message {
       color: #e74c3c !important;
       text-align: right;
@@ -53,8 +53,6 @@ body {
       font-weight: 600;
       margin: 0 auto;
       text-shadow: 1px 2px 7px black; }
-    body .main-general .deadline input {
-      text-align: left !important; }
     body .main-general .calendar {
       margin: 30px auto;
       margin-bottom: 20px;
@@ -67,7 +65,7 @@ body {
         padding: 0 1rem;
         background-color: rgba(255, 255, 255, 0.2);
         color: white;
-        border-top: 2px solid black;
+        border-top: 2px solid black !important;
         text-shadow: 1px 2px 7px black;
         font-size: 23px;
         font-weight: 400;
@@ -119,7 +117,7 @@ body {
       body .main-general .letters .story {
         font-size: 25px;
         background-color: rgba(255, 255, 255, 0.2);
-        border-top: 2px solid black;
+        border-top: 2px solid black !important;
         height: auto;
         width: 100%;
         color: white;
@@ -262,7 +260,7 @@ body {
   body .step-1 .button-back-home {
     text-align: center;
     cursor: pointer; }
-    body .step-1 .button-back-home a .back-to-home {
+    body .step-1 .button-back-home .back-to-home {
       cursor: pointer;
       position: relative;
       line-height: 50px;
@@ -276,7 +274,7 @@ body {
       margin: 20px;
       text-shadow: 1px 2px 7px black;
       border: 1px solid black; }
-      body .step-1 .button-back-home a .back-to-home:hover {
+      body .step-1 .button-back-home .back-to-home:hover {
         color: black;
         background-color: gray;
         -webkit-transition: 2000ms;
@@ -451,7 +449,7 @@ body {
         position: relative;
         padding: 0 1rem;
         width: 100%;
-        overflow-y: scroll; }
+        overflow-y: auto; }
     body .step-3 .page-question .characters-input, body .step-3 .preview-form .characters-input {
       margin: 50px auto; }
       body .step-3 .page-question .characters-input input, body .step-3 .preview-form .characters-input input {
@@ -496,7 +494,7 @@ body {
       margin: 0 auto;
       text-align: center;
       background-attachment: fixed;
-      overflow-y: scroll; }
+      overflow-y: auto; }
       body .final-submit-page .review-page .for-submit {
         text-align: center;
         padding-top: 30px; }
@@ -688,16 +686,43 @@ body {
           font-size: 25px;
           width: 50px;
           height: auto; }
+    body .nav-top .main-menu .contact_us {
+      padding-top: 10px; }
+      body .nav-top .main-menu .contact_us p a {
+        text-decoration: none;
+        color: white;
+        display: inline;
+        font-size: 17px;
+        text-align: center;
+        margin-left: 8px; }
+        body .nav-top .main-menu .contact_us p a:hover {
+          color: white !important; }
+        body .nav-top .main-menu .contact_us p a:before {
+          content: " ";
+          position: absolute;
+          background-color: #fff;
+          -webkit-transition: width 0.5s ease-in-out;
+          -o-transition: width 0.5s ease-in-out;
+          transition: width 0.5s ease-in-out; }
+        body .nav-top .main-menu .contact_us p a:after {
+          content: " ";
+          position: absolute;
+          background-color: #fff;
+          -webkit-transition: width 0.5s ease-in-out;
+          -o-transition: width 0.5s ease-in-out;
+          transition: width 0.5s ease-in-out; }
+        body .nav-top .main-menu .contact_us p a:hover:before, body .nav-top .main-menu .contact_us p a:focus:before {
+          width: 0%; }
     body .nav-top .main-menu li {
-      padding: 0 0 0 25px;
-      font-size: 25px;
+      padding: 20px 0 0 25px;
+      font-size: 20px;
       text-shadow: 1px 2px 7px black; }
       body .nav-top .main-menu li .item-link {
         font-family: 'Arial Fett', 'Arial Standard', 'Arial';
         font-weight: 700;
         font-style: normal;
         color: white;
-        margin: 0px auto; }
+        margin: -8px auto; }
         body .nav-top .main-menu li .item-link:focus {
           color: white  !important; }
       body .nav-top .main-menu li:hover a {
@@ -734,14 +759,16 @@ body {
         width: 100%; }
   body .modal-1 {
     position: fixed;
-    z-index: 9999;
+    z-index: 1037;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(23, 26, 29, 0.2);
     max-height: 100vh; }
-    body .modal-1 .leaves-page {
+    body .modal-1 .add-instruments-modal {
+      z-index: 1037 !important; }
+    body .modal-1 .leaves-page, body .modal-1 .add-instruments {
       width: 500px !important;
       height: 300px !important; }
     body .modal-1 .wrapper {
@@ -755,6 +782,17 @@ body {
       box-shadow: 1px 2px 5px gray;
       top: 120px;
       margin: 0 auto; }
+      body .modal-1 .wrapper div {
+        margin-bottom: 15px; }
+      body .modal-1 .wrapper .add-instruments-name {
+        margin: 30px 0 20px 0; }
+      body .modal-1 .wrapper .error-message {
+        color: #e74c3c !important;
+        text-align: left;
+        font-size: 17px;
+        font-weight: 600;
+        margin: 3px auto;
+        text-shadow: 1px 2px 7px black; }
       body .modal-1 .wrapper h3 {
         color: wheat;
         font-size: 25px;
@@ -762,16 +800,16 @@ body {
         margin-top: 0px; }
       body .modal-1 .wrapper div {
         text-align: center; }
-      body .modal-1 .wrapper .input-name, body .modal-1 .wrapper .input-email {
+      body .modal-1 .wrapper .input-name, body .modal-1 .wrapper .input-email, body .modal-1 .wrapper .input-instrument {
         height: 50px;
+        width: 100%;
         border: 2px solid black;
         padding: 0 20px;
-        margin: 20px 0;
         text-align: center;
         color: #2d3945;
         font-size: 18px;
         background: #fff3cd; }
-        body .modal-1 .wrapper .input-name:focus, body .modal-1 .wrapper .input-email:focus {
+        body .modal-1 .wrapper .input-name:focus, body .modal-1 .wrapper .input-email:focus, body .modal-1 .wrapper .input-instrument:focus {
           outline: none; }
       body .modal-1 .wrapper .submit {
         padding: 10px 40px;
@@ -785,19 +823,19 @@ body {
           color: #5F81A3; }
   body .choose-modals {
     position: fixed;
-    z-index: 9999;
+    z-index: 1036;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(23, 26, 29, 0.2);
-    overflow-y: scroll; }
+    overflow-y: auto; }
     body .choose-modals .singing_choose_genre {
       height: 100%; }
       body .choose-modals .singing_choose_genre .choose-your-genre {
         padding-top: 30px;
-        background-color: black;
-        position: relative;
+        background-image: url("../images/bg/Free-Simple-Black-Seamless-Pattern-for-Website-Background.jpg");
+        position: absolute;
         min-height: 100%;
         width: 100%; }
         body .choose-modals .singing_choose_genre .choose-your-genre .error-message {
@@ -809,12 +847,13 @@ body {
           text-shadow: 1px 2px 7px black; }
         body .choose-modals .singing_choose_genre .choose-your-genre .first-paragrafh {
           display: inline-block; }
-        body .choose-modals .singing_choose_genre .choose-your-genre button {
+        body .choose-modals .singing_choose_genre .choose-your-genre .close-modal {
           display: inline-block;
-          text-transform: uppercase;
           position: relative;
-          width: 13%;
-          top: -62px;
+          width: 45px;
+          height: 45px;
+          margin-top: -68px;
+          float: right;
           cursor: pointer;
           color: #8c8c8c;
           background: transparent;
@@ -822,17 +861,44 @@ body {
           text-align: center;
           font-size: 1.5vw;
           font-weight: bold;
-          padding: 0.5vw 0;
+          padding: 0px 0;
           text-shadow: 1px 1px rgba(13, 12, 12, 0.3), 2px 2px rgba(13, 12, 12, 0.3);
           overflow: hidden;
           -webkit-transition: all 0.3s ease-in;
           -o-transition: all 0.3s ease-in;
           transition: all 0.3s ease-in; }
-          body .choose-modals .singing_choose_genre .choose-your-genre button:hover {
+          body .choose-modals .singing_choose_genre .choose-your-genre .close-modal:hover {
             color: rgba(38, 38, 38, 0.5);
             background: white; }
-          body .choose-modals .singing_choose_genre .choose-your-genre button:focus {
-            color: #0d0d0d; }
+          body .choose-modals .singing_choose_genre .choose-your-genre .close-modal:focus {
+            color: #8c8c8c;
+            outline: none; }
+        body .choose-modals .singing_choose_genre .choose-your-genre .done {
+          display: inline-block;
+          position: relative;
+          width: 200px;
+          height: 52px;
+          margin: 20px 0;
+          float: right;
+          cursor: pointer;
+          color: #8c8c8c;
+          background: transparent;
+          border: 3px solid rgba(64, 64, 64, 0.5);
+          text-align: center;
+          font-size: 1.5vw;
+          font-weight: bold;
+          padding: 7px 0 33px;
+          text-shadow: 1px 1px rgba(13, 12, 12, 0.3), 2px 2px rgba(13, 12, 12, 0.3);
+          overflow: hidden;
+          -webkit-transition: all 0.3s ease-in;
+          -o-transition: all 0.3s ease-in;
+          transition: all 0.3s ease-in; }
+          body .choose-modals .singing_choose_genre .choose-your-genre .done:hover {
+            color: rgba(38, 38, 38, 0.5);
+            background: white; }
+          body .choose-modals .singing_choose_genre .choose-your-genre .done:focus {
+            color: #8c8c8c;
+            outline: none; }
         body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name {
           position: relative;
           padding: 20px;
@@ -845,8 +911,6 @@ body {
             overflow: hidden;
             height: 220px;
             width: 100%;
-            -webkit-box-shadow: 4px 0px 4px darkslategrey;
-            box-shadow: 4px 0px 4px darkslategrey;
             border-radius: 2px; }
             body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .csscheckbox, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .csscheckbox {
               width: 40px;
@@ -885,13 +949,28 @@ body {
               box-sizing: border-box;
               color: white;
               background-color: rgba(0, 0, 0, 0.3); }
-            body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image:hover .instruments-name, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image:hover .instruments-name {
+              body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .instruments-name:hover, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .instruments-name:hover {
+                cursor: pointer;
+                bottom: -90px;
+                display: block;
+                -webkit-transition: 400ms;
+                -o-transition: 400ms;
+                transition: 400ms; }
+            body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .hover-style, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .hover-style {
               cursor: pointer;
               bottom: -90px;
-              display: block;
-              -webkit-transition: 400ms;
-              -o-transition: 400ms;
-              transition: 400ms; }
+              display: block; }
+              body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-image .hover-style:hover, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-image .hover-style:hover {
+                cursor: pointer;
+                bottom: -90px;
+                display: block; }
+          body .choose-modals .singing_choose_genre .choose-your-genre .groups-of-genre .instrument-check-in, body .choose-modals .singing_choose_genre .choose-your-genre .instrument-image-and-name .instrument-check-in {
+            -webkit-box-shadow: 1px 1px rgba(13, 12, 12, 0.3);
+            box-shadow: 1px 1px rgba(13, 12, 12, 0.3);
+            border: 2px solid darkgreen;
+            width: 105%;
+            border-radius: 2px;
+            padding: 11px; }
         body .choose-modals .singing_choose_genre .choose-your-genre form input {
           background-color: rgba(255, 255, 255, 0.2);
           border-top: 2px solid black;
@@ -1149,7 +1228,8 @@ body .home {
   background-image: url("../images/bg/singing.jpeg");
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  overflow-y: scroll; }
   body .home .hidingScrollBar .header-top-area .home-page span {
     font-family: 'Arial Fett', 'Arial Standard', 'Arial';
     font-weight: 600;
@@ -1240,7 +1320,7 @@ body .songwriting_choose_usagetype {
   display: -ms-flexbox;
   display: flex; }
   body .songwriting_choose_usagetype .songwriting_choose_usagetype_private_use {
-    background-image: url("../images/songwriting/photo20.jpg"); }
+    background-image: url("../images/instrumentals/photo-1475275166152-f1e8005f9854.jpg"); }
   body .songwriting_choose_usagetype .songwriting_songtext {
     background-image: url("../images/songwriting/photo4.jpg"); }
   body .songwriting_choose_usagetype .songwriting_deadline {
@@ -1253,6 +1333,39 @@ body .songwriting_choose_usagetype {
     background-image: url("../images/songwriting/photo18.jpeg"); }
   body .songwriting_choose_usagetype .commercial_use-budget {
     background-image: url("../images/songwriting/photo6.jpeg"); }
+  body .songwriting_choose_usagetype .thank_you {
+    background-image: url("../images/songwriting/photo6.jpeg"); }
+    body .songwriting_choose_usagetype .thank_you .center-one {
+      text-align: center; }
+      body .songwriting_choose_usagetype .thank_you .center-one h1 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        display: inline-block;
+        text-align: center;
+        margin: 70px 0 40px 0;
+        vertical-align: middle;
+        position: relative; }
+      body .songwriting_choose_usagetype .thank_you .center-one span {
+        border: 2px solid white;
+        border-radius: 50px;
+        top: 5px;
+        padding: 0 13px;
+        font-size: 23px;
+        color: white; }
+      body .songwriting_choose_usagetype .thank_you .center-one p {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 20px;
+        margin: 0 0 24px 0;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 1px 2px 7px black; }
 
 body .singing-general-page {
   width: 100%;
@@ -1302,7 +1415,7 @@ body {
   display: -ms-flexbox;
   display: flex; }
   body .instrumentals-general-page .instrumentals_choose_usagetype {
-    background-image: url("../images/instrumentals/accordeon2.jpg"); }
+    background-image: url("../images/bg/xmDspz.jpg"); }
   body .instrumentals-general-page .instrumentals_choose_instrument {
     background-image: url("../images/instrumentals/song1.jpeg"); }
   body .instrumentals-general-page .instrumentals_topic {
@@ -1379,7 +1492,7 @@ body .complete_song-general-page {
 
 @media screen and (max-width: 768px) {
   html, body {
-    overflow-y: scroll;
+    overflow-y: auto;
     background-size: cover;
     background-attachment: fixed; }
     html .home, body .home {
@@ -1449,17 +1562,24 @@ body .complete_song-general-page {
           text-decoration: none;
           cursor: pointer;
           padding-top: 50px; }
-    html .main-general, body .main-general {
+    html .songwriting_choose_usagetype, html .singing-general-page, html .instrumentals-general-page, html .complete_song-general-page, body .songwriting_choose_usagetype, body .singing-general-page, body .instrumentals-general-page, body .complete_song-general-page {
+      height: auto;
       height: auto;
       width: 100%;
       background-size: cover; }
-      html .main-general .page-question, body .main-general .page-question {
-        padding-top: 100px; }
-      html .main-general .bullets, body .main-general .bullets {
-        top: 230px; }
-      html .main-general .button, body .main-general .button {
+      html .songwriting_choose_usagetype .step-1 .page-question, html .singing-general-page .step-1 .page-question, html .instrumentals-general-page .step-1 .page-question, html .complete_song-general-page .step-1 .page-question, body .songwriting_choose_usagetype .step-1 .page-question, body .singing-general-page .step-1 .page-question, body .instrumentals-general-page .step-1 .page-question, body .complete_song-general-page .step-1 .page-question {
+        margin-top: 60px !important; }
+        html .songwriting_choose_usagetype .step-1 .page-question .center h1:hover, html .singing-general-page .step-1 .page-question .center h1:hover, html .instrumentals-general-page .step-1 .page-question .center h1:hover, html .complete_song-general-page .step-1 .page-question .center h1:hover, body .songwriting_choose_usagetype .step-1 .page-question .center h1:hover, body .singing-general-page .step-1 .page-question .center h1:hover, body .instrumentals-general-page .step-1 .page-question .center h1:hover, body .complete_song-general-page .step-1 .page-question .center h1:hover {
+          display: none !important; }
+      html .songwriting_choose_usagetype .main-general, html .singing-general-page .main-general, html .instrumentals-general-page .main-general, html .complete_song-general-page .main-general, body .songwriting_choose_usagetype .main-general, body .singing-general-page .main-general, body .instrumentals-general-page .main-general, body .complete_song-general-page .main-general {
+        height: auto;
+        width: 100%;
+        background-size: cover; }
+      html .songwriting_choose_usagetype .step-2 .page-question, html .songwriting_choose_usagetype .step-3 .page-question, html .singing-general-page .step-2 .page-question, html .singing-general-page .step-3 .page-question, html .instrumentals-general-page .step-2 .page-question, html .instrumentals-general-page .step-3 .page-question, html .complete_song-general-page .step-2 .page-question, html .complete_song-general-page .step-3 .page-question, body .songwriting_choose_usagetype .step-2 .page-question, body .songwriting_choose_usagetype .step-3 .page-question, body .singing-general-page .step-2 .page-question, body .singing-general-page .step-3 .page-question, body .instrumentals-general-page .step-2 .page-question, body .instrumentals-general-page .step-3 .page-question, body .complete_song-general-page .step-2 .page-question, body .complete_song-general-page .step-3 .page-question {
+        margin-top: 180px !important; }
+      html .songwriting_choose_usagetype .step-2 .button, html .songwriting_choose_usagetype .step-3 .button, html .singing-general-page .step-2 .button, html .singing-general-page .step-3 .button, html .instrumentals-general-page .step-2 .button, html .instrumentals-general-page .step-3 .button, html .complete_song-general-page .step-2 .button, html .complete_song-general-page .step-3 .button, body .songwriting_choose_usagetype .step-2 .button, body .songwriting_choose_usagetype .step-3 .button, body .singing-general-page .step-2 .button, body .singing-general-page .step-3 .button, body .instrumentals-general-page .step-2 .button, body .instrumentals-general-page .step-3 .button, body .complete_song-general-page .step-2 .button, body .complete_song-general-page .step-3 .button {
         text-align: center; }
-        html .main-general .button .btn, body .main-general .button .btn {
+        html .songwriting_choose_usagetype .step-2 .button .btn, html .songwriting_choose_usagetype .step-3 .button .btn, html .singing-general-page .step-2 .button .btn, html .singing-general-page .step-3 .button .btn, html .instrumentals-general-page .step-2 .button .btn, html .instrumentals-general-page .step-3 .button .btn, html .complete_song-general-page .step-2 .button .btn, html .complete_song-general-page .step-3 .button .btn, body .songwriting_choose_usagetype .step-2 .button .btn, body .songwriting_choose_usagetype .step-3 .button .btn, body .singing-general-page .step-2 .button .btn, body .singing-general-page .step-3 .button .btn, body .instrumentals-general-page .step-2 .button .btn, body .instrumentals-general-page .step-3 .button .btn, body .complete_song-general-page .step-2 .button .btn, body .complete_song-general-page .step-3 .button .btn {
           display: inline-block;
           height: 56px;
           line-height: 50px;
@@ -1477,18 +1597,50 @@ body .complete_song-general-page {
           box-shadow: 1px 2px 6px #ffffff;
           text-shadow: 1px 2px 7px black;
           margin: 40px auto; }
-          html .main-general .button .btn:hover, body .main-general .button .btn:hover {
+          html .songwriting_choose_usagetype .step-2 .button .btn:hover, html .songwriting_choose_usagetype .step-3 .button .btn:hover, html .singing-general-page .step-2 .button .btn:hover, html .singing-general-page .step-3 .button .btn:hover, html .instrumentals-general-page .step-2 .button .btn:hover, html .instrumentals-general-page .step-3 .button .btn:hover, html .complete_song-general-page .step-2 .button .btn:hover, html .complete_song-general-page .step-3 .button .btn:hover, body .songwriting_choose_usagetype .step-2 .button .btn:hover, body .songwriting_choose_usagetype .step-3 .button .btn:hover, body .singing-general-page .step-2 .button .btn:hover, body .singing-general-page .step-3 .button .btn:hover, body .instrumentals-general-page .step-2 .button .btn:hover, body .instrumentals-general-page .step-3 .button .btn:hover, body .complete_song-general-page .step-2 .button .btn:hover, body .complete_song-general-page .step-3 .button .btn:hover {
             color: white;
             background-color: #8DB835;
             -webkit-transition: 2000ms;
             -o-transition: 2000ms;
             transition: 2000ms; }
-        html .main-general .button ul li input[type=radio]:checked ~ label, body .main-general .button ul li input[type=radio]:checked ~ label {
+        html .songwriting_choose_usagetype .step-2 .button p, html .songwriting_choose_usagetype .step-3 .button p, html .singing-general-page .step-2 .button p, html .singing-general-page .step-3 .button p, html .instrumentals-general-page .step-2 .button p, html .instrumentals-general-page .step-3 .button p, html .complete_song-general-page .step-2 .button p, html .complete_song-general-page .step-3 .button p, body .songwriting_choose_usagetype .step-2 .button p, body .songwriting_choose_usagetype .step-3 .button p, body .singing-general-page .step-2 .button p, body .singing-general-page .step-3 .button p, body .instrumentals-general-page .step-2 .button p, body .instrumentals-general-page .step-3 .button p, body .complete_song-general-page .step-2 .button p, body .complete_song-general-page .step-3 .button p {
+          display: inline-block;
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          text-shadow: 1px 2px 8px black; }
+      html .songwriting_choose_usagetype .button, html .singing-general-page .button, html .instrumentals-general-page .button, html .complete_song-general-page .button, body .songwriting_choose_usagetype .button, body .singing-general-page .button, body .instrumentals-general-page .button, body .complete_song-general-page .button {
+        text-align: center; }
+        html .songwriting_choose_usagetype .button .btn, html .singing-general-page .button .btn, html .instrumentals-general-page .button .btn, html .complete_song-general-page .button .btn, body .songwriting_choose_usagetype .button .btn, body .singing-general-page .button .btn, body .instrumentals-general-page .button .btn, body .complete_song-general-page .button .btn {
+          display: inline-block;
+          height: 56px;
+          line-height: 50px;
+          position: relative;
+          border: 3px solid #8DB835;
+          padding: 0 1rem;
+          color: white;
+          font-size: 25px;
+          font-weight: 700;
+          text-align: center;
+          border-radius: 1px;
+          width: 88%;
+          background-color: rgba(255, 255, 255, 0);
+          -webkit-box-shadow: 1px 2px 6px #ffffff;
+          box-shadow: 1px 2px 6px #ffffff;
+          text-shadow: 1px 2px 7px black;
+          margin: 40px auto; }
+          html .songwriting_choose_usagetype .button .btn:hover, html .singing-general-page .button .btn:hover, html .instrumentals-general-page .button .btn:hover, html .complete_song-general-page .button .btn:hover, body .songwriting_choose_usagetype .button .btn:hover, body .singing-general-page .button .btn:hover, body .instrumentals-general-page .button .btn:hover, body .complete_song-general-page .button .btn:hover {
+            color: white;
+            background-color: #8DB835;
+            -webkit-transition: 2000ms;
+            -o-transition: 2000ms;
+            transition: 2000ms; }
+        html .songwriting_choose_usagetype .button ul li input[type=radio]:checked ~ label, html .singing-general-page .button ul li input[type=radio]:checked ~ label, html .instrumentals-general-page .button ul li input[type=radio]:checked ~ label, html .complete_song-general-page .button ul li input[type=radio]:checked ~ label, body .songwriting_choose_usagetype .button ul li input[type=radio]:checked ~ label, body .singing-general-page .button ul li input[type=radio]:checked ~ label, body .instrumentals-general-page .button ul li input[type=radio]:checked ~ label, body .complete_song-general-page .button ul li input[type=radio]:checked ~ label {
           color: white;
           background-color: #8DB835;
-          width: 100%;
           margin: 20px auto; }
-        html .main-general .button ul li label, body .main-general .button ul li label {
+        html .songwriting_choose_usagetype .button ul li label, html .singing-general-page .button ul li label, html .instrumentals-general-page .button ul li label, html .complete_song-general-page .button ul li label, body .songwriting_choose_usagetype .button ul li label, body .singing-general-page .button ul li label, body .instrumentals-general-page .button ul li label, body .complete_song-general-page .button ul li label {
           cursor: pointer;
           display: block;
           height: 56px;
@@ -1506,15 +1658,22 @@ body .complete_song-general-page {
           box-shadow: 1px 2px 6px #ffffff;
           text-shadow: 1px 2px 7px black;
           margin: 30px auto; }
-        html .main-general .button p, body .main-general .button p {
+        html .songwriting_choose_usagetype .button p, html .singing-general-page .button p, html .instrumentals-general-page .button p, html .complete_song-general-page .button p, body .songwriting_choose_usagetype .button p, body .singing-general-page .button p, body .instrumentals-general-page .button p, body .complete_song-general-page .button p {
           display: inline-block;
           color: white;
           font-size: 18px;
           font-weight: 600;
           text-align: center;
           text-shadow: 1px 2px 8px black; }
-      html .main-general .final-submit-page .review-page, body .main-general .final-submit-page .review-page {
-        background-attachment: scroll; }
+    html .bullets, body .bullets {
+      top: 140px !important; }
+    html .contact-modal .wrapper, html .main-modal .wrapper, body .contact-modal .wrapper, body .main-modal .wrapper {
+      width: auto;
+      height: auto; }
+      html .contact-modal .wrapper input, html .main-modal .wrapper input, body .contact-modal .wrapper input, body .main-modal .wrapper input {
+        margin: 0 auto;
+        width: 100%;
+        height: 30px; }
     html .contact-modal .wrapper, html .main-modal .wrapper, body .contact-modal .wrapper, body .main-modal .wrapper {
       width: auto;
       height: auto; }
@@ -1523,133 +1682,98 @@ body .complete_song-general-page {
         width: 100%;
         height: 30px; } }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  html .home, body .home {
-    overflow-y: scroll; }
-    html .home .hidingScrollBar .header .home-page, body .home .hidingScrollBar .header .home-page {
-      max-width: 100%; }
-    html .home .hidingScrollBar .groups .group-content, body .home .hidingScrollBar .groups .group-content {
-      cursor: pointer;
-      overflow: hidden;
-      height: 500px;
-      width: 100%; }
-      html .home .hidingScrollBar .groups .group-content img, body .home .hidingScrollBar .groups .group-content img {
-        width: 100%;
-        height: 100%;
-        border-radius: 5px; }
-      html .home .hidingScrollBar .groups .group-content .description, body .home .hidingScrollBar .groups .group-content .description {
-        bottom: -545px; }
-      html .home .hidingScrollBar .groups .group-content:hover .description, body .home .hidingScrollBar .groups .group-content:hover .description {
-        bottom: 0;
-        display: block;
-        -webkit-transition: 400ms;
-        -o-transition: 400ms;
-        transition: 400ms; }
-    html .home .hidingScrollBar .groups .group-text a, body .home .hidingScrollBar .groups .group-text a {
-      width: 200px;
-      text-align: center;
-      font-size: 30px;
-      text-shadow: 2px 3px 7px black;
-      color: white;
-      text-decoration: none;
-      cursor: pointer;
-      padding-top: 50px; }
-  html .main-general, body .main-general {
-    height: 100%; }
-    html .main-general .button, body .main-general .button {
-      text-align: center; }
-      html .main-general .button .btn, body .main-general .button .btn {
-        display: inline-block;
-        height: 56px;
-        line-height: 50px;
-        position: relative;
-        border: 3px solid #8DB835;
-        padding: 0 1rem;
-        color: white;
-        font-size: 25px;
-        font-weight: 700;
-        text-align: center;
-        border-radius: 1px;
-        width: 88%;
-        background-color: rgba(255, 255, 255, 0);
-        -webkit-box-shadow: 1px 2px 6px #ffffff;
-        box-shadow: 1px 2px 6px #ffffff;
-        text-shadow: 1px 2px 7px black;
-        margin: 20px auto; }
-        html .main-general .button .btn:hover, body .main-general .button .btn:hover {
+@media screen and (max-width: 1024px) {
+  html .songwriting_choose_usagetype, html .singing-general-page, html .instrumentals-general-page, html .complete_song-general-page, body .songwriting_choose_usagetype, body .singing-general-page, body .instrumentals-general-page, body .complete_song-general-page {
+    height: 100%;
+    height: auto;
+    width: 100%;
+    background-size: cover; }
+    html .songwriting_choose_usagetype .main-general, html .singing-general-page .main-general, html .instrumentals-general-page .main-general, html .complete_song-general-page .main-general, body .songwriting_choose_usagetype .main-general, body .singing-general-page .main-general, body .instrumentals-general-page .main-general, body .complete_song-general-page .main-general {
+      height: auto; }
+      html .songwriting_choose_usagetype .main-general .button, html .singing-general-page .main-general .button, html .instrumentals-general-page .main-general .button, html .complete_song-general-page .main-general .button, body .songwriting_choose_usagetype .main-general .button, body .singing-general-page .main-general .button, body .instrumentals-general-page .main-general .button, body .complete_song-general-page .main-general .button {
+        text-align: center; }
+        html .songwriting_choose_usagetype .main-general .button .btn, html .singing-general-page .main-general .button .btn, html .instrumentals-general-page .main-general .button .btn, html .complete_song-general-page .main-general .button .btn, body .songwriting_choose_usagetype .main-general .button .btn, body .singing-general-page .main-general .button .btn, body .instrumentals-general-page .main-general .button .btn, body .complete_song-general-page .main-general .button .btn {
+          display: inline-block;
+          height: 56px;
+          line-height: 50px;
+          position: relative;
+          border: 3px solid #8DB835;
+          padding: 0 1rem;
           color: white;
-          background-color: #8DB835;
-          -webkit-transition: 2000ms;
-          -o-transition: 2000ms;
-          transition: 2000ms; }
-      html .main-general .button p, body .main-general .button p {
-        display: inline-block;
-        color: white;
-        font-size: 18px;
-        font-weight: 600;
-        text-align: center;
-        text-shadow: 1px 2px 8px black; } }
-
-@media screen and (min-width: 1024px) {
-  body .home {
-    overflow-y: scroll; }
-    body .home .hidingScrollBar .header .home-page {
+          font-size: 25px;
+          font-weight: 700;
+          text-align: center;
+          border-radius: 1px;
+          width: 88%;
+          background-color: rgba(255, 255, 255, 0);
+          -webkit-box-shadow: 1px 2px 6px #ffffff;
+          box-shadow: 1px 2px 6px #ffffff;
+          text-shadow: 1px 2px 7px black;
+          margin: 20px auto; }
+          html .songwriting_choose_usagetype .main-general .button .btn:hover, html .singing-general-page .main-general .button .btn:hover, html .instrumentals-general-page .main-general .button .btn:hover, html .complete_song-general-page .main-general .button .btn:hover, body .songwriting_choose_usagetype .main-general .button .btn:hover, body .singing-general-page .main-general .button .btn:hover, body .instrumentals-general-page .main-general .button .btn:hover, body .complete_song-general-page .main-general .button .btn:hover {
+            color: white;
+            background-color: #8DB835;
+            -webkit-transition: 2000ms;
+            -o-transition: 2000ms;
+            transition: 2000ms; }
+        html .songwriting_choose_usagetype .main-general .button p, html .singing-general-page .main-general .button p, html .instrumentals-general-page .main-general .button p, html .complete_song-general-page .main-general .button p, body .songwriting_choose_usagetype .main-general .button p, body .singing-general-page .main-general .button p, body .instrumentals-general-page .main-general .button p, body .complete_song-general-page .main-general .button p {
+          display: inline-block;
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          text-shadow: 1px 2px 8px black; }
+    html .songwriting_choose_usagetype .home .header .home-page, html .singing-general-page .home .header .home-page, html .instrumentals-general-page .home .header .home-page, html .complete_song-general-page .home .header .home-page, body .songwriting_choose_usagetype .home .header .home-page, body .singing-general-page .home .header .home-page, body .instrumentals-general-page .home .header .home-page, body .complete_song-general-page .home .header .home-page {
       max-width: 100%; }
-      body .home .hidingScrollBar .header .home-page h1 {
+      html .songwriting_choose_usagetype .home .header .home-page h1, html .singing-general-page .home .header .home-page h1, html .instrumentals-general-page .home .header .home-page h1, html .complete_song-general-page .home .header .home-page h1, body .songwriting_choose_usagetype .home .header .home-page h1, body .singing-general-page .home .header .home-page h1, body .instrumentals-general-page .home .header .home-page h1, body .complete_song-general-page .home .header .home-page h1 {
         text-align: center; }
-      body .home .hidingScrollBar .header .home-page p {
+      html .songwriting_choose_usagetype .home .header .home-page p, html .singing-general-page .home .header .home-page p, html .instrumentals-general-page .home .header .home-page p, html .complete_song-general-page .home .header .home-page p, body .songwriting_choose_usagetype .home .header .home-page p, body .singing-general-page .home .header .home-page p, body .instrumentals-general-page .home .header .home-page p, body .complete_song-general-page .home .header .home-page p {
         text-align: center; }
-    body .home .hidingScrollBar .groups {
-      position: relative;
-      padding: 20px;
-      -webkit-transition: 3000ms;
-      -o-transition: 3000ms;
-      transition: 3000ms;
-      text-align: center; }
-      body .home .hidingScrollBar .groups .group-content {
+    html .songwriting_choose_usagetype .home .groups, html .singing-general-page .home .groups, html .instrumentals-general-page .home .groups, html .complete_song-general-page .home .groups, body .songwriting_choose_usagetype .home .groups, body .singing-general-page .home .groups, body .instrumentals-general-page .home .groups, body .complete_song-general-page .home .groups {
+      max-width: 95%; }
+      html .songwriting_choose_usagetype .home .groups .group-content, html .singing-general-page .home .groups .group-content, html .instrumentals-general-page .home .groups .group-content, html .complete_song-general-page .home .groups .group-content, body .songwriting_choose_usagetype .home .groups .group-content, body .singing-general-page .home .groups .group-content, body .instrumentals-general-page .home .groups .group-content, body .complete_song-general-page .home .groups .group-content {
+        height: auto; }
+        html .songwriting_choose_usagetype .home .groups .group-content img, html .singing-general-page .home .groups .group-content img, html .instrumentals-general-page .home .groups .group-content img, html .complete_song-general-page .home .groups .group-content img, body .songwriting_choose_usagetype .home .groups .group-content img, body .singing-general-page .home .groups .group-content img, body .instrumentals-general-page .home .groups .group-content img, body .complete_song-general-page .home .groups .group-content img {
+          width: auto;
+          height: auto;
+          margin-left: 18px; }
+        html .songwriting_choose_usagetype .home .groups .group-content .description, html .singing-general-page .home .groups .group-content .description, html .instrumentals-general-page .home .groups .group-content .description, html .complete_song-general-page .home .groups .group-content .description, body .songwriting_choose_usagetype .home .groups .group-content .description, body .singing-general-page .home .groups .group-content .description, body .instrumentals-general-page .home .groups .group-content .description, body .complete_song-general-page .home .groups .group-content .description {
+          display: none; }
+          html .songwriting_choose_usagetype .home .groups .group-content .description a h3, html .singing-general-page .home .groups .group-content .description a h3, html .instrumentals-general-page .home .groups .group-content .description a h3, html .complete_song-general-page .home .groups .group-content .description a h3, body .songwriting_choose_usagetype .home .groups .group-content .description a h3, body .singing-general-page .home .groups .group-content .description a h3, body .instrumentals-general-page .home .groups .group-content .description a h3, body .complete_song-general-page .home .groups .group-content .description a h3 {
+            display: none; }
+      html .songwriting_choose_usagetype .home .groups .group-text a, html .singing-general-page .home .groups .group-text a, html .instrumentals-general-page .home .groups .group-text a, html .complete_song-general-page .home .groups .group-text a, body .songwriting_choose_usagetype .home .groups .group-text a, body .singing-general-page .home .groups .group-text a, body .instrumentals-general-page .home .groups .group-text a, body .complete_song-general-page .home .groups .group-text a {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 30px;
+        display: block;
+        cursor: pointer; } }
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  html, body {
+    overflow-y: auto;
+    background-size: cover; }
+    html .home, body .home {
+      overflow-y: scroll; }
+      html .home .hidingScrollBar .header .home-page, body .home .hidingScrollBar .header .home-page {
+        max-width: 100%; }
+      html .home .hidingScrollBar .groups .group-content, body .home .hidingScrollBar .groups .group-content {
         cursor: pointer;
         overflow: hidden;
         height: 500px;
-        width: 100%;
-        -webkit-box-shadow: 4px 0 4px darkslategrey;
-        box-shadow: 4px 0 4px darkslategrey;
-        border-radius: 2px; }
-        body .home .hidingScrollBar .groups .group-content img {
+        width: 100%; }
+        html .home .hidingScrollBar .groups .group-content img, body .home .hidingScrollBar .groups .group-content img {
           width: 100%;
           height: 100%;
           border-radius: 5px; }
-        body .home .hidingScrollBar .groups .group-content .description {
-          cursor: pointer;
-          display: block;
-          position: -webkit-sticky;
-          position: sticky;
-          bottom: -545px;
-          height: 100%;
-          -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-          color: white;
-          background-color: rgba(0, 0, 0, 0.3); }
-          body .home .hidingScrollBar .groups .group-content .description a {
-            text-decoration: none;
-            -webkit-text-emphasis: none;
-            text-emphasis: none;
-            text-align: center; }
-            body .home .hidingScrollBar .groups .group-content .description a h3 {
-              font-weight: 300;
-              color: #fff;
-              display: block;
-              font-size: 30px;
-              text-decoration: none;
-              text-align: center;
-              text-shadow: 2px 3px 7px black;
-              padding: 95px 20px; }
-        body .home .hidingScrollBar .groups .group-content:hover .description {
+        html .home .hidingScrollBar .groups .group-content .description, body .home .hidingScrollBar .groups .group-content .description {
+          bottom: -545px; }
+        html .home .hidingScrollBar .groups .group-content:hover .description, body .home .hidingScrollBar .groups .group-content:hover .description {
           bottom: 0;
           display: block;
           -webkit-transition: 400ms;
           -o-transition: 400ms;
           transition: 400ms; }
-      body .home .hidingScrollBar .groups .group-text a {
+      html .home .hidingScrollBar .groups .group-text a, body .home .hidingScrollBar .groups .group-text a {
         width: 200px;
         text-align: center;
         font-size: 30px;
@@ -1657,97 +1781,281 @@ body .complete_song-general-page {
         color: white;
         text-decoration: none;
         cursor: pointer;
-        padding-top: 50px; } }
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  html, body {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-size: cover;
-    background-attachment: fixed; }
-    html .home, body .home {
-      overflow-y: scroll; }
-      html .home .hidingScrollBar .header .home-page, body .home .hidingScrollBar .header .home-page {
-        max-width: 100%; }
-        html .home .hidingScrollBar .header .home-page h1, body .home .hidingScrollBar .header .home-page h1 {
-          text-align: center; }
-        html .home .hidingScrollBar .header .home-page p, body .home .hidingScrollBar .header .home-page p {
-          text-align: center; }
-      html .home .hidingScrollBar .groups, body .home .hidingScrollBar .groups {
-        position: relative;
-        padding: 20px; }
-        html .home .hidingScrollBar .groups .group-content, body .home .hidingScrollBar .groups .group-content {
-          cursor: pointer;
-          overflow: hidden;
-          height: 500px;
-          width: 100%; }
-          html .home .hidingScrollBar .groups .group-content img, body .home .hidingScrollBar .groups .group-content img {
-            width: 100%;
-            height: 100%;
-            border-radius: 5px; }
-          html .home .hidingScrollBar .groups .group-content .description, body .home .hidingScrollBar .groups .group-content .description {
-            display: block;
-            bottom: 0px;
-            height: 100%; }
-            html .home .hidingScrollBar .groups .group-content .description a p, body .home .hidingScrollBar .groups .group-content .description a p {
-              font-size: 22px; }
-          html .home .hidingScrollBar .groups .group-content:hover .description, body .home .hidingScrollBar .groups .group-content:hover .description {
-            bottom: 0;
-            display: block;
-            -webkit-transition: 400ms;
-            -o-transition: 400ms;
-            transition: 400ms; }
-        html .home .hidingScrollBar .groups .group-text a, body .home .hidingScrollBar .groups .group-text a {
-          width: 200px;
-          text-align: center;
-          font-size: 30px;
-          text-shadow: 2px 3px 7px black;
+        padding-top: 50px; }
+    html .songwriting_choose_usagetype, html .singing-general-page, html .instrumentals-general-page, html .complete_song-general-page, body .songwriting_choose_usagetype, body .singing-general-page, body .instrumentals-general-page, body .complete_song-general-page {
+      height: auto;
+      height: auto;
+      width: 100%;
+      background-size: cover; }
+      html .songwriting_choose_usagetype .main-general, html .singing-general-page .main-general, html .instrumentals-general-page .main-general, html .complete_song-general-page .main-general, body .songwriting_choose_usagetype .main-general, body .singing-general-page .main-general, body .instrumentals-general-page .main-general, body .complete_song-general-page .main-general {
+        height: auto; }
+        html .songwriting_choose_usagetype .main-general .page-question, html .singing-general-page .main-general .page-question, html .instrumentals-general-page .main-general .page-question, html .complete_song-general-page .main-general .page-question, body .songwriting_choose_usagetype .main-general .page-question, body .singing-general-page .main-general .page-question, body .instrumentals-general-page .main-general .page-question, body .complete_song-general-page .main-general .page-question {
+          padding-top: 200px; }
+      html .songwriting_choose_usagetype .bullets, html .singing-general-page .bullets, html .instrumentals-general-page .bullets, html .complete_song-general-page .bullets, body .songwriting_choose_usagetype .bullets, body .singing-general-page .bullets, body .instrumentals-general-page .bullets, body .complete_song-general-page .bullets {
+        top: 180px; }
+      html .songwriting_choose_usagetype .button, html .singing-general-page .button, html .instrumentals-general-page .button, html .complete_song-general-page .button, body .songwriting_choose_usagetype .button, body .singing-general-page .button, body .instrumentals-general-page .button, body .complete_song-general-page .button {
+        text-align: center; }
+        html .songwriting_choose_usagetype .button .btn, html .singing-general-page .button .btn, html .instrumentals-general-page .button .btn, html .complete_song-general-page .button .btn, body .songwriting_choose_usagetype .button .btn, body .singing-general-page .button .btn, body .instrumentals-general-page .button .btn, body .complete_song-general-page .button .btn {
+          display: inline-block;
+          height: 56px;
+          line-height: 50px;
+          position: relative;
+          border: 3px solid #8DB835;
+          padding: 0 1rem;
           color: white;
-          text-decoration: none;
-          cursor: pointer;
-          padding-top: 50px; }
-    html .main-general .main-content, body .main-general .main-content {
-      margin: 100px auto;
-      text-align: center; }
-    html .main-general .button, body .main-general .button {
-      text-align: center; }
-      html .main-general .button .btn, body .main-general .button .btn {
-        display: inline-block;
-        height: 56px;
-        line-height: 50px;
-        position: relative;
-        border: 3px solid #8DB835;
-        padding: 0 1rem;
-        color: white;
-        font-size: 25px;
-        font-weight: 700;
-        text-align: center;
-        border-radius: 1px;
-        width: 88%;
-        background-color: rgba(255, 255, 255, 0);
-        -webkit-box-shadow: 1px 2px 6px #ffffff;
-        box-shadow: 1px 2px 6px #ffffff;
-        text-shadow: 1px 2px 7px black;
-        margin: 20px auto; }
-        html .main-general .button .btn:hover, body .main-general .button .btn:hover {
+          font-size: 25px;
+          font-weight: 700;
+          text-align: center;
+          border-radius: 1px;
+          width: 88%;
+          background-color: rgba(255, 255, 255, 0);
+          -webkit-box-shadow: 1px 2px 6px #ffffff;
+          box-shadow: 1px 2px 6px #ffffff;
+          text-shadow: 1px 2px 7px black;
+          margin: 40px auto; }
+          html .songwriting_choose_usagetype .button .btn:hover, html .singing-general-page .button .btn:hover, html .instrumentals-general-page .button .btn:hover, html .complete_song-general-page .button .btn:hover, body .songwriting_choose_usagetype .button .btn:hover, body .singing-general-page .button .btn:hover, body .instrumentals-general-page .button .btn:hover, body .complete_song-general-page .button .btn:hover {
+            color: white;
+            background-color: #8DB835;
+            -webkit-transition: 2000ms;
+            -o-transition: 2000ms;
+            transition: 2000ms; }
+        html .songwriting_choose_usagetype .button ul li input[type=radio]:checked ~ label, html .singing-general-page .button ul li input[type=radio]:checked ~ label, html .instrumentals-general-page .button ul li input[type=radio]:checked ~ label, html .complete_song-general-page .button ul li input[type=radio]:checked ~ label, body .songwriting_choose_usagetype .button ul li input[type=radio]:checked ~ label, body .singing-general-page .button ul li input[type=radio]:checked ~ label, body .instrumentals-general-page .button ul li input[type=radio]:checked ~ label, body .complete_song-general-page .button ul li input[type=radio]:checked ~ label {
           color: white;
           background-color: #8DB835;
-          -webkit-transition: 2000ms;
-          -o-transition: 2000ms;
-          transition: 2000ms; }
-      html .main-general .button p, body .main-general .button p {
-        display: inline-block;
-        color: white;
-        font-size: 18px;
-        font-weight: 600;
-        text-align: center;
-        text-shadow: 1px 2px 8px black; }
-    html .bullets, body .bullets {
+          margin: 20px auto; }
+        html .songwriting_choose_usagetype .button ul li label, html .singing-general-page .button ul li label, html .instrumentals-general-page .button ul li label, html .complete_song-general-page .button ul li label, body .songwriting_choose_usagetype .button ul li label, body .singing-general-page .button ul li label, body .instrumentals-general-page .button ul li label, body .complete_song-general-page .button ul li label {
+          cursor: pointer;
+          display: block;
+          height: 56px;
+          line-height: 50px;
+          border: 3px solid #8DB835;
+          padding: 0 1rem;
+          color: white;
+          font-size: 25px;
+          font-weight: 700;
+          text-align: center;
+          border-radius: 1px;
+          width: 100%;
+          background-color: rgba(255, 255, 255, 0);
+          -webkit-box-shadow: 1px 2px 6px #ffffff;
+          box-shadow: 1px 2px 6px #ffffff;
+          text-shadow: 1px 2px 7px black;
+          margin: 30px auto; }
+        html .songwriting_choose_usagetype .button p, html .singing-general-page .button p, html .instrumentals-general-page .button p, html .complete_song-general-page .button p, body .songwriting_choose_usagetype .button p, body .singing-general-page .button p, body .instrumentals-general-page .button p, body .complete_song-general-page .button p {
+          display: inline-block;
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          text-shadow: 1px 2px 8px black; }
+      html .songwriting_choose_usagetype .final-submit-page .review-page, html .singing-general-page .final-submit-page .review-page, html .instrumentals-general-page .final-submit-page .review-page, html .complete_song-general-page .final-submit-page .review-page, body .songwriting_choose_usagetype .final-submit-page .review-page, body .singing-general-page .final-submit-page .review-page, body .instrumentals-general-page .final-submit-page .review-page, body .complete_song-general-page .final-submit-page .review-page {
+        background-attachment: scroll; }
+    html .final-submit-page, body .final-submit-page {
+      text-align: center;
+      margin: 0 auto; }
+      html .final-submit-page .main-content, body .final-submit-page .main-content {
+        padding-top: 130px; }
+      html .final-submit-page .review-page, body .final-submit-page .review-page {
+        background-attachment: fixed;
+        overflow-y: auto; }
+        html .final-submit-page .review-page .preview-form, body .final-submit-page .review-page .preview-form {
+          margin: 0 auto; }
+          html .final-submit-page .review-page .preview-form .button ul, body .final-submit-page .review-page .preview-form .button ul {
+            list-style-type: none;
+            text-align: center;
+            width: 100%; }
+            html .final-submit-page .review-page .preview-form .button ul li, body .final-submit-page .review-page .preview-form .button ul li {
+              text-align: center;
+              display: block;
+              margin: 0 auto;
+              width: 100%; }
+              html .final-submit-page .review-page .preview-form .button ul li input[type=radio], body .final-submit-page .review-page .preview-form .button ul li input[type=radio] {
+                position: absolute;
+                visibility: hidden; }
+              html .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ .check, body .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ .check {
+                border: 5px solid black; }
+              html .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ label, body .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ label {
+                color: white;
+                background-color: #8DB835; }
+              html .final-submit-page .review-page .preview-form .button ul li label, body .final-submit-page .review-page .preview-form .button ul li label {
+                margin: 0 auto; }
+          html .final-submit-page .review-page .preview-form .button-back-home, body .final-submit-page .review-page .preview-form .button-back-home {
+            text-align: center; }
+            html .final-submit-page .review-page .preview-form .button-back-home .back-to-home, body .final-submit-page .review-page .preview-form .button-back-home .back-to-home {
+              position: relative;
+              line-height: 50px;
+              height: 56px;
+              font-size: 25px;
+              font-weight: 700;
+              padding: 0 1rem;
+              text-align: center;
+              background-color: rgba(156, 156, 156, 0.5);
+              color: white;
+              margin: 20px;
+              text-shadow: 1px 2px 7px black;
+              border: 1px solid black; }
+              html .final-submit-page .review-page .preview-form .button-back-home .back-to-home:hover, body .final-submit-page .review-page .preview-form .button-back-home .back-to-home:hover {
+                color: black;
+                background-color: gray;
+                -webkit-transition: 2000ms;
+                -o-transition: 2000ms;
+                transition: 2000ms; }
+    html .contact-modal .wrapper, html .main-modal .wrapper, body .contact-modal .wrapper, body .main-modal .wrapper {
+      width: auto;
+      height: auto; }
+      html .contact-modal .wrapper input, html .main-modal .wrapper input, body .contact-modal .wrapper input, body .main-modal .wrapper input {
+        margin: 0 auto;
+        width: 100%;
+        height: 30px; } }
+
+@media only screen and (max-device-width: 768px) {
+  .instrumentals-general-page .instrumentals_choose_usagetype .main-general {
+    height: auto;
+    width: 100%;
+    background-size: cover; }
+  .instrumentals-general-page .instrumentals_choose_usagetype .main-general {
+    height: auto;
+    width: 100%;
+    background-size: cover; }
+  html .final-submit-page, body .final-submit-page {
+    text-align: center;
+    margin: 0 auto; }
+    html .final-submit-page .main-content, body .final-submit-page .main-content {
+      padding-top: 130px; }
+    html .final-submit-page .review-page, body .final-submit-page .review-page {
+      background-attachment: fixed;
+      overflow-y: auto; }
+      html .final-submit-page .review-page .preview-form, body .final-submit-page .review-page .preview-form {
+        margin: 0 auto; }
+        html .final-submit-page .review-page .preview-form .button ul, body .final-submit-page .review-page .preview-form .button ul {
+          list-style-type: none;
+          text-align: center;
+          width: 100%; }
+          html .final-submit-page .review-page .preview-form .button ul li, body .final-submit-page .review-page .preview-form .button ul li {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            width: 100%; }
+            html .final-submit-page .review-page .preview-form .button ul li input[type=radio], body .final-submit-page .review-page .preview-form .button ul li input[type=radio] {
+              position: absolute;
+              visibility: hidden; }
+            html .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ .check, body .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ .check {
+              border: 5px solid black; }
+            html .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ label, body .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ label {
+              color: white;
+              background-color: #8DB835; }
+            html .final-submit-page .review-page .preview-form .button ul li label, body .final-submit-page .review-page .preview-form .button ul li label {
+              margin: 0 auto; }
+        html .final-submit-page .review-page .preview-form .button-back-home, body .final-submit-page .review-page .preview-form .button-back-home {
+          text-align: center; }
+          html .final-submit-page .review-page .preview-form .button-back-home .back-to-home, body .final-submit-page .review-page .preview-form .button-back-home .back-to-home {
+            position: relative;
+            line-height: 50px;
+            height: 56px;
+            font-size: 25px;
+            font-weight: 700;
+            padding: 0 1rem;
+            text-align: center;
+            background-color: rgba(156, 156, 156, 0.5);
+            color: white;
+            margin: 20px;
+            text-shadow: 1px 2px 7px black;
+            border: 1px solid black; }
+            html .final-submit-page .review-page .preview-form .button-back-home .back-to-home:hover, body .final-submit-page .review-page .preview-form .button-back-home .back-to-home:hover {
+              color: black;
+              background-color: gray;
+              -webkit-transition: 2000ms;
+              -o-transition: 2000ms;
+              transition: 2000ms; } }
+
+@media only screen and (max-device-width: 768px) and (max-device-width: 1024px) {
+  body .bullets {
+    position: relative;
+    width: 100%;
+    top: 145px;
+    padding: 0;
+    margin: 0;
+    text-align: center; }
+  body .songwriting_choose_usagetype .main-general .button, body .singing-general-page .main-general .button, body .instrumentals-general-page .main-general .button, body .complete_song-general-page .main-general .button {
+    text-align: center; }
+    body .songwriting_choose_usagetype .main-general .button .btn, body .singing-general-page .main-general .button .btn, body .instrumentals-general-page .main-general .button .btn, body .complete_song-general-page .main-general .button .btn {
+      display: inline-block;
+      height: 56px;
+      line-height: 50px;
       position: relative;
-      width: 100%;
-      top: 145px;
-      padding: 0;
-      margin: 0;
-      text-align: center; } }
+      border: 3px solid #8DB835;
+      padding: 0 1rem;
+      color: white;
+      font-size: 25px;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 1px;
+      width: 88%;
+      background-color: rgba(255, 255, 255, 0);
+      -webkit-box-shadow: 1px 2px 6px #ffffff;
+      box-shadow: 1px 2px 6px #ffffff;
+      text-shadow: 1px 2px 7px black;
+      margin: 20px auto; }
+      body .songwriting_choose_usagetype .main-general .button .btn:hover, body .singing-general-page .main-general .button .btn:hover, body .instrumentals-general-page .main-general .button .btn:hover, body .complete_song-general-page .main-general .button .btn:hover {
+        color: white;
+        background-color: #8DB835;
+        -webkit-transition: 2000ms;
+        -o-transition: 2000ms;
+        transition: 2000ms; }
+    body .songwriting_choose_usagetype .main-general .button p, body .singing-general-page .main-general .button p, body .instrumentals-general-page .main-general .button p, body .complete_song-general-page .main-general .button p {
+      display: inline-block;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      text-shadow: 1px 2px 8px black; }
+  body .songwriting_choose_usagetype .final-submit-page, body .singing-general-page .final-submit-page, body .instrumentals-general-page .final-submit-page, body .complete_song-general-page .final-submit-page {
+    text-align: center;
+    margin: 0 auto; }
+    body .songwriting_choose_usagetype .final-submit-page .main-content, body .singing-general-page .final-submit-page .main-content, body .instrumentals-general-page .final-submit-page .main-content, body .complete_song-general-page .final-submit-page .main-content {
+      padding-top: 130px; }
+    body .songwriting_choose_usagetype .final-submit-page .review-page, body .singing-general-page .final-submit-page .review-page, body .instrumentals-general-page .final-submit-page .review-page, body .complete_song-general-page .final-submit-page .review-page {
+      background-attachment: fixed;
+      overflow-y: auto; }
+      body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form, body .singing-general-page .final-submit-page .review-page .preview-form, body .instrumentals-general-page .final-submit-page .review-page .preview-form, body .complete_song-general-page .final-submit-page .review-page .preview-form {
+        margin: 0 auto; }
+        body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button ul, body .singing-general-page .final-submit-page .review-page .preview-form .button ul, body .instrumentals-general-page .final-submit-page .review-page .preview-form .button ul, body .complete_song-general-page .final-submit-page .review-page .preview-form .button ul {
+          list-style-type: none;
+          text-align: center;
+          width: 100%; }
+          body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button ul li, body .singing-general-page .final-submit-page .review-page .preview-form .button ul li, body .instrumentals-general-page .final-submit-page .review-page .preview-form .button ul li, body .complete_song-general-page .final-submit-page .review-page .preview-form .button ul li {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            width: 100%; }
+            body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button ul li input[type=radio], body .singing-general-page .final-submit-page .review-page .preview-form .button ul li input[type=radio], body .instrumentals-general-page .final-submit-page .review-page .preview-form .button ul li input[type=radio], body .complete_song-general-page .final-submit-page .review-page .preview-form .button ul li input[type=radio] {
+              position: absolute;
+              visibility: hidden; }
+            body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ .check, body .singing-general-page .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ .check, body .instrumentals-general-page .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ .check, body .complete_song-general-page .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ .check {
+              border: 5px solid black; }
+            body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ label, body .singing-general-page .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ label, body .instrumentals-general-page .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ label, body .complete_song-general-page .final-submit-page .review-page .preview-form .button ul li input[type=radio]:checked ~ label {
+              color: white;
+              background-color: #8DB835; }
+            body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button ul li label, body .singing-general-page .final-submit-page .review-page .preview-form .button ul li label, body .instrumentals-general-page .final-submit-page .review-page .preview-form .button ul li label, body .complete_song-general-page .final-submit-page .review-page .preview-form .button ul li label {
+              margin: 0 auto; }
+        body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button-back-home, body .singing-general-page .final-submit-page .review-page .preview-form .button-back-home, body .instrumentals-general-page .final-submit-page .review-page .preview-form .button-back-home, body .complete_song-general-page .final-submit-page .review-page .preview-form .button-back-home {
+          text-align: center; }
+          body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button-back-home .back-to-home, body .singing-general-page .final-submit-page .review-page .preview-form .button-back-home .back-to-home, body .instrumentals-general-page .final-submit-page .review-page .preview-form .button-back-home .back-to-home, body .complete_song-general-page .final-submit-page .review-page .preview-form .button-back-home .back-to-home {
+            position: relative;
+            line-height: 50px;
+            height: 56px;
+            font-size: 25px;
+            font-weight: 700;
+            padding: 0 1rem;
+            text-align: center;
+            background-color: rgba(156, 156, 156, 0.5);
+            color: white;
+            margin: 20px;
+            text-shadow: 1px 2px 7px black;
+            border: 1px solid black; }
+            body .songwriting_choose_usagetype .final-submit-page .review-page .preview-form .button-back-home .back-to-home:hover, body .singing-general-page .final-submit-page .review-page .preview-form .button-back-home .back-to-home:hover, body .instrumentals-general-page .final-submit-page .review-page .preview-form .button-back-home .back-to-home:hover, body .complete_song-general-page .final-submit-page .review-page .preview-form .button-back-home .back-to-home:hover {
+              color: black;
+              background-color: gray;
+              -webkit-transition: 2000ms;
+              -o-transition: 2000ms;
+              transition: 2000ms; } }

@@ -7,18 +7,16 @@
 
 //for small device
 @media screen and (max-width: 768px){
-
-  html, body{
-
-    overflow-y:scroll;
+  html, body {
+    overflow-y: auto;
     background-size: cover;
     background-attachment: fixed;
 
     //home  page//
     .home {
-      overflow-y:scroll;
+      overflow-y: scroll;
 
-      .hidingScrollBar{
+      .hidingScrollBar {
 
         .header {
 
@@ -111,18 +109,67 @@
       }
     }
 
-    //other page
-    .main-general {
+    .songwriting_choose_usagetype, .singing-general-page, .instrumentals-general-page, .complete_song-general-page {
       height: auto;
-      width: 100%;
-      background-size: cover;
-
-      .page-question {
-        padding-top: 100px;
+      @include bg-propertis;
+       .step-1 {
+        .page-question {
+          margin-top: 60px !important;
+          .center {
+            h1 {
+              &:hover {
+                display: none !important;
+              }
+            }
+          }
+        }
       }
 
-      .bullets {
-        top: 230px;
+      .main-general {
+        height: auto;
+        width: 100%;
+        background-size: cover;
+      }
+        .step-2, .step-3{
+        .page-question {
+          margin-top: 180px !important;
+         }
+        .button {
+          text-align: center;
+          .btn {
+            display: inline-block;
+            height: 56px;
+            line-height: 50px;
+            position: relative;
+            border: 3px solid #8DB835;
+            padding: 0 1rem;
+            color: white;
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 1px;
+            width: 88%;
+            background-color: rgba(255, 255, 255, 0);
+            box-shadow: 1px 2px 6px #ffffff;
+            text-shadow: 1px 2px 7px black;
+            margin: 40px auto;
+
+            &:hover {
+              color: white;
+              background-color: #8DB835;
+              transition: 2000ms;
+            }
+          }
+
+          p {
+            display: inline-block;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            text-shadow: 1px 2px 8px black;
+          }
+        }
       }
 
       .button {
@@ -156,11 +203,9 @@
             input[type=radio]:checked ~ label {
               color: white;
               background-color: #8DB835;
-              width: 100%;
               margin: 20px auto;
 
             }
-
             label {
               cursor: pointer;
               display: block;
@@ -192,96 +237,54 @@
         }
       }
 
-      .final-submit-page{
-        .review-page{
-          background-attachment: scroll;
-        }
-      }
     }
 
-    .contact-modal, .main-modal{
-      .wrapper{
+    .bullets {
+      top: 140px !important;
+    }
+
+    .contact-modal, .main-modal {
+      .wrapper {
         width: auto;
         height: auto;
 
-        input{
+        input {
           margin: 0 auto;
           width: 100%;
           height: 30px;
         }
       }
     }
+    .contact-modal, .main-modal {
+      .wrapper {
+        width: auto;
+        height: auto;
+
+        input {
+          margin: 0 auto;
+          width: 100%;
+          height: 30px;
+        }
+      }
+    }
+    .choose-modals{
+      .singing_choose_genre{
+
+      }
+    }
   }
 }
 
 //for middle device
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-
+@media screen and (max-width: 1024px) {
   html, body {
-
-
-
-
-    //home page
-    .home {
-      overflow-y:scroll;
-
-      .hidingScrollBar{
-        .header {
-          .home-page {
-            max-width: 100%;
-          }
-        }
-        .groups {
-
-          .group-content {
-            cursor: pointer;
-            overflow: hidden;
-            height: 500px;
-            width: 100%;
-
-            img {
-
-              width: 100%;
-              height: 100%;
-              border-radius: 5px;
-            }
-            .description {
-
-              bottom: -545px;
-
-            }
-            &:hover .description {
-
-              bottom: 0;
-              display: block;
-              transition: 400ms;
-            }
-          }
-
-          .group-text {
-            a {
-              width: 200px;
-              //margin: 0 auto;
-              text-align: center;
-              font-size: 30px;
-              text-shadow: 2px 3px 7px black;
-              color: white;
-              text-decoration: none;
-              cursor: pointer;
-              //top: 50%;
-              padding-top: 50px;
-            }
-          }
-        }
-      }
-    }
-
-    //others
-      .main-general {
+    //padding-left: -15px;
+    //padding-right: -15px;
+    .songwriting_choose_usagetype, .singing-general-page, .instrumentals-general-page, .complete_song-general-page {
         height: 100%;
-       //@include bg-propertis;
-
+        @include bg-propertis;
+      .main-general {
+        height: auto;
         .button {
           text-align: center;
           .btn {
@@ -318,20 +321,9 @@
           }
         }
       }
-    }
-  }
 
-
-//for large device
-@media screen and (min-width: 1024px){
-
-  body{
-    //home  page//
-    .home {
-      overflow-y:scroll;
-
-      .hidingScrollBar{
-
+      //home  page//
+      .home {
         .header {
           .home-page {
             max-width: 100%;
@@ -344,124 +336,156 @@
           }
         }
         .groups {
-          position: relative;
-          padding: 20px;
-          -webkit-transition: 3000ms;
-          -o-transition: 3000ms;
-          transition: 3000ms;
-          text-align: center;
-
+          max-width: 95%;
           .group-content {
-            cursor: pointer;
-            overflow: hidden;
-            height: 500px;
-            width: 100%;
-            box-shadow: 4px 0 4px darkslategrey;
-            border-radius: 2px;
-
+            height: auto;
             img {
-
-              width: 100%;
-              height: 100%;
-              border-radius: 5px;
+              width: auto;
+              height: auto;
+              margin-left: 18px;
             }
             .description {
-
-              cursor: pointer;
-              display: block;
-              position: -webkit-sticky;
-              position: sticky;
-              bottom: -545px;
-              height: 100%;
-              -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-              color: white;
-              background-color: rgba(0, 0, 0, 0.3);
-
+              display: none;
               a {
-                text-decoration: none;
-                text-emphasis: none;
-                text-align: center;
-
                 h3 {
-                  font-weight: 300;
-                  color: #fff;
-                  display: block;
-                  font-size: 30px;
-                  text-decoration: none;
-                  text-align: center;
-                  text-shadow: 2px 3px 7px black;
-                  padding: 95px 20px;
+                  display: none;
                 }
               }
             }
-            &:hover .description {
-
-              bottom: 0;
-              display: block;
-              transition: 400ms;
-            }
           }
-
           .group-text {
             a {
-              width: 200px;
-              //margin: 0 auto;
+              margin: 0 auto;
               text-align: center;
               font-size: 30px;
-              text-shadow: 2px 3px 7px black;
-              color: white;
-              text-decoration: none;
+              display: block;
               cursor: pointer;
-              //top: 50%;
-              padding-top: 50px;
             }
           }
         }
       }
     }
   }
+  //html, body{
+  //
+  //  overflow-y:scroll;
+  //  background-size: cover;
+  //  .songwriting_choose_usagetype, .singing-general-page, .instrumentals-general-page, .complete_song-general-page {
+  //    height: auto;
+  //    @include bg-propertis;
+  //    .main-general {
+  //      height: auto;
+  //
+  //      .page-question {
+  //        padding-top: 200px;
+  //      }
+  //    }
+  //
+  //    .bullets {
+  //      top: 180px;
+  //    }
+  //
+  //    .button {
+  //      text-align: center;
+  //      .btn {
+  //        display: inline-block;
+  //        height: 56px;
+  //        line-height: 50px;
+  //        position: relative;
+  //        border: 3px solid #8DB835;
+  //        padding: 0 1rem;
+  //        color: white;
+  //        font-size: 25px;
+  //        font-weight: 700;
+  //        text-align: center;
+  //        border-radius: 1px;
+  //        width: 88%;
+  //        background-color: rgba(255, 255, 255, 0);
+  //        box-shadow: 1px 2px 6px #ffffff;
+  //        text-shadow: 1px 2px 7px black;
+  //        margin: 40px auto;
+  //
+  //        &:hover {
+  //          color: white;
+  //          background-color: #8DB835;
+  //          transition: 2000ms;
+  //        }
+  //      }
+  //      ul {
+  //        li {
+  //          input[type=radio]:checked ~ label {
+  //            color: white;
+  //            background-color: #8DB835;
+  //            margin: 20px auto;
+  //
+  //          }
+  //          label {
+  //            cursor: pointer;
+  //            display: block;
+  //            height: 56px;
+  //            line-height: 50px;
+  //            border: 3px solid #8DB835;
+  //            padding: 0 1rem;
+  //            color: white;
+  //            font-size: 25px;
+  //            font-weight: 700;
+  //            text-align: center;
+  //            border-radius: 1px;
+  //            width: 100%;
+  //            background-color: rgba(255, 255, 255, 0);
+  //            -webkit-box-shadow: 1px 2px 6px #ffffff;
+  //            box-shadow: 1px 2px 6px #ffffff;
+  //            text-shadow: 1px 2px 7px black;
+  //            margin: 30px auto;
+  //          }
+  //        }
+  //      }
+  //      p {
+  //        display: inline-block;
+  //        color: white;
+  //        font-size: 18px;
+  //        font-weight: 600;
+  //        text-align: center;
+  //        text-shadow: 1px 2px 8px black;
+  //      }
+  //    }
+  //
+  //    .final-submit-page {
+  //      .review-page {
+  //        background-attachment: scroll;
+  //      }
+  //    }
+  //  }
+  //
+  //  .contact-modal, .main-modal{
+  //    .wrapper{
+  //      width: auto;
+  //      height: auto;
+  //
+  //      input{
+  //        margin: 0 auto;
+  //        width: 100%;
+  //        height: 30px;
+  //      }
+  //    }
+  //  }
+  //}
 }
 
-
-//for ipad and tab
-@media only screen  and (min-device-width: 768px) and  (max-device-width : 1024px){
-
-  html, body {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-size: cover;
-    background-attachment: fixed;
-
-
-    //home  page//
+//for middle device
+@media screen and (min-width: 769px) and (max-width: 1023px){
+  html, body{
+    //home page
     .home {
-      overflow-y:scroll;
+      overflow-y: scroll;
 
       .hidingScrollBar{
-
         .header {
-
           .home-page {
-
             max-width: 100%;
-
-            h1 {
-              text-align: center;
-            }
-
-            p {
-              text-align: center;
-            }
           }
         }
-
         .groups {
-          position: relative;
-          padding: 20px;
-
 
           .group-content {
             cursor: pointer;
@@ -475,19 +499,10 @@
               height: 100%;
               border-radius: 5px;
             }
-
             .description {
 
-              display: block;
-              bottom: 0px;
-              height: 100%;
+              bottom: -545px;
 
-              a {
-
-                p {
-                  font-size: 22px;
-                }
-              }
             }
             &:hover .description {
 
@@ -515,14 +530,24 @@
       }
     }
 
-    //others
 
-    .main-general {
+    overflow-y:auto;
+    background-size: cover;
+    .songwriting_choose_usagetype, .singing-general-page, .instrumentals-general-page, .complete_song-general-page {
+      height: auto;
+      @include bg-propertis;
+      .main-general {
+        height: auto;
 
-      .main-content{
-        margin: 100px auto;
-        text-align: center;
+        .page-question {
+          padding-top: 200px;
+        }
       }
+
+      .bullets {
+        top: 180px;
+      }
+
       .button {
         text-align: center;
         .btn {
@@ -541,12 +566,41 @@
           background-color: rgba(255, 255, 255, 0);
           box-shadow: 1px 2px 6px #ffffff;
           text-shadow: 1px 2px 7px black;
-          margin: 20px auto;
+          margin: 40px auto;
 
           &:hover {
             color: white;
             background-color: #8DB835;
             transition: 2000ms;
+          }
+        }
+        ul {
+          li {
+            input[type=radio]:checked ~ label {
+              color: white;
+              background-color: #8DB835;
+              margin: 20px auto;
+
+            }
+            label {
+              cursor: pointer;
+              display: block;
+              height: 56px;
+              line-height: 50px;
+              border: 3px solid #8DB835;
+              padding: 0 1rem;
+              color: white;
+              font-size: 25px;
+              font-weight: 700;
+              text-align: center;
+              border-radius: 1px;
+              width: 100%;
+              background-color: rgba(255, 255, 255, 0);
+              -webkit-box-shadow: 1px 2px 6px #ffffff;
+              box-shadow: 1px 2px 6px #ffffff;
+              text-shadow: 1px 2px 7px black;
+              margin: 30px auto;
+            }
           }
         }
         p {
@@ -558,8 +612,197 @@
           text-shadow: 1px 2px 8px black;
         }
       }
-    }
 
+      .final-submit-page {
+        .review-page {
+          background-attachment: scroll;
+        }
+      }
+    }
+    .final-submit-page {
+
+      text-align: center;
+      margin: 0 auto;
+
+      .main-content {
+        padding-top: 130px;
+      }
+
+      .review-page {
+        background-attachment: fixed;
+        overflow-y: auto;
+
+        .preview-form {
+          margin: 0 auto;
+
+          .button {
+
+            ul {
+              list-style-type: none;
+              text-align: center;
+              width: 100%;
+
+              li {
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+
+                input[type=radio] {
+                  position: absolute;
+                  visibility: hidden;
+                }
+                input[type=radio]:checked ~ .check {
+                  border: 5px solid black
+                }
+                input[type=radio]:checked ~ label {
+                  color: white;
+                  background-color: #8DB835;
+                }
+                label {
+                  margin: 0 auto;
+                }
+              }
+            }
+          }
+          .button-back-home {
+            text-align: center;
+
+            .back-to-home {
+              position: relative;
+              line-height: 50px;
+              height: 56px;
+              font-size: 25px;
+              font-weight: 700;
+              padding: 0 1rem;
+              text-align: center;
+              background-color: rgba(156, 156, 156, 0.5);
+              color: white;
+              margin: 20px;
+              text-shadow: 1px 2px 7px black;
+              border: 1px solid black;
+
+              &:hover {
+                color: black;
+                background-color: gray;
+                transition: 2000ms;
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact-modal, .main-modal{
+      .wrapper{
+        width: auto;
+        height: auto;
+
+        input{
+          margin: 0 auto;
+          width: 100%;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+//
+@media only screen and (max-device-width : 768px) {
+  .instrumentals-general-page {
+    .instrumentals_choose_usagetype {
+      .main-general {
+        height: auto;
+        width: 100%;
+        background-size: cover;
+      }
+      .main-general {
+        height: auto;
+        width: 100%;
+        background-size: cover;
+      }
+    }
+  }
+  html, body{
+    .final-submit-page {
+
+      text-align: center;
+      margin: 0 auto;
+
+      .main-content {
+        padding-top: 130px;
+      }
+
+      .review-page {
+        background-attachment: fixed;
+        overflow-y: auto;
+
+        .preview-form {
+          margin: 0 auto;
+
+          .button {
+
+            ul {
+              list-style-type: none;
+              text-align: center;
+              width: 100%;
+
+              li {
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+
+                input[type=radio] {
+                  position: absolute;
+                  visibility: hidden;
+                }
+                input[type=radio]:checked ~ .check {
+                  border: 5px solid black
+                }
+                input[type=radio]:checked ~ label {
+                  color: white;
+                  background-color: #8DB835;
+                }
+                label {
+                  margin: 0 auto;
+                }
+              }
+            }
+          }
+          .button-back-home {
+            text-align: center;
+
+            .back-to-home {
+              position: relative;
+              line-height: 50px;
+              height: 56px;
+              font-size: 25px;
+              font-weight: 700;
+              padding: 0 1rem;
+              text-align: center;
+              background-color: rgba(156, 156, 156, 0.5);
+              color: white;
+              margin: 20px;
+              text-shadow: 1px 2px 7px black;
+              border: 1px solid black;
+
+              &:hover {
+                color: black;
+                background-color: gray;
+                transition: 2000ms;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-device-width : 768px) and (max-device-width : 1024px){
+  body {
     .bullets{
       position: relative;
       width: 100%;
@@ -568,103 +811,120 @@
       margin: 0;
       text-align: center;
     }
+    .songwriting_choose_usagetype, .singing-general-page, .instrumentals-general-page, .complete_song-general-page {
+      .step-3, .step-1, .step-2{
 
+      }
+      .main-general {
+        .button {
+          text-align: center;
+          .btn {
+            display: inline-block;
+            height: 56px;
+            line-height: 50px;
+            position: relative;
+            border: 3px solid #8DB835;
+            padding: 0 1rem;
+            color: white;
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 1px;
+            width: 88%;
+            background-color: rgba(255, 255, 255, 0);
+            box-shadow: 1px 2px 6px #ffffff;
+            text-shadow: 1px 2px 7px black;
+            margin: 20px auto;
+
+            &:hover {
+              color: white;
+              background-color: #8DB835;
+              transition: 2000ms;
+            }
+          }
+          p {
+            display: inline-block;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            text-shadow: 1px 2px 8px black;
+          }
+        }
+      }
+      .final-submit-page {
+
+        text-align: center;
+        margin: 0 auto;
+
+        .main-content {
+          padding-top: 130px;
+        }
+
+        .review-page {
+          background-attachment: fixed;
+          overflow-y: auto;
+
+          .preview-form {
+            margin: 0 auto;
+
+            .button {
+
+              ul {
+                list-style-type: none;
+                text-align: center;
+                width: 100%;
+
+                li {
+                  text-align: center;
+                  display: block;
+                  margin: 0 auto;
+                  width: 100%;
+
+                  input[type=radio] {
+                    position: absolute;
+                    visibility: hidden;
+                  }
+                  input[type=radio]:checked ~ .check {
+                    border: 5px solid black
+                  }
+                  input[type=radio]:checked ~ label {
+                    color: white;
+                    background-color: #8DB835;
+                  }
+                  label {
+                    margin: 0 auto;
+                  }
+                }
+              }
+            }
+            .button-back-home {
+              text-align: center;
+
+              .back-to-home {
+                position: relative;
+                line-height: 50px;
+                height: 56px;
+                font-size: 25px;
+                font-weight: 700;
+                padding: 0 1rem;
+                text-align: center;
+                background-color: rgba(156, 156, 156, 0.5);
+                color: white;
+                margin: 20px;
+                text-shadow: 1px 2px 7px black;
+                border: 1px solid black;
+
+                &:hover {
+                  color: black;
+                  background-color: gray;
+                  transition: 2000ms;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
-
-
-
-
-
-
-//@media only screen and (max-device-width : 768px) {}
-//@media screen and (max-width: 1024px) {
-//
-//  body {
-//    //padding-left: -15px;
-//    //padding-right: -15px;
-//    .songwriting_choose_usagetype, .singing-general-page, .instrumentals-general-page, .complete_song-general-page {
-//      .main-general {
-//        height: 100%;
-//        @include bg-propertis;
-//        .button {
-//          text-align: center;
-//          .btn {
-//            display: inline-block;
-//            height: 56px;
-//            line-height: 50px;
-//            position: relative;
-//            border: 3px solid #8DB835;
-//            padding: 0 1rem;
-//            color: white;
-//            font-size: 25px;
-//            font-weight: 700;
-//            text-align: center;
-//            border-radius: 1px;
-//            width: 88%;
-//            background-color: rgba(255, 255, 255, 0);
-//            box-shadow: 1px 2px 6px #ffffff;
-//            text-shadow: 1px 2px 7px black;
-//            margin: 20px auto;
-//
-//            &:hover {
-//              color: white;
-//              background-color: #8DB835;
-//              transition: 2000ms;
-//            }
-//          }
-//          p {
-//            display: inline-block;
-//            color: white;
-//            font-size: 18px;
-//            font-weight: 600;
-//            text-align: center;
-//            text-shadow: 1px 2px 8px black;
-//          }
-//        }
-//      }
-//      //home  page//
-//      .home {
-//        .header {
-//          .home-page {
-//            max-width: 100%;
-//            h1 {
-//              text-align: center;
-//            }
-//            p {
-//              text-align: center;
-//            }
-//          }
-//        }
-//        .groups {
-//          max-width: 95%;
-//          .group-content {
-//            height: auto;
-//            img {
-//              width: auto;
-//              height: auto;
-//              margin-left: 18px;
-//            }
-//            .description {
-//              display: none;
-//              a {
-//                h3 {
-//                  display: none;
-//                }
-//              }
-//            }
-//          }
-//          .group-text {
-//            a {
-//              margin: 0 auto;
-//              text-align: center;
-//              font-size: 30px;
-//              display: block;
-//              cursor: pointer;
-//            }
-//          }
-//        }
-//      }
-//    }
-//  }
-//}
+}
