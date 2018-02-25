@@ -12,6 +12,45 @@ body {
     height: 100%;
     width: 100%;
     background-size: cover; }
+    body .main-general .characters-input {
+      margin: 50px auto; }
+      body .main-general .characters-input input, body .main-general .characters-input select {
+        border: 3px solid white;
+        padding: 14px 36px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-top: 2px solid black;
+        font-size: 23px;
+        font-weight: 400;
+        display: inline-block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        width: 100%;
+        text-align: center; }
+        body .main-general .characters-input input:focus, body .main-general .characters-input select:focus {
+          outline: none; }
+      body .main-general .characters-input select {
+        padding: 0 36px !important; }
+        body .main-general .characters-input select option {
+          background-color: rgba(255, 255, 255, 0.2) !important;
+          color: black; }
+      body .main-general .characters-input h3 {
+        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        text-align: center;
+        margin: 20px; }
+      body .main-general .characters-input p {
+        text-align: right;
+        font-size: 17px;
+        font-weight: 600;
+        color: white;
+        width: 100%;
+        margin: 0 auto; }
     body .main-general .button {
       text-align: center; }
       body .main-general .button .btn {
@@ -57,7 +96,7 @@ body {
       margin: 30px auto;
       margin-bottom: 20px;
       padding: 10px; }
-      body .main-general .calendar input {
+      body .main-general .calendar input, body .main-general .calendar select {
         width: 100%;
         height: 56px;
         display: inline-block;
@@ -71,9 +110,9 @@ body {
         font-weight: 400;
         line-height: 50px;
         text-align: center; }
-        body .main-general .calendar input:focus {
+        body .main-general .calendar input:focus, body .main-general .calendar select:focus {
           outline: none; }
-        body .main-general .calendar input::-webkit-input-placeholder {
+        body .main-general .calendar input::-webkit-input-placeholder, body .main-general .calendar select::-webkit-input-placeholder {
           text-align: center;
           text-shadow: 1px 1px 4px black;
           font-size: 25px;
@@ -81,11 +120,13 @@ body {
           color: white;
           margin: 10px 0 0 10px;
           text-overflow: ellipsis; }
-        body .main-general .calendar input:focus::-webkit-input-placeholder {
+        body .main-general .calendar input:focus::-webkit-input-placeholder, body .main-general .calendar select:focus::-webkit-input-placeholder {
           opacity: 0;
           -webkit-transition: opacity 0.3s ease;
           -o-transition: opacity 0.3s ease;
           transition: opacity 0.3s ease; }
+      body .main-general .calendar select option {
+        color: black; }
       body .main-general .calendar p {
         color: white;
         font-size: 17px;
@@ -157,46 +198,59 @@ body {
       color: #8DB835;
       text-decoration: none;
       text-shadow: 1px 2px 7px black; }
-    body .main-general .hint {
-      position: relative;
-      display: inline-block; }
-      body .main-general .hint:before, body .main-general .hint:after {
-        position: absolute;
-        opacity: 0;
-        z-index: 1000000;
-        -webkit-transition: 0.3s ease;
-        -moz-transition: 0.3s ease;
-        pointer-events: none; }
-      body .main-general .hint:hover:before, body .main-general .hint:hover:after {
-        opacity: 1; }
-      body .main-general .hint:before {
-        content: '';
-        position: absolute;
-        background: transparent;
-        border: 6px solid transparent;
-        position: absolute; }
-      body .main-general .hint:after {
-        content: attr(data-hint);
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 8px 10px;
-        font-size: 12px;
-        white-space: nowrap;
-        -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); }
-    body .main-general .hint--right:before {
-      left: 100%;
-      bottom: 50%;
-      margin: 0 0 -4px -8px;
-      border-right-color: rgba(0, 0, 0, 0.8); }
-    body .main-general .hint--right:after {
-      left: 100%;
-      bottom: 50%;
-      margin: 0 0 -13px 4px; }
-    body .main-general .hint--right:hover:before {
-      margin: 0 0 -4px -0; }
-    body .main-general .hint--right:hover:after {
-      margin: 0 0 -13px 12px; }
+  body .hint {
+    position: relative;
+    display: inline-block; }
+    body .hint:before, body .hint:after {
+      position: absolute;
+      opacity: 0;
+      z-index: 1000000;
+      -webkit-transition: 0.3s ease;
+      -moz-transition: 0.3s ease;
+      pointer-events: none; }
+    body .hint:hover:before, body .hint:hover:after {
+      opacity: 1; }
+    body .hint:before {
+      content: '';
+      position: absolute;
+      background: transparent;
+      border: 6px solid transparent;
+      position: absolute; }
+    body .hint:after {
+      content: attr(data-hint);
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 8px 10px;
+      font-size: 12px;
+      white-space: nowrap;
+      -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); }
+  body .hint--right:before {
+    left: 100%;
+    bottom: 50%;
+    margin: 0 0 -4px -8px;
+    border-right-color: rgba(0, 0, 0, 0.8); }
+  body .hint--right:after {
+    left: 100%;
+    bottom: 50%;
+    margin: 0 0 -13px 4px; }
+  body .hint--right:hover:before {
+    margin: 0 0 -4px -0; }
+  body .hint--right:hover:after {
+    margin: 0 0 -13px 12px; }
+  body .hint--bottom:before {
+    top: 70%;
+    left: 50%;
+    margin: -14px 0 0 0;
+    border-bottom-color: rgba(0, 0, 0, 0.8); }
+  body .hint--bottom:after {
+    top: 70%;
+    left: 50%;
+    margin: -2px 0 0 -10px; }
+  body .hint--bottom:hover:before {
+    margin-top: -6px; }
+  body .hint--bottom:hover:after {
+    margin-top: 6px; }
   body .step-1 .page-question {
     padding-top: 150px; }
     body .step-1 .page-question .center {
@@ -450,40 +504,6 @@ body {
         padding: 0 1rem;
         width: 100%;
         overflow-y: auto; }
-    body .step-3 .page-question .characters-input, body .step-3 .preview-form .characters-input {
-      margin: 50px auto; }
-      body .step-3 .page-question .characters-input input, body .step-3 .preview-form .characters-input input {
-        border: 3px solid white;
-        padding: 14px 36px;
-        color: white;
-        background-color: rgba(255, 255, 255, 0.2);
-        border-top: 2px solid black;
-        font-size: 23px;
-        font-weight: 400;
-        display: inline-block;
-        height: 56px;
-        line-height: 50px;
-        position: relative;
-        width: 100%;
-        text-align: center; }
-        body .step-3 .page-question .characters-input input:focus, body .step-3 .preview-form .characters-input input:focus {
-          outline: none; }
-      body .step-3 .page-question .characters-input h3, body .step-3 .preview-form .characters-input h3 {
-        font-family: 'Arial Fett', 'Arial Standard', 'Arial';
-        font-weight: 700;
-        font-style: normal;
-        color: white;
-        font-size: 30px;
-        text-shadow: 1px 2px 7px black;
-        text-align: center;
-        margin: 20px; }
-      body .step-3 .page-question .characters-input p, body .step-3 .preview-form .characters-input p {
-        text-align: right;
-        font-size: 17px;
-        font-weight: 600;
-        color: white;
-        width: 100%;
-        margin: 0 auto; }
   body .final-submit-page {
     text-align: center;
     margin: 0 auto; }
@@ -714,8 +734,8 @@ body {
         body .nav-top .main-menu .contact_us p a:hover:before, body .nav-top .main-menu .contact_us p a:focus:before {
           width: 0%; }
     body .nav-top .main-menu li {
-      padding: 20px 0 0 25px;
-      font-size: 20px;
+      padding: 20px 0 0 10px;
+      font-size: 16px;
       text-shadow: 1px 2px 7px black; }
       body .nav-top .main-menu li .item-link {
         font-family: 'Arial Fett', 'Arial Standard', 'Arial';
@@ -971,7 +991,7 @@ body {
             width: 105%;
             border-radius: 2px;
             padding: 11px; }
-        body .choose-modals .singing_choose_genre .choose-your-genre form input {
+        body .choose-modals .singing_choose_genre .choose-your-genre form input, body .choose-modals .singing_choose_genre .choose-your-genre form select {
           background-color: rgba(255, 255, 255, 0.2);
           border-top: 2px solid black;
           text-shadow: 1px 2px 7px black;
@@ -984,9 +1004,9 @@ body {
           position: relative;
           margin: 10px auto 10px;
           padding: 10px 20px; }
-          body .choose-modals .singing_choose_genre .choose-your-genre form input:focus {
+          body .choose-modals .singing_choose_genre .choose-your-genre form input:focus, body .choose-modals .singing_choose_genre .choose-your-genre form select:focus {
             outline: none; }
-          body .choose-modals .singing_choose_genre .choose-your-genre form input::-webkit-input-placeholder {
+          body .choose-modals .singing_choose_genre .choose-your-genre form input::-webkit-input-placeholder, body .choose-modals .singing_choose_genre .choose-your-genre form select::-webkit-input-placeholder {
             text-align: center;
             text-shadow: 1px 1px 4px black;
             font-size: 19px;
@@ -994,7 +1014,7 @@ body {
             color: white;
             margin: 10px 0 0 10px;
             text-overflow: ellipsis; }
-          body .choose-modals .singing_choose_genre .choose-your-genre form input:focus::-webkit-input-placeholder {
+          body .choose-modals .singing_choose_genre .choose-your-genre form input:focus::-webkit-input-placeholder, body .choose-modals .singing_choose_genre .choose-your-genre form select:focus::-webkit-input-placeholder {
             opacity: 0;
             -webkit-transition: opacity 0.3s ease;
             -o-transition: opacity 0.3s ease;

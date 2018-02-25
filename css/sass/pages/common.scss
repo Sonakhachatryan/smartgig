@@ -41,6 +41,52 @@ $small: 40em;
     height: 100%;
     @include bg-properties;
 
+    .characters-input {
+      margin: 50px auto;
+
+      input, select {
+        border: 3px solid white;
+        padding: 14px 36px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-top: 2px solid black;
+        font-size: 23px;
+        font-weight: 400;
+        display: inline-block;
+        height: 56px;
+        line-height: 50px;
+        position: relative;
+        width: 100%;
+        text-align: center;
+
+        &:focus{
+          outline: none;
+        }
+      }
+      select{
+        padding: 0 36px !important;
+        option{
+          background-color: rgba(255, 255, 255, 0.2) !important;
+          color: black;
+        }
+      }
+      h3 {
+        @include large-text;
+        font-size: 30px;
+        text-shadow: 1px 2px 7px black;
+        text-align: center;
+        margin: 20px;
+      }
+      p {
+        text-align: right;
+        font-size: 17px;
+        font-weight: 600;
+        color: white;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
     .button {
       text-align: center;
 
@@ -95,7 +141,7 @@ $small: 40em;
       padding: 10px;
       //text-align: right;
 
-      input {
+      input, select{
         width: 100%;
         height: 56px;
         display: inline-block;
@@ -109,6 +155,7 @@ $small: 40em;
         font-weight: 400;
         line-height: 50px;
         text-align: center;
+
 
         &:focus {
           outline: none;
@@ -127,6 +174,11 @@ $small: 40em;
         &:focus::-webkit-input-placeholder {
           opacity: 0;
           transition: opacity 0.3s ease;
+        }
+      }
+      select{
+        option{
+          color: black;
         }
       }
       p {
@@ -208,60 +260,83 @@ $small: 40em;
         text-shadow: 1px 2px 7px black;
       }
     }
-    .hint {
-      position: relative;
-      display: inline-block;
-
-      &:before, &:after {
-        position: absolute;
-        opacity: 0;
-        z-index: 1000000;
-        -webkit-transition: 0.3s ease;
-        -moz-transition: 0.3s ease;
-        pointer-events: none;
-      }
-      &:hover:before, &:hover:after {
-        opacity: 1;
-      }
-
-      &:before {
-        content: '';
-        position: absolute;
-        background: transparent;
-        border: 6px solid transparent;
-        position: absolute;
-      }
-
-      &:after {
-        content: attr(data-hint);
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 8px 10px;
-        font-size: 12px;
-        white-space: nowrap;
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-      }
-    }
-    .hint--right {
-      &:before {
-        left: 100%;
-        bottom: 50%;
-        margin: 0 0 -4px -8px;
-        border-right-color: rgba(0, 0, 0, 0.8);
-      }
-      &:after {
-        left: 100%;
-        bottom: 50%;
-        margin: 0 0 -13px 4px;
-      }
-      &:hover:before {
-        margin: 0 0 -4px -0;
-      }
-      &:hover:after {
-        margin: 0 0 -13px 12px;
-      }
-    }
   }
+
+   .hint {
+     position: relative;
+     display: inline-block;
+
+     &:before, &:after {
+       position: absolute;
+       opacity: 0;
+       z-index: 1000000;
+       -webkit-transition: 0.3s ease;
+       -moz-transition: 0.3s ease;
+       pointer-events: none;
+     }
+     &:hover:before, &:hover:after {
+       opacity: 1;
+     }
+
+     &:before {
+       content: '';
+       position: absolute;
+       background: transparent;
+       border: 6px solid transparent;
+       position: absolute;
+     }
+
+     &:after {
+       content: attr(data-hint);
+       background: rgba(0, 0, 0, 0.8);
+       color: white;
+       padding: 8px 10px;
+       font-size: 12px;
+       white-space: nowrap;
+       box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+     }
+   }
+   .hint--right {
+     &:before {
+       left: 100%;
+       bottom: 50%;
+       margin: 0 0 -4px -8px;
+       border-right-color: rgba(0, 0, 0, 0.8);
+     }
+     &:after {
+       left: 100%;
+       bottom: 50%;
+       margin: 0 0 -13px 4px;
+     }
+     &:hover:before {
+       margin: 0 0 -4px -0;
+     }
+     &:hover:after {
+       margin: 0 0 -13px 12px;
+     }
+   }
+
+
+   .hint--bottom:before {
+     top: 70%;
+     left: 50%;
+     margin: -14px 0 0 0;
+     border-bottom-color: rgba(0, 0, 0, 0.8);
+   }
+
+   .hint--bottom:after {
+     top: 70%;
+     left: 50%;
+     margin: -2px 0 0 -10px;
+   }
+
+   .hint--bottom:hover:before {
+     margin-top: -6px;
+   }
+
+   .hint--bottom:hover:after {
+     margin-top: 6px;
+   }
 
   .step-1 {
     .page-question {
@@ -558,44 +633,6 @@ $small: 40em;
           overflow-y: auto;
         }
       }
-      .characters-input {
-        margin: 50px auto;
-
-        input {
-          border: 3px solid white;
-          padding: 14px 36px;
-          color: white;
-          background-color: rgba(255, 255, 255, 0.2);
-          border-top: 2px solid black;
-          font-size: 23px;
-          font-weight: 400;
-          display: inline-block;
-          height: 56px;
-          line-height: 50px;
-          position: relative;
-          width: 100%;
-          text-align: center;
-
-          &:focus{
-            outline: none;
-          }
-        }
-        h3 {
-          @include large-text;
-          font-size: 30px;
-          text-shadow: 1px 2px 7px black;
-          text-align: center;
-          margin: 20px;
-        }
-        p {
-          text-align: right;
-          font-size: 17px;
-          font-weight: 600;
-          color: white;
-          width: 100%;
-          margin: 0 auto;
-        }
-      }
     }
   }
 
@@ -883,8 +920,8 @@ $small: 40em;
       }
 
       li {
-        padding:20px 0 0 25px;
-        font-size: 20px;
+        padding:20px 0 0 10px;
+        font-size: 16px;
         text-shadow: 1px 2px 7px black;
 
 
@@ -1224,7 +1261,7 @@ $small: 40em;
         }
 
         form {
-          input {
+          input, select{
             background-color: rgba(255, 255, 255, 0.2);
             border-top: 2px solid black;
             text-shadow: 1px 2px 7px black;
